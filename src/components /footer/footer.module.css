@@ -1,12 +1,17 @@
 .container{
-    background-color: green;
     height: 50px;
     display: flex;
     align-items: center; 
     justify-content: space-between;
+    font-size: 14px;
 }
+.social{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .icon{
-    height: 50px;
-    padding: 10px;
-    color: yellow !important;
+    opacity: 0.6;
+    cursor: pointer;
 }

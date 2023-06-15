@@ -11,8 +11,92 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   background-color: #bbbb;
+  font-family: sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
 }
 
+/* Texts */
+
+/* Logo Text */
+
+.logoText {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+/* Main Heading */
+.text-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  /* For main headings or section titles. */
+}
+
+/* Subheading */
+.text-subheading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #666;
+/* For subheadings or smaller section titles. */
+}
+
+/* Body Text */
+.text-body {
+  font-size: 1rem;
+  color: #444;
+ /*  For regular body text. */ 
+}
+
+/* Caption Text */
+.text-caption {
+  font-size: 0.8rem;
+  color: #777;
+  /* For captions or smaller text accompanying images or figures.*/
+}
+
+/* Emphasized Text */
+.text-emphasis {
+  font-weight: bold;
+  /*  For emphasized or highlighted text. */
+}
+
+/* Link Text */
+.text-link {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: none;
+  /* For text that represents links or clickable elements.*/
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+/* Muted Text */
+.text-muted {
+  color: #888;
+  /* For text that is less important or muted in appearance. */
+}
+
+/* Highlighted Text */
+.text-highlight {
+  background-color: #ffff99;
+  /*  For text that should stand out or be highlighted. */
+}
+
+/* Error Text */
+.text-error {
+  color: #ff0000;
+  /* For text indicating errors or warnings. */
+}
+
+/* Success Text */
+.text-success {
+  color: #008000;
+  /*  For text indicating success or positive feedback */
+}
+
+/* Links Reset */
 a{
   text-decoration: none;
   color: inherit;
