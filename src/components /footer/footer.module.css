@@ -1,0 +1,12 @@
+.container{
+    background-color: green;
+    height: 50px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+}
+.icon{
+    height: 50px;
+    padding: 10px;
+    color: yellow !important;
+}
