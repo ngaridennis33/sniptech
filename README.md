@@ -1,5 +1,5 @@
 # Sniptech Blog App
-Welcome to our sniptech blog site, a professional platform meticulously developed using Next.js, Python Flask, and a MySQL database. Leveraging the dynamic capabilities of Next.js on the frontend and the robustness of Flask on the backend, our blog site offers an immersive and seamless experience for both writers and readers. The integration with MySQL ensures efficient data storage and retrieval, allowing lightning-fast performance. Join our thriving community, unleash your creativity, and explore the limitless possibilities our blog site has to offer.
+Welcome to our sniptech blog site, a professional platform meticulously developed using Next.js, Python Flask, and a MySQL database. Leveraging the dynamic capabilities of Next.js on the frontend and the robustness of Flask on the backend, our blog site offers an immersive and seamless experience for both writers and readers. The integr ation with MySQL ensures efficient data storage and retrieval, allowing lightning-fast performance. Join our thriving community, unleash your creativity, and explore the limitless possibilities our blog site has to offer.
 
 # Features
 
