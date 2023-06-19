@@ -16,8 +16,23 @@ const Dashboard = () => {
         <span className={styles.textbody}> Log in to SnipTech to continue to site</span>
       </div>
       <form className={styles.form}>
-        <input className={styles.input} autoFocus type="text" placeholder='Email address' required></input>
-        <input className={styles.input} type="password" placeholder='Password' required></input>
+
+        {/* Email Container */}
+        <div className={styles.inputCont}>
+        <input className={styles.input} autoFocus type="text" required/>
+          <label htmlFor="input" className={styles.inputLabel}>
+            <span className={styles.inputLabelName}>Email Address</span>
+          </label>
+        </div>
+
+        {/* Password Container */}
+        <div className={styles.inputCont}>
+        <input className={styles.input} type="password" required/>
+          <label htmlFor="input" className={styles.inputLabel}>
+            <span className={styles.inputLabelName}>Password</span>
+          </label>
+        </div>
+
         <span className='text-link'> Forgot Password? </span>
         <button className={styles.button}>Continue</button>
       </form>

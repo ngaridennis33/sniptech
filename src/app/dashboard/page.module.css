@@ -3,9 +3,13 @@
     width: 100%;
     display: flex;
 }
-* > .container {
-margin-bottom: 10px;
+@media only screen and (max-width:600px){
+    .wrapper {  
+        width: 100%;
+        overflow-y: hidden;
+    }
 }
+
 .container{
     height: 70vh;
     background-color: #ffff;
@@ -17,6 +21,15 @@ margin-bottom: 10px;
     margin: 0 auto;
     padding: 50px;
     border-radius: 10px;
+}
+@media only screen and (max-width:600px){
+    .container {  
+        width: 100%;
+        margin: 0;
+        height: 100%;
+        border-radius: 0px;
+        gap: 20px;
+    }
 }
 
 .header{
@@ -33,37 +46,79 @@ margin-bottom: 10px;
     flex-direction: column;
     justify-content: center;
     align-items: start;
+    gap: 20px;
 }
 
+.inputCont{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+   
+    
+}
 .input{
     border: none;
     width: 100%;
     height:50px;
     outline: none;
-    background: rgb(108, 105, 105);
-    border-radius: 5px;
     border: 1px solid rgb(192, 192, 192);
-    padding: 10px;
+    padding-left: 10px;
     margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    
 }
 .input:focus{
     border: 2px solid rgb(20, 57, 193);
+    transition: all ease;
 }
+
+.inputLabel{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.inputLabelName{
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    transition: all .3s ease;
+    padding-left: 10px;
+    color: grey;
+    font-size: 18px;
+    
+}
+
+.input:focus + .inputLabel .inputLabelName,
+.input:valid + .inputLabel .inputLabelName{
+    transform: translateY(-80%);
+    font-size: 14px;
+    font-weight:700;
+    color: blue;
+    background-color: #ffff;
+    padding: 5px;
+    left: 5px;
+}
+
 
 .button{
     margin-top: 10px;
     padding: 10px;
     width: 100%;
     border: none;
-    background-color: green;
+    background-color: rgb(3, 128, 3);
     color: #ffff;
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
 }
 .button:hover{
-    background-color: rgb(3, 174, 3);
-    transition: ease;
+    background-color: rgb(3, 144, 3);
+    transition: all .3s ease;
 }
 
 .register{
@@ -103,4 +158,9 @@ cursor: pointer;
 position: relative;
 cursor: pointer;
 background-color: rgb(224, 223, 219);
+}
+
+.socialLogin:hover{
+background-color: rgb(227, 226, 221);
+transition: all 0.5s ease;
 }

@@ -4,11 +4,11 @@ import Hero from "/public/hero.png"
 
 export default function Home() {
   return (
-  <div>
+  <div className={styles.container}>
     <div className={styles.item}>
-      <h1>Better Design tour digital products</h1>
-     <p> Turning your idea into reality. We bring together the tetam for global tech industry</p>
-     <button> See our works</button>
+      <h1 className={styles.title}>Better Design tour digital products</h1>
+     <p className={styles.desc}>  Turning your idea into reality. We bring together the tetam for global tech industry</p>
+     <button className={styles.button}> See our works</button>
     </div>
 
     <div className={styles.item}>
