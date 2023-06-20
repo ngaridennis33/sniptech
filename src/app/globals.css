@@ -10,10 +10,26 @@ html,s
 body {
   /* max-width: 100vw; */
   overflow-x: hidden;
-  background-color: #bbbb;
   font-family: sans-serif;
   line-height: 1.6;
   font-size: 18px;
+ }
+
+ .theme{
+  transition:1s all ease ;
+ }
+.light{
+  background-color: #afacac;
+  color: #000C18;
+}
+
+.dark{
+  background-color:#000C18;
+  color: #16cd2b;
+}
+
+.entryTheme{
+  background-color: #011222;
 }
 
 /* Texts */
@@ -26,9 +42,13 @@ body {
 }
 /* Main Heading */
 .text-heading {
+  font-size: 72px;
+  color: transparent;
+  background: linear-gradient(to bottom, #18ca0b, #831d69);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent transparent;
   font-size: 2rem;
   font-weight: bold;
-  color: #333;
   /* For main headings or section titles. */
 }
 
@@ -36,7 +56,7 @@ body {
 .text-subheading {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #666;
+  color: #666666;
 /* For subheadings or smaller section titles. */
 }
 

@@ -12,7 +12,7 @@ export default function Home() {
     </div>
 
     <div className={styles.item}>
-    <Image width={500} height={500}  src={Hero} alt='Hero.png' className={styles.img}/>
+    <Image className={styles.image} style={{width:'100%', height:'500px'}}   src={Hero} alt='Hero.png'/>
     </div>
   </div>
   )

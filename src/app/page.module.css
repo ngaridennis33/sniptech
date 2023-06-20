@@ -6,5 +6,45 @@
 
 .item{
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
 
+.title{
+  font-size: 72px;
+  color: transparent;
+  background: linear-gradient(to bottom, #194c33, #505050);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent transparent;
+}
+
+.desc{
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.image{
+  /* width: 100%; */
+  object-fit: contain;
+  animation: move 3s infinite ease alternate;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(-10px);
+  }
+  to{
+    transform: translateY(10px);
+  }
+}
+
+.button{
+  padding: 20px;
+  cursor: pointer;
+  background-color: #53c28b;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  width: max-content;
 }
