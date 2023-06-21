@@ -1,23 +1,57 @@
+.navWrapper{
+    line-height: 65px;
+    width: 100%;
+    height: 10vh;
+    border-bottom: 1px solid red;
+}
 .container{
-    height: 100px;
+    height: 100%;
+    width: 70%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-
-.links{
+.logo{
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
+    width: 10%;
+    height: 100%;
+}
+
+.desktopLinks{
+    width: 50%;
+    display: flex;
+    align-items: clinksenter;
     font-size: 1rem;
     font-weight: 400;
 }
 
+.cta{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .logout{
-    padding: 5px;
+    padding: 10px;
     border: none;
     background-color: #53c28b;
     color: #fff;
     cursor: pointer;
 }
+
+@media only screen and (max-width:900px){
+    .desktopLinks {  
+        display: none;
+    }
+}
+
+/* @media only screen and (min-width:900px){
+    .desktopLinks {  
+        display: none;
+    }
+} */

@@ -1,52 +1,39 @@
+"use client"
 import Link from 'next/link'
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from "./navbar.module.css"
 import DarkmodeToogle from '../DarkmodeToggle/DarkmodeToogle'
+import Logo from './layout/logo/Logo'
+import DesktopLinks from './layout/navLinks/deskTop/DesktopLinks'
+import { AuthLoginButton } from '../button/Button'
+import { ThemeContext } from '../../../context/ThemeContext'
+import MobileLinks from './layout/navLinks/mobileLinks/MobileLinks'
 
-const links = [
-    {
-        id:1,
-        title:"Home",
-        url:"/",
-    },
-    {
-        id:2,
-        title:"About",
-        url:"/about",
-    },
-    {
-        id:3,
-        title:"portfolio",
-        url:"/portfolio",
-    },
-    {
-        id:4,
-        title:"Dashboard",
-        url:"/dashboard",
-    },
-    {
-        id:5,
-        title: "blog",
-        url:"/blog",
-    },
-    {
-        id:6,
-        title:"Contact",
-        url:"/contact",
-    }
 
-]
 
 const Navbar = () => {
+    const {mode} = useContext(ThemeContext);
   return (
-    <div className={styles.container}>
-        <Link href="/" className='logoText'>Sniptech</Link>
-        <div className={styles.links}>
-            <DarkmodeToogle/>
-            {links.map(link=>(
-                <Link key={link.id} href={link.url} className={styles.link}>{link.title}</Link>
-            ))}
-            <button className={styles.logout} onClick={console.log("Logged out")}>Logout</button>
+    <div className={styles.navWrapper}>
+        <div className={styles.container}>
+            <div className={styles.logo}>
+                <Link href="/">
+                    <Logo/>
+                </Link>
+            </div>
+
+            <div className={styles.desktopLinks}>
+                <DesktopLinks mode = {mode}/>
+            </div>
+
+            <div className={styles.mobileLinks}>
+                <MobileLinks mode = {mode}/>
+            </div>
+
+            <div className={styles.cta}> 
+            <AuthLoginButton/>
+                <DarkmodeToogle/>
+            </div>
         </div>
     </div>
   )

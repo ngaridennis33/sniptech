@@ -1,0 +1,85 @@
+.navMenu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.navMenuList{
+    list-style: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    width: 100%; 
+    font-weight: bold;
+}
+
+.navMenuItemLink{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.dropMenu{
+    background-color: #07284a;
+    opacity: 0;
+    visibility: hidden;
+    line-height: 45px;
+    min-width: 150px ;
+    top: 12vh;
+    position: absolute;
+    border-radius: 5px;
+    transition: all .5s ease;
+}
+
+.dropMenuItem{
+    width: 100%;
+    list-style: none;
+    color: #fff;
+    font-size: 17px;
+    text-align: center;
+}
+.dropMenuItem:not(:last-child){
+    border-bottom: 1px solid gray;
+}
+.dropMenuItem:hover{
+    text-decoration: underline;
+}
+
+.dropMenuItemLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: inherit;
+}
+.dropMenuItemLink:hover{
+    background-color: red;
+}
+
+.navMenuItem{
+height: 100%;
+padding-bottom: 10px;
+cursor: pointer;
+color: inherit;
+border-bottom: 5px solid transparent;
+}
+
+.navMenuItem:hover{
+    color:#038003;
+    border-bottom: 5px solid red;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.navMenuItem.dark:hover{
+    color: #ffff;
+}
+
+.navMenuItem:hover .dropMenu{
+    top: 10vh;
+    opacity: 1;
+    visibility: visible;
+}
