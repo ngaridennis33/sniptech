@@ -1,0 +1,12 @@
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.icon{
+    cursor: pointer;
+    color: #ffffff;
+}

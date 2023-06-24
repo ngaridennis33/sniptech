@@ -1,12 +1,3 @@
-.ctaButton{
-    padding: 20px;
-    cursor: pointer;
-    background-color: #53c28b;
-    border: none;
-    color: #fff;
-    border-radius: 5px;
-    width: max-content;
-  }
 
   .authLoginButton{
     padding: 10px;
@@ -22,4 +13,19 @@
   }
   .authButton:hover{
     background-color: #45a049;
+  }
+
+  .authLoginButton {  
+    width: 100%;
+  }
+
+
+  .ctaButton{
+    padding: 20px;
+    cursor: pointer;
+    background-color: #53c28b;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    width: max-content;
   }

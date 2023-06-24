@@ -16,7 +16,7 @@ const DesktopLinks = ({mode}) => {
 
             {/* Drop Down Menu */}
             <li className={navMenuItem} id={styles.dropDown}>
-                <span className={styles.navMenuItemLink}>About Us</span>
+                <span className={styles.navMenuItemLink}>About</span>
                 
                 {/* Drop Down */}
                 <ul className={styles.dropMenu}>
