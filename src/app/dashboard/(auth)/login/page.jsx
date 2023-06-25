@@ -4,6 +4,7 @@ import styles from './page.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ThemeContext } from '../../../../../context/ThemeContext'
+import { LogInRegisterBtn } from '@/components /button/Button'
 
 const Login = () => {
   const {mode} = useContext(ThemeContext);
@@ -41,7 +42,7 @@ const Login = () => {
         </div>
 
         <span className='text-link'> Forgot Password? </span>
-        <button className={styles.button}>Continue</button>
+        <LogInRegisterBtn text={"Continue"}/>
       </form>
 
     <div className={styles.register}>

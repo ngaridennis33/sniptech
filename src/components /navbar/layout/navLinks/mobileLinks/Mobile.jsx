@@ -1,10 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import styles from './mobileLinks.module.css'
 import { navLinkData } from '@/components /navbar/navbarData'
 import Dropdown from './dropDown/Dropdown'
 import Link from 'next/link'
+import { HamburgerContext } from '../../../../../../context/HumbergerContext'
 
 const Mobile = () => {
+
+  // HamburgerController
+  const {handleHamburgerClose} = useContext(HamburgerContext)
+
   const [openDropDown, setOpenDropDown] = useState(null)
   const openDropDownHandler = (label)=>{
       if(label === openDropDown) return setOpenDropDown(null);
@@ -14,14 +19,15 @@ const Mobile = () => {
   return (
     <>
       {navLinkData.map(({link, label,tree},index) => {
-      const isOpen = openDropDown === label;
+      const isopen = openDropDown === label;
+      
           return(
           <ul className={styles.navMenu} key = {index}>
-            {link && <li className={styles.navMenuItem}><Link style={{width:"100%", padding:"0 5px"}} href={link}>{label}</Link></li>}
+            {link && <li className={styles.navMenuItem}><Link onClick={handleHamburgerClose} style={{width:"100%", padding:" 5px"}} href={link}>{label} </Link></li>}
             {!link && (<div className={styles.dropdownContainer}onClick={() => openDropDownHandler(label)}>
-              <span className={styles.dropdownLabel} isOpen={isOpen}>{label}</span>
+              <span className={styles.dropdownLabel} dataisopen={isopen.toString()}>{label}</span>
             </div>)}
-            {isOpen && (<Dropdown tree = {tree}/>)}
+            {isopen && (<Dropdown handleHamburgerClose = {handleHamburgerClose} tree = {tree}/>)}
           </ul>
         );
       })}

@@ -5,32 +5,28 @@ import styles from "./navbar.module.css"
 import DarkmodeToogle from '../DarkmodeToggle/DarkmodeToogle'
 import Logo from './layout/logo/Logo'
 import DesktopLinks from './layout/navLinks/deskTop/DesktopLinks'
-import { AuthLoginButton, AuthLogoutButton, AuthRegisterButton } from '../button/Button'
+import { AuthDesktopButton, AuthMobileButton } from '../button/Button'
 import { ThemeContext } from '../../../context/ThemeContext'
 import { Menu, CloseMenu } from '../hamburger/Humberger'
 import Mobile from './layout/navLinks/mobileLinks/Mobile'
 import { useClickOutside } from '@/hooks/hooks'
+import { HamburgerContext } from '../../../context/HumbergerContext'
 
 
 
 const Navbar = () => {
     const {mode} = useContext(ThemeContext);
-    const [navbarOpen,setNavbarOpen] = useState(true);
-    const handleHamburgerClick = () => setNavbarOpen(!navbarOpen);
+    const {navbarOpen,handleHamburgerClose,domNodeClick} = useContext(HamburgerContext);
     const mobileLinks = `${styles.mobileLinks} ${navbarOpen === true ? styles.showMenu : ''}`;
 
 //Toggle hamburger open or close when user clicks outside the menu.
 let domNode = useClickOutside(()=>{
-    setNavbarOpen(false)
+    domNodeClick();
 })
 
 
     // Handle User
-    const [user, setUser] = useState(true);
-    const handleLogout = () => {
-        setUser(!user);
-        // console.log(user)
-    }
+    const user = false;
 
   return (
     <>
@@ -51,23 +47,25 @@ let domNode = useClickOutside(()=>{
 
             {/* Right Section (Desktop View) */}
             <div className={styles.cta}> 
-            {user ? (<Link href="/dashboard/login"><AuthLogoutButton/></Link>):(<Link href="/dashboard/login"><AuthLoginButton/></Link>)}
+            {user ? (<AuthDesktopButton url={"/dashboard/login"} text={"Logout"}/>):(<AuthDesktopButton url={"/dashboard/login"} text = {"Login"}/>)}
                 <DarkmodeToogle/>
             </div>
 
             {/* Mobile View Hamburger */}
-            <div className={styles.mobileHamburgerCotainer} onClick={handleHamburgerClick}>
+            <div className={styles.mobileHamburgerCotainer} onClick={handleHamburgerClose}>
                 {navbarOpen ? <CloseMenu/> : <Menu/>}
             </div>
         </div>
     </div>
 
     {/* Mobile Links */}
-    <div className={mobileLinks} ref={domNode} navbarState = {`${navbarOpen ? "showMenu":""}`}>
+        {navbarOpen ? <div className={styles.overlay}/>:""}
+        <div className={mobileLinks} ref={domNode}>
+        <DarkmodeToogle/>
         <Mobile/>
         <div className={styles.mobileAuth}>
-            {user ? (<Link href="/dashboard/login"><AuthLogoutButton handleLogout={handleLogout}/></Link>):(<Link href="/dashboard/login"><AuthLoginButton/></Link>)}
-            {user ? (""):(<Link href="/dashboard/register"><AuthRegisterButton handleHamburgerClick={handleHamburgerClick}/></Link>)}
+            {user ? (<AuthMobileButton url={"/dashboard/login"} text={"logout"} handleHamburgerClose={handleHamburgerClose} />):(<AuthMobileButton url={"/dashboard/login"} text={"Login"} handleHamburgerClose={handleHamburgerClose}/>)}
+            {user ? (""):(<AuthMobileButton url={"/dashboard/register"} text={"Sign Up"} handleHamburgerClose={handleHamburgerClose}/>)}
         </div>
         
     </div>

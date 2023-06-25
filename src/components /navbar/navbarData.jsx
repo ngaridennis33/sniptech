@@ -42,8 +42,8 @@ export const navLinkData = [
                         branches: null,
                     },
                     {
-                        label: "Return Policy",
-                        link: "/return-policy",
+                        label: "Terms and Conditions",
+                        link: "/terms-and-conditions",
                         branches: null,
                     },
                 ],
@@ -55,11 +55,20 @@ export const navLinkData = [
         link: null,
         tree: [
             {
-                label: "Business and Finance",
+                label: "Financial Services",
                 link: null,
                 branches: [
                     {
-                        label: "Academics",
+                        label: "Reports",
+                        link: "/services/reports",
+                        branches: null,
+                    },{
+                      label: "Presentations",
+                      link: "/services/presentations",
+                      branches: null,
+                  },
+                    {
+                        label: "Academics Services",
                         link: null,
                         branches: [
                             {
@@ -79,21 +88,7 @@ export const navLinkData = [
                             },
                         ],
                     },
-                    {
-                      label: "Reports",
-                      link: "/services/reports",
-                      branches: null,
-                  },{
-                    label: "Presentations",
-                    link: "/services/presentations",
-                    branches: null,
-                },
                 ],
-            },
-            {
-                label: "Essays",
-                link: "/essays",
-                branches: null,
             },
             {
                 label: "Pricing",

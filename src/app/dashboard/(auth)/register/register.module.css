@@ -1,0 +1,15 @@
+.container{
+    padding: 20px 0;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    background-color: #031A31;
+    display: flex;
+    flex-direction: column;
+}
+
+.form{
+    padding: 0px 40px;
+}

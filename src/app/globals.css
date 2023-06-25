@@ -129,6 +129,7 @@ a{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
 .container{
@@ -140,11 +141,10 @@ a{
   justify-content: space-between;
 }
 
+
 @media only screen and (max-width:600px){
   .container {  
-      width: 100%;
       padding: 0;
-      height: 100vh;
       overflow: hidden;
       display: block;
   }

@@ -1,11 +1,13 @@
 import Image from 'next/image'
 import React from 'react'
+import LogoImg from "/public/logo.png"
+import styles from './logo.module.css'
 
 
 const Logo = () => {
   return (
-    <div>
-    <Image width={100} height={100} alt="logoImage" src="/logo.png"/>
+    <div className={styles.logoImageContainer}>
+    <Image src={LogoImg} className={styles.logoImage} alt="logoImage" />
     </div>
   )
 }

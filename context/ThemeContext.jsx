@@ -9,7 +9,8 @@ export const ThemeProvider = ({children})=>{
     const toogle =()=>{
         setMode((prev) => (prev == "dark" ? "light": "dark"));
     };
-    return (<ThemeContext.Provider value={{toogle, mode}}>
+    return (
+    <ThemeContext.Provider value={{toogle, mode}}>
         <div className={`theme ${mode}`}>
         {children}
         </div>

@@ -110,24 +110,6 @@
     background-color: #031A31;
 }
 
-
-
-.button{
-    margin-top: 10px;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    background-color: rgb(3, 128, 3);
-    color: #ffff;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.button:hover{
-    background-color: rgb(3, 144, 3);
-    transition: all .3s ease;
-}
-
 .register{
     display: flex;
     gap: 10px;
@@ -147,8 +129,8 @@ border: 0;
 border-top: 1px solid #d1d0d0;
 }
 .orText{
-    font-size: 14px;
-color: #555353;
+font-size: 14px;
+color: #aeabab;;
 border-radius: 50%;
 border:1px solid #ccc;
 padding: 5px;

@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './page.module.css'
+import Spinner from '@/components /spinner/spinner';
 
 
 export const metadata = {
@@ -9,7 +10,10 @@ export const metadata = {
 
 const About = () => {
   return (
-    <div className={styles.container}>About</div>
+    <div className={styles.container}>
+      {/* <Spinner/> */}
+      About Sniptech
+    </div>
   )
 }
 

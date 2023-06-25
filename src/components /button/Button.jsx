@@ -1,32 +1,47 @@
 import React from 'react'
 import styles from "./button.module.css"
+import Link from 'next/link'
 
 
-// Login User Button and Logic
-export const AuthLoginButton=() => {
+// AuthButton Component on Desktop
+export const AuthDesktopButton=({url, text}) => {
   return (
-    <button className={styles.authLoginButton}> Login </button>
+    <Link className={styles.authLink} href={url}>
+    <button className={styles.authButton}> 
+      {text}
+    </button>
+   </Link>
   )
 }
 
-// Logout User button and logic
-export const AuthLogoutButton=({handleLogout,handleHamburgerClick}) => {
+// AuthButton Component on Mobile
+export const AuthMobileButton=({url, text,handleHamburgerClose}) => {
   return (
-    <button className={styles.authLoginButton} onClick={handleLogout}> Logout </button>
+    <Link className={styles.authLink} href={url}>
+    <button className={styles.authButton} onClick={handleHamburgerClose}> 
+      {text}
+    </button>
+   </Link>
   )
 }
 
-// Register a new user button and Logic
-export const AuthRegisterButton=({handleHamburgerClick}) => {
+// LogIn/Register Button.
+export const LogInRegisterBtn=({text}) => {
   return (
-    <button className={styles.authLoginButton} onClick={handleHamburgerClick} > Register </button>
+    <button className={styles.logInRegisterBtn} > 
+      {text}
+    </button>
   )
 }
+
 
 // Control to action Button and logic
-export const CtaButton = () => {
+export const CtaButton = ({url, text}) => {
   return (
-    <button className={styles.ctaButton}></button>
+      <Link style={{width:"max-content"}} href={url} rel="preload" as="style" >
+        <button className={styles.ctaButton}>{text}
+        </button>
+      </Link>
   )
 }
 

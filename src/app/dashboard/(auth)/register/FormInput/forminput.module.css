@@ -1,0 +1,32 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    position: relative;
+}
+
+.label{
+    color: rgb(193, 180, 180);
+}
+
+.input{
+    background-color: #000C18;
+    cursor: pointer;
+    border:none;
+    outline: none;
+    display: flex;
+    padding: 15px;
+    margin: 5px 0;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+.input::placeholder{
+    color: grey;
+}
+
+.input:focus{
+    border: 2px solid #069317;
+
+}
