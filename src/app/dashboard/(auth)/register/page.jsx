@@ -1,10 +1,16 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import styles from "./register.module.css"
 import FormInput from './FormInput/FormInput'
 import { LogInRegisterBtn } from '@/components /button/Button';
+import Image from 'next/image';
+import Link from 'next/link';
+import { ThemeContext } from '../../../../../context/ThemeContext';
 
-function Register() {
+const Register = () => {
+  const {mode} = useContext(ThemeContext);
+  const containerClass = `${styles.container} ${mode === 'dark' ? styles.dark : ''}`;
+  const socialLogin = `${styles.socialLogin} ${mode === 'dark' ? styles.dark : ''}`;
 
   const [values, setValues] = useState({
     fullName:"",
@@ -90,13 +96,18 @@ const onChange = (e)=>{
 ]
 
   return (
-    <div className={styles.container}>
-              <h1>Snip Tech</h1>
-        <span>Welcome</span>
-        <h2>Enter the following fields</h2>
+    <div className={containerClass}>
+
+      <div className={styles.header}>
+      <Link href="/" className='logoText'>Sniptech</Link>
+        <h3 className='text-heading'>Welcome</h3>
+        <span className={styles.textbody}> Log in to SnipTech to continue to site</span>
+      </div>
+
       <form className={styles.form}>
       {InputData.map((input)=>(
                 <FormInput 
+                mode={mode}
                 names={input.label}
                     key={input.id} 
                     {...input} 
@@ -105,10 +116,23 @@ const onChange = (e)=>{
                     
                  />
                 ))}
-        <LogInRegisterBtn text={"Register"}/>
       </form>
-      <span>or</span>
-      <div>Register with google</div>
+
+      <div className={styles.bottom}>
+        <LogInRegisterBtn text={"Register"}/>
+          {/* Or Container */}
+        <div className={styles.orCont}>
+          <hr className={styles.hr}/>
+          <span className={styles.orText}>OR</span>
+          <hr className={styles.hr}/>
+        </div>
+
+      <div className={socialLogin}>
+        <Image width={20} height={20} src="/5.png" alt="google"  priority={true}/>
+        <span>Continue with Google</span>
+      </div>
+    </div>
+
     </div>
   )
 }

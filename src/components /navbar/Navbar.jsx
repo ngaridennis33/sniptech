@@ -17,7 +17,7 @@ import { HamburgerContext } from '../../../context/HumbergerContext'
 const Navbar = () => {
     const {mode} = useContext(ThemeContext);
     const {navbarOpen,handleHamburgerClose,domNodeClick} = useContext(HamburgerContext);
-    const mobileLinks = `${styles.mobileLinks} ${navbarOpen === true ? styles.showMenu : ''}`;
+    const mobileLinks = (`${styles.mobileLinks} ${mode === 'dark' ? styles.dark : ''}`) && (`${styles.mobileLinks} ${navbarOpen === true ? styles.showMenu : ''}`);
 
 //Toggle hamburger open or close when user clicks outside the menu.
 let domNode = useClickOutside(()=>{
@@ -60,15 +60,15 @@ let domNode = useClickOutside(()=>{
 
     {/* Mobile Links */}
         {navbarOpen ? <div className={styles.overlay}/>:""}
-        <div className={mobileLinks} ref={domNode}>
-        <DarkmodeToogle/>
-        <Mobile/>
-        <div className={styles.mobileAuth}>
-            {user ? (<AuthMobileButton url={"/dashboard/login"} text={"logout"} handleHamburgerClose={handleHamburgerClose} />):(<AuthMobileButton url={"/dashboard/login"} text={"Login"} handleHamburgerClose={handleHamburgerClose}/>)}
-            {user ? (""):(<AuthMobileButton url={"/dashboard/register"} text={"Sign Up"} handleHamburgerClose={handleHamburgerClose}/>)}
+        <div style={{background:`${mode === "dark" ? "#00050a" : "#fff"}`,
+            boxShadow:`${mode === "dark" ? "0 15px 15px rgba(255, 255, 255, 0.15)" : "0 15px 15px rgba(0, 0, 0, 0.972)"}`}} className={mobileLinks} ref={domNode}>
+                <DarkmodeToogle/>
+                <Mobile/>
+                <div className={styles.mobileAuth}>
+                    {user ? (<AuthMobileButton url={"/dashboard/login"} text={"logout"} handleHamburgerClose={handleHamburgerClose} />):(<AuthMobileButton url={"/dashboard/login"} text={"Login"} handleHamburgerClose={handleHamburgerClose}/>)}
+                    {user ? (""):(<AuthMobileButton url={"/dashboard/register"} text={"Sign Up"} handleHamburgerClose={handleHamburgerClose}/>)}
+                </div>
         </div>
-        
-    </div>
     </>
   )
 }

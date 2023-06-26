@@ -16,7 +16,7 @@ const FormInput = (props) => {
 
   return (
     <div className={styles.wrapper}>
-        <label className={styles.label}>{label}</label>
+        <label style={{color:`${props.mode === "dark" ? "rgb(3, 144, 3)" : "blue"}`}} className={styles.label}>{label}</label>
         <input className={styles.input}
         {...inputProps}
         onChange={onChange} 
@@ -24,7 +24,7 @@ const FormInput = (props) => {
         list= {list.toString()}
         onFocus = {()=> inputProps.name === "confirmPassword" && setList(true)}
         />
-        {/* <span className={styles.errorMessage}>{errorMessage}</span> */}
+        <span className={styles.errorMessage}>{errorMessage}</span>
     </div>
   )
 }

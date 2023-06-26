@@ -5,7 +5,8 @@
   font-size: 14px;
   font-weight: bold;
   text-align: center;
-  background-color: #4CAF50; /* Set your desired background color */
+  background-color: rgb(3, 128, 3);
+  /* background-color: #4CAF50; Set your desired background color */
   color: #ffffff; /* Set your desired text color */
   border-radius: 5px;
   border: none;
@@ -41,7 +42,8 @@
   .ctaButton{
     padding: 20px;
     cursor: pointer;
-    background-color: #4CAF50;;
+  background-color: rgb(3, 128, 3);
+    /* background-color: #4CAF50;; */
     border: none;
     color: #fff;
     border-radius: 5px;

@@ -13,7 +13,6 @@
     align-items: center;
     justify-content:space-around;
     width: 100%; 
-    font-weight: bold;
 }
 
 .navMenuItemLink{
@@ -21,11 +20,14 @@
     cursor: pointer;
     width: 100%;
     height: 100%;
+    font-size: 20px;
+    font-weight: 300;
 }
 
 .dropMenu{
     background-color: #07284a;
     opacity: 0;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.972);
     visibility: hidden;
     line-height: 45px;
     min-width: 150px ;
@@ -64,7 +66,7 @@
 height: 100%;
 padding-bottom: 10px;
 cursor: pointer;
-color: inherit;
+color: #000000;
 border-bottom: 5px solid transparent;
 }
 
@@ -75,8 +77,12 @@ border-bottom: 5px solid transparent;
     border-bottom-left-radius: 5px;
 }
 
-.navMenuItem.dark:hover{
+.navMenuItem.dark{
     color: #ffff;
+}
+
+.navMenuItem.dark:hover{
+    color: #038003;
 }
 
 .navMenuItem:hover .dropMenu{

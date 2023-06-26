@@ -8,7 +8,7 @@ import { LogInRegisterBtn } from '@/components /button/Button'
 
 const Login = () => {
   const {mode} = useContext(ThemeContext);
-  const containerClasses = `${styles.container} ${mode === 'dark' ? styles.dark : ''}`;
+  const containerClass = `${styles.container} ${mode === 'dark' ? styles.dark : ''}`;
   const socialLogin = `${styles.socialLogin} ${mode === 'dark' ? styles.dark : ''}`;
   const inputLabel = `${styles.inputLabel} ${mode === 'dark' ? styles.dark : ''}`;
   const inputLabelName = `${styles.inputLabelName} ${mode === 'dark' ? styles.dark : ''}`;
@@ -17,7 +17,7 @@ const Login = () => {
 
   return (
     <div className={styles.wrapper}>
-    <div className={containerClasses}>
+    <div className={containerClass}>
       <div className={styles.header}>
       <Link href="/" className='logoText'>Sniptech</Link>
         <h3 className='text-heading'>Welcome</h3>
@@ -61,6 +61,7 @@ const Login = () => {
       <Image width={20} height={20} src="/5.png" alt="google"  priority={true}/>
       <span>Continue with Google</span>
     </div>
+
     </div>
     </div>
   )

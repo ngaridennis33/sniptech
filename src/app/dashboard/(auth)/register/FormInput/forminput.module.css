@@ -1,17 +1,19 @@
 .wrapper{
     display: flex;
     flex-direction: column;
-    width: 400px;
+    /* width: 400px; */
     position: relative;
 }
 
 .label{
-    color: rgb(193, 180, 180);
+    color: #069317;
 }
 
 .input{
-    background-color: #000C18;
+    background-color: inherit;
+    width: 400px;
     cursor: pointer;
+    color: grey;
     border:none;
     outline: none;
     display: flex;
@@ -19,7 +21,7 @@
     margin: 5px 0;
     font-size: 14px;
     border-radius: 5px;
-    border: 2px solid transparent;
+    border: 1px solid #5e8bb7;
 }
 
 .input::placeholder{
@@ -28,5 +30,20 @@
 
 .input:focus{
     border: 2px solid #069317;
+}
 
+.errorMessage{
+    width: 400px;
+    font-size: 12px;
+    padding: 3px;
+    color: red;
+    display: none;
+}
+
+.input:invalid[list = "true"] ~ .errorMessage{
+    display: block;
+}
+
+.input:invalid[list = "true"]{
+    border: 1px solid red;
 }
