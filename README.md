@@ -4,6 +4,21 @@ Welcome to our sniptech blog site, a professional platform meticulously develope
 # Features
 
 # Installation
+
+### Node and NPM
+The project uses Node Version Manager (NVM) as a tool for managing Node versions on the device.
+* Install nvm
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+```
+* Use NVM to install Node version v16.20.1 and NPM version 8.19.4
+```
+nvm install node v16.20.1
+```
+- Verify installation ``` node -v ``` and ```npm -v ```
+
+### Nextjs
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
