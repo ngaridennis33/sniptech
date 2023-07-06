@@ -2,7 +2,7 @@
     list-style: none;
     width: 100%;
     justify-content: space-between;
-    border-bottom: 2px solid rgb(161, 165, 165);
+    border-bottom: 2px solid rgb(201, 206, 206);
     padding: 5px;
 }
 
@@ -33,6 +33,11 @@
 }
 
 .navMenuItem:hover, .dropdownLabel:hover{
-    background-color:#022343 ;
+    background-color:#c3c0c0 ;
     transition: .3s ease;
 }
+
+.dropdownLabel.dark:hover, .navMenuItem.dark:hover {
+    background-color:#022343;
+}
+

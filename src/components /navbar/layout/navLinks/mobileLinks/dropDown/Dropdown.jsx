@@ -19,7 +19,7 @@ const TreeItem = ({label, children, link,handleHamburgerClose})=>{
 
 }
 
-const Dropdown = ({tree,handleHamburgerClose}) => {
+const Dropdown = ({tree,handleHamburgerClose, mode}) => {
 
 const createTree = (branch) => (
   <TreeItem label={branch.label} link = {branch.link} handleHamburgerClose={handleHamburgerClose}>

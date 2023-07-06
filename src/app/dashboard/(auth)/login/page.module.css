@@ -76,6 +76,10 @@
     transition: all ease;
 }
 
+.input:valid{
+    border: 1px solid green;
+}
+
 .inputLabel{
     position: absolute;
     bottom: 0;

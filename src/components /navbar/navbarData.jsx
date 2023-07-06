@@ -113,7 +113,7 @@ export const navLinkData = [
       link: "/contact",
       tree: null,
   },{
-    label: "blog",
+    label: "Blog",
     link: "/blog",
     tree: null,
 },

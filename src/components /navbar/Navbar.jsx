@@ -36,7 +36,7 @@ let domNode = useClickOutside(()=>{
             {/* left Section */}
             <div className={styles.left}>
                 <Link href="/">
-                    <Logo/>
+                    <Logo mode = {mode}/>
                 </Link>
             </div>
 
@@ -59,11 +59,11 @@ let domNode = useClickOutside(()=>{
     </div>
 
     {/* Mobile Links */}
-        {navbarOpen ? <div className={styles.overlay}/>:""}
+        {navbarOpen ? <div className={"overlay"}/>:""}
         <div style={{background:`${mode === "dark" ? "#00050a" : "#fff"}`,
             boxShadow:`${mode === "dark" ? "0 15px 15px rgba(255, 255, 255, 0.15)" : "0 15px 15px rgba(0, 0, 0, 0.972)"}`}} className={mobileLinks} ref={domNode}>
                 <DarkmodeToogle/>
-                <Mobile/>
+                <Mobile mode = {mode}/>
                 <div className={styles.mobileAuth}>
                     {user ? (<AuthMobileButton url={"/dashboard/login"} text={"logout"} handleHamburgerClose={handleHamburgerClose} />):(<AuthMobileButton url={"/dashboard/login"} text={"Login"} handleHamburgerClose={handleHamburgerClose}/>)}
                     {user ? (""):(<AuthMobileButton url={"/dashboard/register"} text={"Sign Up"} handleHamburgerClose={handleHamburgerClose}/>)}

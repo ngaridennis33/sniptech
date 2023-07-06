@@ -58,8 +58,8 @@
     cursor: pointer;
     border-radius: inherit;
 }
-.dropMenuItemLink:hover{
-    background-color: red;
+.dropMenuItemLink:hover{  
+    background-color: #09345f;
 }
 
 .navMenuItem{

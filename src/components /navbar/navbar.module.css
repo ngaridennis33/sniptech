@@ -2,7 +2,7 @@
     line-height: 65px;
     width: 100%;
     height: 10vh;
-    border-bottom: 1px solid red;
+    /* border-bottom: 1px solid rgb(152, 148, 148); */
 }
 .container{
     height: 100%;
@@ -11,6 +11,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid rgb(152, 148, 148);
+
 }
 @media only screen and (max-width:1000px){
     .container{
@@ -41,25 +43,16 @@
     justify-content: space-around;
 }
 
-.mobileHamburgerCotainer{
-    height: 50px;
-    background-color: rgb(255, 13, 0);
-}
 
 .mobileLinks{
     display: none;
 }
 .mobileHamburgerCotainer{
+    height: 50px;
+    background-color: rgb(255, 13, 0);
     display: none;
 }
 
-.overlay{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: #000C18;
-    opacity: .7;
-}
 
 @media only screen and (max-width:900px){
     .center {  
@@ -97,7 +90,7 @@
         padding: 50px 10px;
         box-shadow: 0 15px 15px rgba(0, 0, 0, 0.972);
         transform: translateX(100%);
-        z-index: 1;
+        z-index: 2;
         transition: .15s ease-in;
         opacity: 1;
     }

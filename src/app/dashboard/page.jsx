@@ -1,33 +1,15 @@
-"use client"
-import React, { useEffect, useState } from 'react'
-import styles from './page.module.css'
+import NavBarDash from '@/components /dashboard/navBarDash/NavBarDash'
+import SideBar from '@/components /dashboard/sideBar/SideBar'
+import React from 'react'
+import styles from "./page.module.css"
 
-const Dashboard = () => {
-  const [data, setData] = useState([])
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
- const getData = async ()=> {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts",{
-    cache: "no-cache"
-  });
-
-  if (!res.ok) {
-    setErr(true)
-  }
-  const data = await res.json();
-
-  setData(data)
-  setIsLoading(false);
- }
- getData();
-  }, []);
-
-  console.log(data)
-
+const DashBoard = () => {
   return (
-    <div>Dashboard</div>
+    <div className={styles.home}>
+      <SideBar/>
+      <div className={styles.homeContainer}> container</div>
+    </div>
   )
 }
 
-export default Dashboard
+export default DashBoard 

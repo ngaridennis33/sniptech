@@ -5,11 +5,13 @@ import Dropdown from './dropDown/Dropdown'
 import Link from 'next/link'
 import { HamburgerContext } from '../../../../../../context/HumbergerContext'
 
-const Mobile = () => {
+const Mobile = ({mode}) => {
+
+  const navMenuItem = (`${styles.navMenuItem} ${mode === 'dark' ? styles.dark : ''}`);
+  const dropdownLabel = (`${styles.dropdownLabel} ${mode === 'dark' ? styles.dark : ''}`);
 
   // HamburgerController
   const {handleHamburgerClose} = useContext(HamburgerContext)
-
   const [openDropDown, setOpenDropDown] = useState(null)
   const openDropDownHandler = (label)=>{
       if(label === openDropDown) return setOpenDropDown(null);
@@ -23,11 +25,11 @@ const Mobile = () => {
       
           return(
           <ul className={styles.navMenu} key = {index}>
-            {link && <li className={styles.navMenuItem}><Link onClick={handleHamburgerClose} style={{width:"100%", padding:" 5px"}} href={link}>{label} </Link></li>}
+            {link && <li className={navMenuItem}><Link onClick={handleHamburgerClose} style={{width:"100%", padding:" 5px"}} href={link}>{label} </Link></li>}
             {!link && (<div className={styles.dropdownContainer}onClick={() => openDropDownHandler(label)}>
-              <span className={styles.dropdownLabel} dataisopen={isopen.toString()}>{label}</span>
+              <span className={dropdownLabel} dataisopen={isopen.toString()}>{label}</span>
             </div>)}
-            {isopen && (<Dropdown handleHamburgerClose = {handleHamburgerClose} tree = {tree}/>)}
+            {isopen && (<Dropdown handleHamburgerClose = {handleHamburgerClose} tree = {tree} mode={mode}/>)}
           </ul>
         );
       })}
