@@ -12,6 +12,8 @@ const Mobile = ({mode}) => {
 
   // HamburgerController
   const {handleHamburgerClose} = useContext(HamburgerContext)
+
+  
   const [openDropDown, setOpenDropDown] = useState(null)
   const openDropDownHandler = (label)=>{
       if(label === openDropDown) return setOpenDropDown(null);

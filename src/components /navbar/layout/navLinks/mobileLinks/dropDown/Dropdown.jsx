@@ -7,6 +7,7 @@ import Link from 'next/link'
 
 const TreeItem = ({label, children, link,handleHamburgerClose})=>{
   const [dataisopen, setIsOpen] = useState(false)
+  console.log(children)
   return(
     <div className={styles.treeItemContainer}>
       {link && (<li className={styles.navMenuItem}><Link onClick={handleHamburgerClose} style={{width:"100%",padding: "0 10px"}}  href={link}>{label}</Link></li>)}

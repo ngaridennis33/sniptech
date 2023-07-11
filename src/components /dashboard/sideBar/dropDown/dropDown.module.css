@@ -1,0 +1,72 @@
+.list{
+    position: relative;
+}
+.listItem{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    gap: 5px;
+}
+.listItem:hover{
+    background: #062e57;
+    border-radius: 5px;
+}
+
+.icon{
+    font-size: 18px;
+    color: #7451f8;
+}
+
+.listItemName{
+    font-size: 13px;
+    font-weight: 600;
+    color: #888;
+}
+
+
+.dropdownCont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    font-size: 18px;
+    color: #7451f8;
+}
+
+.dropdownMunuIcon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    /* transform: rotate(180deg);  */
+    transition: .2s ease;
+}
+
+.treeChildContainer{
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    /* background-color: #042240;; */
+    }
+    
+    .dropdownLabel{
+        font-size: 13px;
+        font-weight: 600;
+        color: #888;
+        cursor: pointer;
+    }
+    .dropdownContainer{
+        background: #031A31;
+        white-space: nowrap;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .dropdownCont:hover{
+        background: #062e57;
+        border-radius: 5px;
+    }
+
+    

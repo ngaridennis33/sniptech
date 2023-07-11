@@ -142,7 +142,7 @@ a{
 
 /* The Entire page */
 .wrapper{
-  /* min-height: 100vh; */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -151,9 +151,9 @@ a{
 
 /* The body Apart from the NavBar and the Footer */
 .container{
-  /* max-width: 1366px; */
-  /* margin: auto; */
-  /* padding: 0 60px; */
+  max-width: 1366px;
+  margin: auto;
+  padding: 0 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
