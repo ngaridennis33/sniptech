@@ -15,24 +15,24 @@ const TreeItem = ({label,icon,link,children})=>{
       };
 
   return(
-    <ul className={styles.list}>
+    <ul>
       {link && (
+          <Link href={link} className={styles.listItemName}>
         <li className={styles.listItem}>
           <div className={styles.icon}>{icon}</div>
-          <Link href={link} className={styles.listItemName}>
             {label}
-          </Link>
         </li>
+          </Link>
       )}
       {!link && (
-        <div className={styles.dropdownCont} onClick={toggleDropdown}>{icon}
+        <li className={styles.dropdownContainer} onClick={toggleDropdown}>{icon}
         <div className={styles.dropdownMunuIcon}>
           <span isdropdownopen={isdropdownopen.toString()} className={styles.dropdownLabel}>
             {label}
           </span>
-          {isdropdownopen ? <KeyboardArrowDownIcon/> : <KeyboardArrowUpIcon className={styles.rotate}/>}
+          {isdropdownopen ? < KeyboardArrowUpIcon  style={{fontSize:"18"}}/> : <KeyboardArrowDownIcon style={{fontSize:"18"}}/>}
         </div>
-          </div>
+        </li>
       )}
       {children && isdropdownopen && <div className={styles.treeChildContainer}>{children}</div>}
     </ul>
@@ -42,7 +42,7 @@ const TreeItem = ({label,icon,link,children})=>{
 
 const Dropdown = ({ tree,children }) => {
     const createTree = (branch) => (
-      <TreeItem label={branch.label} link={branch.link} icon={branch.icon} other={children}>
+      <TreeItem label={branch.label} link={branch.link} icon={branch.icon}>
         {branch.branches?.map((subBranch, index) => (
           <Fragment key={index}>{createTree(subBranch)}</Fragment>
         ))}
@@ -50,7 +50,7 @@ const Dropdown = ({ tree,children }) => {
     );
   
     return (
-      <div className={styles.dropdownContainer}>
+      <div className={styles.container}>
         {tree.map((branch, index) => (
           <Fragment key={index}>{createTree(branch)}</Fragment>))}
       </div>);

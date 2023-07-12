@@ -167,3 +167,19 @@ a{
       display: block;
   }
 }
+
+.modal{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0,0.724);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+  overflow: hidden;
+  /* position: fixed; */
+}

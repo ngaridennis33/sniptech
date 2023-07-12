@@ -1,12 +1,16 @@
-.list{
-    position: relative;
+.container{
+    background: #031A31;
+    white-space: nowrap;
+    padding: 10px;
+    border-radius: 10px;
 }
+
 .listItem{
     display: flex;
     align-items: center;
     padding: 5px;
-    cursor: pointer;
     gap: 5px;
+    cursor: pointer;
 }
 .listItem:hover{
     background: #062e57;
@@ -24,15 +28,26 @@
     color: #888;
 }
 
+.dropdownLabel{
+    font-size: 13px;
+    font-weight: 600;
+    color: #888;
+}
 
-.dropdownCont{
+.dropdownContainer{
     width: 100%;
     display: flex;
     align-items: center;
     gap: 5px;
-    padding: 5px;
+    padding: 10px;
     font-size: 18px;
     color: #7451f8;
+    cursor: pointer;
+}
+
+.dropdownContainer:hover{
+    background: #062e57;
+    border-radius: 5px;
 }
 
 .dropdownMunuIcon{
@@ -40,33 +55,14 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    /* transform: rotate(180deg);  */
-    transition: .2s ease;
 }
 
 .treeChildContainer{
+    width: 100%;
     padding: 5px;
-    margin-top: 10px;
-    margin-left: 10px;
     border-radius: 5px;
-    /* background-color: #042240;; */
+    background-color: #042240;
     }
     
-    .dropdownLabel{
-        font-size: 13px;
-        font-weight: 600;
-        color: #888;
-        cursor: pointer;
-    }
-    .dropdownContainer{
-        background: #031A31;
-        white-space: nowrap;
-        padding: 10px;
-        border-radius: 10px;
-    }
-    .dropdownCont:hover{
-        background: #062e57;
-        border-radius: 5px;
-    }
 
     

@@ -81,15 +81,12 @@ const SideBar = () => {
       <div className={styles.center}>
         {/* Map the Section titles */}
         <div>
-          {dashBoardData.map(({ label, tree,link,icon }, index) => {
-                  const isopen = openDropDown === label;
+          {dashBoardData.map(({ label,tree }, index) => {
             return(
               <div className={styles.container} key={index}>
-              {!link && <div><p className={styles.title}>{label}</p> {icon}</div>}
-              {!link && <div >
-              {!isopen && <Dropdown dataisopen={isopen.toString()} onClick={() => openDropDownHandler(label)} tree={tree} />} </div>
-              }
-            </div>
+                <p className={styles.title}>{label}</p>
+                <Dropdown onClick={() => openDropDownHandler(label)} tree={tree} />
+              </div>
               );
           })}
         </div>

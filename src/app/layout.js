@@ -8,6 +8,7 @@ import {
   HamburgerContext,
   HamburgerProvider,
 } from "../../context/HumbergerContext";
+import Login from "./dashboard/(auth)/login/page";
 
 // Todo Add Roboto font for the Navbar
 const inter = Inter({ subsets: ["latin"] });
@@ -27,6 +28,9 @@ export default function RootLayout({ children }) {
               <Navbar />
               <div className="container">{children}</div>
               <Footer />
+              {/* <div className="modal">
+                <Login />
+              </div> */}
             </div>
           </HamburgerProvider>
         </ThemeProvider>

@@ -18,7 +18,6 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 export const dashBoardData = [
     {
         label: "MAIN",
-        link:null,
         tree:[
             {
                 label:"Dashboard", 
@@ -77,7 +76,6 @@ export const dashBoardData = [
     },
     {
         label: "SERVICE",
-        link:null,
         tree:[
             {
                 label:"System Health", 
