@@ -151,7 +151,8 @@ a{
 
 /* The body Apart from the NavBar and the Footer */
 .container{
-  max-width: 1366px;
+  /* max-width: 1366px; */
+  width: 80vw;
   margin: auto;
   padding: 0 60px;
   display: flex;

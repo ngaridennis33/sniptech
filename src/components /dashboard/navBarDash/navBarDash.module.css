@@ -1,3 +1,96 @@
-.sidebar{
-    
+.navbar{
+    width: 100%;
+    padding: 10px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left{
+        width: 20%;
+        .heading{
+            font-size: 20px;
+            font-weight: bold;
+            color: #6439ff;
+        } 
+    }
+
+    .center{
+        border-radius: 5px;
+        margin: 5px;
+        width: 50%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        border: 1px solid gray;
+        /* justify-content: center; */
+        background-color: rgb(230, 230, 230);
+        .searchinput{
+            border: none;
+            width: 100%;
+            height:100%;
+            outline: none;
+            padding-left: 10px;
+            font-size: 14px;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .searchinput:focus{
+                border: 1px solid rgb(20, 57, 193);
+                transition: all ease;
+                box-shadow: 0px 0px 5px 6px rgba(0,0,0,0.1);
+        }
+        .searchIcon{
+            font-size: 30px;
+            color: #6439ff;
+            cursor: pointer;
+        }
+        
+
+    }
+
+    .right{
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        
+        .user{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .profilepic{
+                width: 26px;
+                height:26px;
+                border-radius: 50%;
+                object-fit: contain;
+            }
+            .username{
+                font-size: 14px;
+                font-weight: bold;
+        
+            }
+        }
+
+        .notification{
+            display: flex;
+            position: relative;
+
+            .number{
+                background-color: red;
+                color: #fff;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 12px;
+            }
+        }
+    }
 }

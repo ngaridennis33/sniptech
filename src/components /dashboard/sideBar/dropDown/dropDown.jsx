@@ -20,7 +20,7 @@ const TreeItem = ({label,icon,link,children})=>{
           <Link href={link} className={styles.listItemName}>
         <li className={styles.listItem}>
           <div className={styles.icon}>{icon}</div>
-            {label}
+          <div>{label}</div>
         </li>
           </Link>
       )}

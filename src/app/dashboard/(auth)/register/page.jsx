@@ -11,6 +11,7 @@ const Register = () => {
   const {mode} = useContext(ThemeContext);
   const containerClass = `${styles.container} ${mode === 'dark' ? styles.dark : ''}`;
   const socialLogin = `${styles.socialLogin} ${mode === 'dark' ? styles.dark : ''}`;
+  const header = `${styles.header} ${mode === 'dark' ? styles.dark : ''}`;
 
   const [values, setValues] = useState({
     fullName:"",
@@ -98,7 +99,7 @@ const onChange = (e)=>{
   return (
     <div className={containerClass}>
 
-      <div className={styles.header}>
+      <div className={header}>
       <Link href="/" className='logoText'>Sniptech</Link>
         <h3 className='text-heading'>Welcome</h3>
         <span className={styles.textbody}> Log in to SnipTech to continue to site</span>

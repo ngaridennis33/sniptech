@@ -13,12 +13,13 @@ const Login = () => {
   const inputLabel = `${styles.inputLabel} ${mode === 'dark' ? styles.dark : ''}`;
   const inputLabelName = `${styles.inputLabelName} ${mode === 'dark' ? styles.dark : ''}`;
   const input = `${styles.input} ${mode === 'dark' ? styles.dark : ''}`;
+  const header = `${styles.header} ${mode === 'dark' ? styles.dark : ''}`;
 
 
   return (
     <div className={styles.wrapper}>
     <div className={containerClass}>
-      <div className={styles.header}>
+      <div className={header}>
       <Link href="/" className='logoText'>Sniptech</Link>
         <h3 className='text-heading'>Welcome</h3>
         <span className={styles.textbody}> Log in to SnipTech to continue to site</span>

@@ -1,6 +1,8 @@
 .sidebar{
     flex: 1;
-    border-right: 0.5px solid rgb(215, 212, 212);
+    border-radius: 3px;
+    border: 1px solid rgb(215, 212, 212); 
+    /* border-right: 0.5px solid rgb(215, 212, 212); */
     min-height: 100vh;
     background-color: #fff;
 
@@ -24,8 +26,12 @@
     border: 0.5px solid rgb(215, 212, 212);
 }
 
+.container:not(:last-child){
+    border-bottom: 1px solid rgb(215, 212, 212);
+}
+
 .center{
-    padding-left: 10px;
+    /* padding-left: 10px; */
 }
 
 .list{
@@ -40,6 +46,7 @@
     color: #999;
     margin-top: 15px;
     margin-bottom: 5px;
+    padding-left: 10px;
 }
 
 

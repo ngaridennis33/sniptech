@@ -75,7 +75,7 @@ const SideBar = () => {
   return (
     <div className={styles.sidebar}>
       <div className={styles.top}>
-        <span className={styles.heading}>DashBoard</span>
+        <span className={styles.heading}>SideBar</span>
       </div>
       <hr className={styles.hr} />
       <div className={styles.center}>
