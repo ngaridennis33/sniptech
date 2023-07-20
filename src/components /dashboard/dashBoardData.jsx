@@ -14,6 +14,9 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeIcon from '@mui/icons-material/LightMode';
+import ContactSupportIcon from '@mui/icons-material/ContactSupport';
+import PolicyIcon from '@mui/icons-material/Policy';
+import SupportIcon from '@mui/icons-material/Support';
 
 export const dashBoardData = [
     {
@@ -95,21 +98,23 @@ export const dashBoardData = [
                         branches:null,
                     },
                     {
-                        label:"Themes", 
-                        icon: <ColorLensIcon/>,
+                        label:"Support", 
+                        icon: <SupportIcon/>,
                         link:null, 
                         branches:[
                             {
-                                label:"Dark", 
-                                icon: <DarkModeIcon/>,
-                                link:"/dashboard/dark", 
+                                label:"Help Center", 
+                                icon: <ContactSupportIcon/>,
+                                link:"/dashboard/help/center",  
                                 branches:null,
+                                toogle:true,
                             },
                             {
-                                label:"Light", 
-                                icon: <LightModeIcon/>,
-                                link:"/dashboard/light", 
+                                label:"Privacy", 
+                                icon: <PolicyIcon/>,
+                                link:"/dashboard/privacy", 
                                 branches: null,
+                                toogle:true,
                             },
                         ] 
                     },

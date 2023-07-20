@@ -5,6 +5,7 @@ import TopBox from '@/components /dashboard/topBox/TopBox';
 import ChartBox from '@/components /dashboard/chatBox/ChartBox';
 import { ChatBoxConversion, ChatBoxProducts, ChatBoxRevenue, barChartRevenue, barChartVisits, chartBoxUser } from '@/components /dashboard/dashBoardData';
 import BarChartBox from '@/components /dashboard/barChartBox/BarChartBox';
+import PieChartBox from '@/components /dashboard/piechartBox/PieChartBox';
 
 const HomePage = () => {
   return (
@@ -14,7 +15,7 @@ const HomePage = () => {
         </div>
         <div className={styles.box} id={styles.box2}><ChartBox {...chartBoxUser}/></div>
         <div className={styles.box} id={styles.box3}><ChartBox {...ChatBoxProducts}/></div>
-        <div className={styles.box} id={styles.box4}>Box 4</div>
+        <div className={styles.box} id={styles.box4}><PieChartBox/></div>
         <div className={styles.box} id={styles.box5}><ChartBox {...ChatBoxConversion}/></div>
         <div className={styles.box} id={styles.box6}><ChartBox {...ChatBoxRevenue}/></div>
         <div className={styles.box} id={styles. box7}>Box7</div>
