@@ -27,7 +27,8 @@ body {
 
 .dark{
   background-color:#000C18;
-  color: #16cd2b;
+  /* color: #16cd2b; */
+  color: #ffff;
 }
 
 .entryTheme{

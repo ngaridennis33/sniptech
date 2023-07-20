@@ -15,8 +15,10 @@ const NavBarDash = () => {
       </div>
 
       <div className={styles.center}>
-        <input className={styles.searchinput} type="text" />
+        <input className={styles.searchinput} placeholder='Search' type="text" />
+        <button className={styles.searchContainerBtn}>
         <SearchIcon className={styles.searchIcon}/>
+        </button>
       </div>
 
       <div className={styles.right}>

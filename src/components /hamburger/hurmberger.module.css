@@ -8,5 +8,6 @@
 
 .icon{
     cursor: pointer;
-    color: #ffffff;
+    font-size: 18px;
+    margin-right: 10px;
 }

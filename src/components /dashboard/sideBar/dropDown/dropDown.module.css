@@ -10,8 +10,10 @@
     padding: 5px;
     gap: 5px;
     cursor: pointer;
+    border-left: 2px solid transparent;
 }
 .listItem:hover{
+    border-left: 2px solid #7451f8;
     background: #e6e1e1;
     border-radius: 3px;
 }
