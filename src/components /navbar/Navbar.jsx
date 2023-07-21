@@ -60,7 +60,7 @@ let domNode = useClickOutside(()=>{
 
     {/* Mobile Links */}
         {navbarOpen ? <div className={"overlay"}/>:""}
-        <div style={{background:`${mode === "dark" ? "#00050a" : "#fff"}`,
+        <div style={{background:`${mode === "dark" ? "#011120" : "#fff"}`,
             boxShadow:`${mode === "dark" ? "0 15px 15px rgba(255, 255, 255, 0.15)" : "0 15px 15px rgba(0, 0, 0, 0.972)"}`}} className={mobileLinks} ref={domNode}>
                 <DarkmodeToogle/>
                 <Mobile mode = {mode}/>

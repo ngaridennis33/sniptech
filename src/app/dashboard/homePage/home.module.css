@@ -1,13 +1,14 @@
 .home{
     display: grid;
     /* height: 100%; */
+    /* width: 100%; */
     gap: 20px;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: minimax(180px, auto);
 
     .box{
-        border-radius: 3px;
-        border: 1px solid #cfcdcd;
+        padding: 10px;
+        border-radius: 5px;
     }
     #box1{
         grid-column: span 1;

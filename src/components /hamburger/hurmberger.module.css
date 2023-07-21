@@ -1,13 +1,23 @@
 .container{
     height: 100%;
+    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    border-radius: 50%;
 }
 
 .icon{
     cursor: pointer;
     font-size: 18px;
-    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.container:hover{
+    color: #fff;
+    background-color:rgba(4, 36, 67, 0.7);
+    transition: all ease .3s;
 }

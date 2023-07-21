@@ -14,23 +14,33 @@ const SideBar = () => {
       setOpenDropDown(label)
   }
 
+  // Dark Theme
+  const style = {
+    backgroundColor:mode === "dark" ? "#021427" : "#FFFF",
+    border:mode === "dark" ? ".5px solid #042141" : "1px solid #cfcdcd"
+  }
+
   return (
-    <div className={styles.sidebar} style={{backgroundColor: mode === "dark" ? "#021427" : "#fff"}}>
+    <div className={styles.sidebar} style={style}>
       <div className={styles.top}>
         <span className={styles.heading}>SideBar</span>
       </div>
-      <hr className={styles.hr} />
+      <hr className={styles.hr} style={style} />
       <div className={styles.center}>
         {/* Map the Section titles */}
         <div>
           {dashBoardData.map(({ label,tree }, index) => {
             return(
-              <div className={styles.container} key={index}>
+              <div className={styles.container} key={index} style={style}>
                 <p className={styles.title}>{label}</p>
                 <Dropdown onClick={() => openDropDownHandler(label)} tree={tree} />
               </div>
               );
           })}
+        </div>
+
+        <div className={styles.profile}>
+          profile
         </div>
       </div>
     </div>

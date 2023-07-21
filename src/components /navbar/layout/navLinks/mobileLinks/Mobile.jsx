@@ -22,14 +22,14 @@ const Mobile = ({mode}) => {
 
   return (
     <>
-      {navLinkData.map(({link, label,tree},index) => {
+      {navLinkData.map(({link, label,tree,icon},index) => {
       const isopen = openDropDown === label;
       
           return(
           <ul className={styles.navMenu} key = {index}>
-            {link && <li className={navMenuItem}><Link onClick={handleHamburgerClose} style={{width:"100%", padding:" 5px"}} href={link}>{label} </Link></li>}
+            {link && <li className={navMenuItem}><Link onClick={handleHamburgerClose} style={{width:"100%", padding:" 5px", display:"flex", gap:"10px", alignItems:"center"}} href={link}><ul className={styles.icon}>{icon}</ul>{label} </Link></li>}
             {!link && (<div className={styles.dropdownContainer}onClick={() => openDropDownHandler(label)}>
-              <span className={dropdownLabel} dataisopen={isopen.toString()}>{label}</span>
+              <span className={dropdownLabel} dataisopen={isopen.toString()} style={{display:"flex", gap:"10px", alignItems:"center"}}><ul className={styles.icon}>{icon}</ul>{label}</span>
             </div>)}
             {isopen && (<Dropdown handleHamburgerClose = {handleHamburgerClose} tree = {tree} mode={mode}/>)}
           </ul>

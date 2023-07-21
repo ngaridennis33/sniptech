@@ -5,6 +5,9 @@
     border-bottom: 2px solid rgb(201, 206, 206);
     padding: 5px;
 }
+.icon{
+    color: #7451F8;
+}
 
 .navMenuItem{
     display: flex;

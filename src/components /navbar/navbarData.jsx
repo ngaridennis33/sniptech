@@ -1,13 +1,23 @@
 //NavBar links for Mobile Devices.
+import HomeIcon from '@mui/icons-material/Home';
+import InfoIcon from '@mui/icons-material/Info';
+import HomeRepairServiceIcon from '@mui/icons-material/HomeRepairService';
+import ContactPageIcon from '@mui/icons-material/ContactPage';
+import RssFeedIcon from '@mui/icons-material/RssFeed';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+
+
 export const navLinkData = [
     {
       label:"Home", 
       link:"/", 
-      tree:"null" 
+      tree:"null",
+      icon:<HomeIcon/>,
     },
     {
         label: "About",
         link: null,
+        icon:<InfoIcon/>,
         tree: [
             {
                 label: "About Us",
@@ -53,6 +63,7 @@ export const navLinkData = [
     {
         label: "Services",
         link: null,
+        icon:<HomeRepairServiceIcon/>,
         tree: [
             {
                 label: "Financial Services",
@@ -111,10 +122,18 @@ export const navLinkData = [
     {
       label: "Contact",
       link: "/contact",
+      icon:<ContactPageIcon/>,
       tree: null,
   },{
     label: "Blog",
     link: "/blog",
+    icon:<RssFeedIcon/>,
     tree: null,
+},
+{
+    label: "Dashboard",
+    link: null,
+    icon:<DashboardIcon/>,
+    link: "/dashboard",
 },
 ];
