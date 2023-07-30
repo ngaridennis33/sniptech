@@ -5,10 +5,10 @@ import CloseIcon from '@mui/icons-material/CloseRounded';
 
 
 // Open Menu Icon
-export const Menu = () =>{
+export const Menu = ({mode}) =>{
+    const container = `${styles.container} ${mode === 'dark' ? styles.dark : ''}`;
     return(
-        <div className={styles.container}>
-            {/* Todo Add the icons  */}
+        <div className={container}>
             <span className={styles.icon}><OpenIcon/></span>
         </div>
     )
@@ -16,10 +16,10 @@ export const Menu = () =>{
 
 
 // Close Menu Icon
-export const CloseMenu = () => {
+export const CloseMenu = ({mode}) => {
+    const container = `${styles.container} ${mode === 'dark' ? styles.dark : ''}`;
   return (
-    <div className={styles.container}>
-            {/* Todo Add the icons  */}
+    <div className={container}>
             <span className={styles.icon}><CloseIcon/></span>
         </div>
   )

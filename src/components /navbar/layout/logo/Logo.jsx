@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import LogoImg from "/public/logo.png"
-import LogoImgDark from "/public/logo2.png"
+import LogoImg from "/public/logoipsum-261.svg"
+import LogoImgDark from "/public/logoipsum-261.svg"
 import styles from './logo.module.css'
 
 

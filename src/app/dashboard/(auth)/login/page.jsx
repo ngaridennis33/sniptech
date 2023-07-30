@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ThemeContext } from '../../../../../context/ThemeContext'
 import { LogInRegisterBtn } from '@/components /button/Button'
+import LogoImg from "/public/logoipsum-261.svg"
 
 const Login = () => {
   const {mode} = useContext(ThemeContext);
@@ -20,7 +21,7 @@ const Login = () => {
     <div className={styles.wrapper}>
     <div className={containerClass}>
       <div className={header}>
-      <Link href="/" className='logoText'>Sniptech</Link>
+      <Link href="/" className='logoText'><Image src={LogoImg} className={styles.logoImage} alt="logoImage" /></Link>
         <h3 className='text-heading'>Welcome</h3>
         <span className={styles.textbody}> Log in to SnipTech to continue to site</span>
       </div>

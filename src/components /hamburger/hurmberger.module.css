@@ -5,6 +5,16 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    background-color:rgba(222, 225, 227, 0.7);
+}
+.container.dark{
+    height: 100%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color:rgba(3, 30, 58, 0.7);
 }
 
 .icon{
@@ -18,6 +28,12 @@
 
 .container:hover{
     color: #fff;
-    background-color:rgba(4, 36, 67, 0.7);
+    background-color:rgba(133, 141, 145, 0.7);
+    transition: all ease .3s;
+}
+
+.container.dark:hover{
+    color: #fff;
+    background-color:rgba(40, 86, 131, 0.7);
     transition: all ease .3s;
 }

@@ -53,7 +53,7 @@ let domNode = useClickOutside(()=>{
 
             {/* Mobile View Hamburger */}
             <div className={styles.mobileHamburgerCotainer} onClick={handleHamburgerClose}>
-                {navbarOpen ? <CloseMenu/> : <Menu/>}
+                {navbarOpen ? <CloseMenu mode = {mode}/> : <Menu mode = {mode}/>}
             </div>
         </div>
     </div>

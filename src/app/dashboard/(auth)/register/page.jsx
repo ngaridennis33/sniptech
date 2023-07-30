@@ -34,16 +34,14 @@ const onChange = (e)=>{
     const InputData=[
       {
       id:1,
-      name:"fullName",
+      name:"userName",
       type:"text",
-      placeholder:"FullName",
-      errorMessage:"* Name should be between 3-16 characters and shouldn't contain any special character!",
-      label:"FullName",
-      pattern:"^[a-zA-Z]{4,}(?: [a-zA-Z]+)?(?: [a-zA-Z]+)?$",
+      placeholder:"UserName",
+      errorMessage:"* UserName should be 3-16 characters and shouldn't include any special characters!",
+      label:"UserName",
+      pattern:"^[A-Za-z0-9]{3,16}$",
       required:true,
-      autoFocus:true,
-      
-      
+
   },
   // {
   //     id:2,
