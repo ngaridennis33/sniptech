@@ -1,74 +1,33 @@
-# Sniptech Blog App
-Welcome to our sniptech blog site, a professional platform meticulously developed using Next.js, Python Flask, and a MySQL database. Leveraging the dynamic capabilities of Next.js on the frontend and the robustness of Flask on the backend, our blog site offers an immersive and seamless experience for both writers and readers. The integr ation with MySQL ensures efficient data storage and retrieval, allowing lightning-fast performance. Join our thriving community, unleash your creativity, and explore the limitless possibilities our blog site has to offer.
+# Next.js Project: Client and Admin Folders
 
-# Features
+This repository contains a Next.js project with separate `client` and `admin` folders. These folders serve distinct purposes within the project.
 
-# Installation
+## Client
 
-### Node and NPM
-The project uses Node Version Manager (NVM) as a tool for managing Node versions on the device.
-* Install nvm
-```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
-```
-* Use NVM to install Node version v16.20.1 and NPM version 8.19.4
-```
-nvm install node v16.20.1
-```
-- Verify installation ``` node -v ``` and ```npm -v ```
+The `client` folder houses the frontend portion of the application. It is responsible for rendering the user interface, handling user interactions, and communicating with the backend APIs or services. Here's a breakdown of what you'll find in the `client` folder:
 
-### Nextjs
+- **Pages**: This is where you define the routes and views of your application. Each `.js` or `.jsx` file within the `pages` directory corresponds to a unique route. You can create dynamic and static pages using Next.js's powerful routing system.
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+- **Components**: Place reusable UI components here. These components can be shared across multiple pages, enhancing consistency and maintainability.
 
-## Getting Started
+- **Styles**: Store your global styles, CSS modules, or styling libraries like SCSS or styled-components in this directory.
 
-First, run the development server:
+- **Public**: Static assets such as images, fonts, and other files can be placed here. They will be accessible directly via URL.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- **Utils**: Utility functions, helper methods, or constants can be organized in this directory for better code organization.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Admin
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+The `admin` folder is dedicated to the administrative panel or backend management of the application. It handles tasks such as managing users, content, settings, and other administrative functions. Here's what you'll typically find in the `admin` folder:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Pages**: Similar to the `client` folder, this is where you can define administrative routes and views. These routes are separate from the client-facing routes and are designed for internal use.
 
-## Learn More
+- **Components**: Admin-specific components that are used to build the admin UI can be placed here. These components might differ in styling and functionality from those in the `client` folder.
 
-To learn more about Next.js, take a look at the following resources:
+- **APIs**: Backend API calls or integrations related to the administrative functions of the application can be managed in this directory.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Auth**: If the admin panel requires authentication, you might find authentication-related code or components here.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Styles**: Admin-specific styles or styling overrides can be stored in this directory.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-# Usage
-
-# Contributing
-Contributions to the Height Collector App are welcome! If you'd like to contribute, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and ensure the app is still functioning correctly.
-4. Write tests for your changes if applicable.
-5. Commit your changes and push them to your fork.
-6. Submit a pull request detailing your changes.
-Please ensure your code follows the existing code style and includes appropriate documentation.
-
-
-# Acknowledgments
-The sniptech App uses the Nextjs and Flask web framework.
-
-
+Remember that the separation of concerns between the `client` and `admin` folders helps maintain a clean and organized codebase. Each folder serves a distinct purpose, making it easier to manage and scale your Next.js project.
