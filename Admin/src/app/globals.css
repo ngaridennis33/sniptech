@@ -1,0 +1,184 @@
+@import 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family:Lato;
+  line-height: 1.6;
+  font-size: 18px;
+  padding:0 20px;
+  height: 100%;
+ }
+
+ ::-webkit-scrollbar{
+  width: 5px;
+ }
+
+ ::-webkit-scrollbar-thumb{
+  background: #6439ff;
+  border-radius: 10px;
+ }
+
+
+ .wrapper{
+  /* background-color: red; */
+ }
+
+ .container{
+  display: flex;
+ }
+
+ .content{
+  flex:6;
+ }
+
+ .theme{
+  transition:1s all ease ;
+ }
+
+.light{
+  background-color: #fffefe;
+  color: #000C18;
+}
+
+.dark{
+  background-color:#000C18;
+  /* color: #16cd2b; */
+  color: #ffff;
+}
+
+.entryTheme{
+  background-color: #011222;
+}
+
+/* Texts */
+
+/* Logo Text */
+
+.logoText {
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: Roboto; 
+}
+/* Main Heading */
+.text-heading {
+  font-family: Montserrat;
+  font-size: 72px;
+  color: transparent;
+  background: linear-gradient(to bottom, #18ca0b, #1d8346);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent transparent;
+  font-size: 2rem;
+  font-weight: bold;
+  /* For main headings or section titles. */
+}
+
+/* Subheading */
+.text-subheading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #666666;
+/* For subheadings or smaller section titles. */
+}
+
+/* Body Text */
+.text-body {
+  font-size: 1rem;
+  color: #444;
+ /*  For regular body text. */ 
+}
+
+/* Caption Text */
+.text-caption {
+  font-size: 0.8rem;
+  color: #777;
+  /* For captions or smaller text accompanying images or figures.*/
+}
+
+/* Emphasized Text */
+.text-emphasis {
+  font-weight: bold;
+  /*  For emphasized or highlighted text. */
+}
+
+/* Link Text */
+.text-link {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: none;
+  /* For text that represents links or clickable elements.*/
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+/* Muted Text */
+.text-muted {
+  color: #888;
+  /* For text that is less important or muted in appearance. */
+}
+
+/* Highlighted Text */
+.text-highlight {
+  background-color: #ffff99;
+  /*  For text that should stand out or be highlighted. */
+}
+
+/* Error Text */
+.text-error {
+  color: #ff0000;
+  /* For text indicating errors or warnings. */
+}
+
+/* Success Text */
+.text-success {
+  color: #008000;
+  /*  For text indicating success or positive feedback */
+}
+
+/* Links Reset */
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* The body Apart from the NavBar and the Footer */
+/* .container{
+  max-width: 1366px;
+  margin: auto;
+  padding: 0 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+
+
+/* @media only screen and (max-width:600px){
+  .container {  
+      padding: 0;
+      overflow: hidden;
+      display: block;
+  }
+} */
+
+.modal{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0,0.724);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+  overflow: hidden;
+  /* position: fixed; */
+}
