@@ -1,0 +1,54 @@
+@import "../../../styles/responsive.scss";
+
+.sidebar{
+    flex: 1;
+    max-height: calc(100vh - 64px);
+    border-radius: 3px;
+    border: 1px solid rgba(4, 33, 65, .7);
+    position: -webkit-sticky;
+    position: sticky;
+    overflow: auto;
+    top: 64px;
+    scrollbar-gutter: stable;
+
+    .top{
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .heading{
+            font-size: 20px;
+            font-weight: bold;
+            color: #6439ff;
+        } 
+    }
+
+    .hr{
+        height:0;
+    }
+    .center{
+
+        .list{
+
+            .container:not(:last-child){
+                border-bottom: 1px solid rgba(4, 33, 65, .7);
+
+                .title{
+                    font-size: 10px;
+                    font-weight: bold;
+                    color: #999;
+                    margin-top: 15px;
+                    margin-bottom: 5px;
+                    padding-left: 10px;
+                    
+                    @include xxl{
+                        display:none;
+                    }
+                }
+            }
+
+        }
+    }
+}
+

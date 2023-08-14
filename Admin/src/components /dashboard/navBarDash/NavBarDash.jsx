@@ -13,7 +13,7 @@ const NavBarDash = () => {
 
     // Configure Theme
     const style = {
-      backgroundColor:mode === "dark" ? "#021427" : "#FFFF",
+      backgroundColor:mode === "dark" ? "#000C18" : "#FFFF",
     }
 
   return (

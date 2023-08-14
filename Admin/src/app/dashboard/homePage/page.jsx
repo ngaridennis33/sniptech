@@ -1,6 +1,6 @@
 "use client"
 import React, { useContext } from 'react'
-import styles from './page.module.css'
+import styles from './page.module.scss'
 import TopBox from '@/components /dashboard/topBox/TopBox';
 import ChartBox from '@/components /dashboard/chatBox/ChartBox';
 import { ChatBoxConversion, ChatBoxProducts, ChatBoxRevenue, barChartRevenue, barChartVisits, chartBoxUser } from '@/components /dashboard/dashBoardData';

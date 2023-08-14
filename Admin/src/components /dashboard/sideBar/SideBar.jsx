@@ -1,6 +1,6 @@
 "use client"
 import React, { useContext, useState } from 'react'
-import styles from './sideBar.module.css'
+import styles from './sideBar.module.scss'
 import { dashBoardData } from '../dashBoardData';
 import Dropdown from './dropDown/dropDown';
 import { ThemeContext } from '../../../../context/ThemeContext';
@@ -17,7 +17,8 @@ const SideBar = () => {
 
   // Dark Theme
   const style = {
-    backgroundColor:mode === "dark" ? "#021427" : "#FFFF"
+    backgroundColor:mode === "dark" ? "#021427" : "#FFFF",
+    border:mode === "dark" ? ".5px solid #042141" : "1px solid #cfcdcd"
   }
 
   return (
@@ -28,7 +29,7 @@ const SideBar = () => {
       <hr className={styles.hr} style={style} />
       <div className={styles.center}>
         {/* Map the Section titles */}
-        <div>
+        <div className={styles.list}>
           {dashBoardData.map(({ label,tree }, index) => {
             return(
               <div className={styles.container} key={index} style={style}>
@@ -38,9 +39,9 @@ const SideBar = () => {
               );
           })}
         </div>
-      </div>
-      <div>
-        <Footer/>
+        <div>
+          <Footer/>
+        </div>
       </div>
     </div>
   );

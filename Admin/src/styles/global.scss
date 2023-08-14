@@ -1,4 +1,6 @@
 @import 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0';
+@import "responsive";
+
 
 * {
   box-sizing: border-box;
@@ -11,8 +13,8 @@ body {
   font-family:Lato;
   line-height: 1.6;
   font-size: 18px;
-  padding:0 20px;
   height: 100%;
+  // background-color: #000C18;
  }
 
  ::-webkit-scrollbar{
@@ -26,10 +28,30 @@ body {
 
 
  .wrapper{
-  /* background-color: red; */
+ @include xxl{
+  background: red;
+ } 
+
+ @include xl{
+  background: green;
+ } 
+
+ @include lg{
+  background: yellow;
+ } 
+
+ @include md{
+  background: blue;
+ } 
+
+ @include sm{
+  background: indigo;
+ } 
+ 
  }
 
  .container{
+  gap: 20px;
   display: flex;
  }
 
@@ -147,25 +169,6 @@ a{
   text-decoration: none;
   color: inherit;
 }
-
-/* The body Apart from the NavBar and the Footer */
-/* .container{
-  max-width: 1366px;
-  margin: auto;
-  padding: 0 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
-
-
-/* @media only screen and (max-width:600px){
-  .container {  
-      padding: 0;
-      overflow: hidden;
-      display: block;
-  }
-} */
 
 .modal{
   position: absolute;

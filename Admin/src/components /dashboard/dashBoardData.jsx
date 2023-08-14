@@ -27,7 +27,6 @@ export const dashBoardData = [
                 label:"Dashboard", 
                 icon: <DashboardIcon/>,
                 link:"/dashboard", 
-                active:false,
                 branches:null,
             },
         ],
@@ -40,28 +39,24 @@ export const dashBoardData = [
                 label:"Users", 
                 icon: <PeopleOutlineRoundedIcon/>,
                 link:"/dashboard/users", 
-                active:false,
                 branches:null,
             },
             {
                 label:"Products", 
                 icon: <Inventory2Icon/>,
                 link:"/dashboard/products", 
-                active:false,
                 branches: null,
             },
             {
                 label:"Orders", 
                 icon: <ViewListIcon/>,
                 link:"/dashboard/orders", 
-                active:false,
                 branches: null,
             },
             {
                 label:"Delivery", 
                 icon: <LocalShippingIcon/>,
                 link:"/dashboard/delivery", 
-                active:false,
                 branches: null,
             },
         ],
@@ -73,14 +68,12 @@ export const dashBoardData = [
                 label:"Stats", 
                 icon: <AnalyticsIcon/>,
                 link:"/dashboard/stats", 
-                active:false,
                 branches: null,
             },
             {
                 label:"Notification", 
                 icon: <NotificationsIcon/>,
                 link:"/dashboard/notification", 
-                active:false,
                 branches: null,
             },
         ],
@@ -92,33 +85,28 @@ export const dashBoardData = [
                 label:"System Health", 
                 icon: <MonitorHeartIcon/>,
                 link:"/dashboard/service", 
-                active:false,
                 branches: null,
             },
             {
                 label:"More", 
                 icon: <MoreHorizIcon/>,
                 link: null, 
-                active:false,
                 branches:[
                     {
                         label:"Settings", 
                         icon: <SettingsIcon/>,
                         link:null, 
-                        active:false,
                         branches:[
                             {
                                 label:"Themes", 
                                 icon: <ColorLensIcon/>,
-                                link:null, 
-                                active:false, 
+                                link:null,  
                                 branches:[
                                     {
                                         label:"", 
                                         icon:<DarkmodeToogle/>, 
                                         link:"#",  
                                         branches:null,
-                                        active:false,
                                         toogle:true,
                                     },
                                 ] 
@@ -127,7 +115,6 @@ export const dashBoardData = [
                                 label:"Privacy", 
                                 icon: <PolicyIcon/>,
                                 link:"/dashboard/privacy", 
-                                active:false,
                                 branches: null,
                                 toogle:true,
                             },
@@ -137,14 +124,12 @@ export const dashBoardData = [
                         label:"Support", 
                         icon: <SupportIcon/>,
                         link:null, 
-                        active:false,
                         branches:[
                             {
                                 label:"Help Center", 
                                 icon: <ContactSupportIcon/>,
                                 link:"/dashboard/help/center",  
                                 branches:null,
-                                active:false,
                                 toogle:true,
                             },
                             {
@@ -152,7 +137,6 @@ export const dashBoardData = [
                                 icon: <PolicyIcon/>,
                                 link:"/dashboard/privacy", 
                                 branches: null,
-                                active:false,
                                 toogle:true,
                             },
                         ] 
@@ -168,14 +152,12 @@ export const dashBoardData = [
                 label:"Profile", 
                 icon: <PersonIcon/>,
                 link:"/dashboard/user", 
-                active:false,
                 branches: null 
             },
             {
                 label:"Logout", 
                 icon: <LogoutIcon/>,
                 link:"/dashboard/logout", 
-                active:false,
                 tree: null, 
             },
         ],

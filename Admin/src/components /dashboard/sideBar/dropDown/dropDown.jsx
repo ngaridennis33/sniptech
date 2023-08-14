@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react'
-import styles from "./dropDown.module.css"
+import styles from "./dropDown.module.scss"
 import Link from 'next/link'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
@@ -15,12 +15,12 @@ const TreeItem = ({label,icon,link,children})=>{
       };
 
   return(
-    <ul>
+    <ul className={styles.list}>
       {link && (
           <Link href={link} className={styles.listItemName}>
         <li className={styles.listItem}>
           <div className={styles.icon}>{icon}</div>
-          <div>{label}</div>
+          <div className={styles.label}>{label}</div>
         </li>
           </Link>
       )}
