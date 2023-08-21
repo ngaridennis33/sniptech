@@ -235,7 +235,7 @@ chartData:[
 
 export const ChatBoxRevenue = {
     color: "#61167a",
-    icon:"/logo.png",
+    icon:"/hero.png",
     title:"Total Products",
     number:"33.12",
     dataKey:"revenue",
@@ -254,7 +254,7 @@ export const ChatBoxRevenue = {
 
 export const ChatBoxProducts = {
     color: "#dad713",
-    icon:"/logo2.png",
+    icon:"/hero.png",
     title:"Total Revenue",
     number:"56.12",
     dataKey:"products",
