@@ -1,6 +1,7 @@
 .wrapper {
     width: 100%;
     display: flex;
+    z-index:2000;
 }
 @media only screen and (max-width:600px){
     .wrapper {  
@@ -43,7 +44,6 @@
 
 .header.dark{
     color: #fff;
-
 }
 
 .form{

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const users = () => {
+const Users = () => {
   return (
     <div>users</div>
   )
 }
 
-export default users
+export default Users

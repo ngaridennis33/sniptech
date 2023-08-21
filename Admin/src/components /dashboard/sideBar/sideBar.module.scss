@@ -10,7 +10,7 @@
     overflow: auto;
     top: 64px;
     scrollbar-gutter: stable;
-
+    width:250px;
     .top{
         height: 50px;
         display: flex;
@@ -31,7 +31,7 @@
 
         .list{
 
-            .container:not(:last-child){
+            .container{
                 border-bottom: 1px solid rgba(4, 33, 65, .7);
 
                 .title{
@@ -41,7 +41,7 @@
                     margin-top: 15px;
                     margin-bottom: 5px;
                     padding-left: 10px;
-                    
+
                     @include xxl{
                         display:none;
                     }

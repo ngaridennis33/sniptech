@@ -6,8 +6,9 @@ const Footer = () => {
 let date =  new Date().getFullYear();
   return (
     <div className={styles.footer}>
-      <span className={styles.footerText}>SnipTechAdmin</span>
-      <span className={styles.footerText}>© Dashboard {date}</span>
+      <span className={styles.footerText}>SnipTech</span>
+      <span className={styles.footerText}>Dashboard</span>
+      <span className={styles.footerText}>© {date}</span>
     </div>
     
   )

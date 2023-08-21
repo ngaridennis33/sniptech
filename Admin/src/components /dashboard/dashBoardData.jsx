@@ -33,7 +33,6 @@ export const dashBoardData = [
     },
     {
         label: "LISTS",
-        link:null,
         tree:[
             {
                 label:"Users", 

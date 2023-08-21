@@ -28,25 +28,25 @@ body {
 
 
  .wrapper{
- @include xxl{
-  background: red;
- } 
+//  @include xxl{
+//   background: red;
+//  } 
 
- @include xl{
-  background: green;
- } 
+//  @include xl{
+//   background: green;
+//  } 
 
- @include lg{
-  background: yellow;
- } 
+//  @include lg{
+//   background: yellow;
+//  } 
 
- @include md{
-  background: blue;
- } 
+//  @include md{
+//   background: blue;
+//  } 
 
- @include sm{
-  background: indigo;
- } 
+//  @include sm{
+//   background: indigo;
+//  } 
  
  }
 
