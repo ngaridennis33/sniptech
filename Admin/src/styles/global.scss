@@ -14,7 +14,7 @@ body {
   line-height: 1.6;
   font-size: 18px;
   height: 100%;
-  // background-color: #000C18;
+  background-color: #000C18;
  }
 
  ::-webkit-scrollbar{
@@ -28,25 +28,27 @@ body {
 
 
  .wrapper{
-//  @include xxl{
-//   background: red;
-//  } 
+  padding:0 40px;
+  
+ @include xxl{
+  padding:0 40px;
+ } 
 
-//  @include xl{
-//   background: green;
-//  } 
+ @include xl{
+  padding:0 30px;
+ } 
 
-//  @include lg{
-//   background: yellow;
-//  } 
+ @include lg{
+  padding:0 20px;
+ } 
 
-//  @include md{
-//   background: blue;
-//  } 
+ @include md{
+  padding:0 10px;
+ } 
 
-//  @include sm{
-//   background: indigo;
-//  } 
+ @include sm{
+  padding:0;
+ } 
  
  }
 
