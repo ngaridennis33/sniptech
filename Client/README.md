@@ -3,6 +3,7 @@ Welcome to our sniptech blog site, a professional platform meticulously develope
 
 # Features
 
+
 # Installation
 
 ### Node and NPM
@@ -69,6 +70,6 @@ Please ensure your code follows the existing code style and includes appropriate
 
 
 # Acknowledgments
-The sniptech App uses the Nextjs and Flask web framework.
+The sniptech App is a server side app that uses the Nextjs  and Flask web framework.
 
 
