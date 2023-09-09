@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import styles from "./desktop.module.css"
+import KeyboardArrowDownSharpIcon from '@mui/icons-material/KeyboardArrowDownSharp';
 
 
 const DesktopLinks = ({mode}) => {
@@ -15,8 +16,12 @@ const DesktopLinks = ({mode}) => {
             </li>
 
             {/* Drop Down Menu */}
-            <li className={navMenuItem} id={styles.dropDown}>
-                <span className={styles.navMenuItemLink}>About</span>
+            <li className={navMenuItem}>
+                <div className={styles.dropDownCont}>
+                    <span className={styles.navMenuItemLink}>About</span>
+                    <KeyboardArrowDownSharpIcon className={styles.dropDownIcon}/>
+                </div>
+                
                 
                 {/* Drop Down */}
                 <ul className={styles.dropMenu}>
@@ -40,24 +45,6 @@ const DesktopLinks = ({mode}) => {
                 <Link href={"/blog"} className={styles.navMenuItemLink}> Blog</Link>
             </li>
 
-            <li className={navMenuItem}>
-                <span className={styles.navMenuItemLink}> Dashboard</span>
-                                {/* Drop Down */}
-                                <ul className={styles.dropMenu}>
-                    <li className={styles.dropMenuItem}>
-                        <Link href={"/dashboard"} className={styles.dropMenuItemLink}>Dashboard </Link>
-                    </li>
-
-                    <li className={styles.dropMenuItem}>
-                        <Link href={"/users"} className={styles.dropMenuItemLink}>Users</Link>
-                    </li>
-
-                    <li className={styles.dropMenuItem}>
-                        <Link href={"/Products"} className={styles.dropMenuItemLink}>Products</Link>
-                    </li>
-                </ul>
-                {/* End of Dropdown */}
-            </li>
 
             <li className={navMenuItem}>
                 <Link href={"/portfolio"} className={styles.navMenuItemLink}> Portfolio</Link>

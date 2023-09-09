@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 import styles from './page.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ThemeContext } from '../../../../../context/ThemeContext'
+import { ThemeContext } from '../../../../context/ThemeContext'
 import { LogInRegisterBtn } from '@/components /button/Button'
 import LogoImg from "/public/logoipsum-261.svg"
 

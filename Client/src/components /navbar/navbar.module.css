@@ -5,41 +5,30 @@
 }
 .container{
     height: 100%;
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgb(152, 148, 148);
-
-}
-@media only screen and (max-width:1000px){
-    .container{
-        width: 100%;
-    }
 }
 
 .left{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10%;
+    width: 20%;
     height: 100%;
 }
 
 .center{
-    width: 50%;
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-    font-weight: 400;
+    width: 60%;
+    height: 100%;
 }
 
 .cta{
-    width: 10%;
+    width: 20%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 10px;
 }
 
 
@@ -52,20 +41,19 @@
 }
 
 
-@media only screen and (max-width:900px){
-    .center {  
-        display: none;
-    }
+@media only screen and (max-width:700px){
     .left {
         width: 30%;
     }
+
+    .center {  
+        display: none;
+    }
+    
     .cta{
         display: none;
     }
 
-    .container{
-        width: 100%;
-    }
     .mobileHamburgerCotainer{
         display: block;
         z-index: 999;

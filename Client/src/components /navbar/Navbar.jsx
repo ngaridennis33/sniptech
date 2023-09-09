@@ -47,8 +47,8 @@ let domNode = useClickOutside(()=>{
 
             {/* Right Section (Desktop View) */}
             <div className={styles.cta}> 
-            {user ? (<AuthDesktopButton url={"/dashboard/login"} text={"Logout"}/>):(<AuthDesktopButton url={"/dashboard/login"} text = {"Login"}/>)}
                 <DarkmodeToogle/>
+                {user ? (<AuthDesktopButton url={"/auth/login"} text={"Logout"}/>):(<AuthDesktopButton url={"/auth/login"} text = {"Login"}/>)}
             </div>
 
             {/* Mobile View Hamburger */}
