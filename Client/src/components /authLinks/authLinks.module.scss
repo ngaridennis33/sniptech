@@ -1,0 +1,22 @@
+.authStatusCont{
+    .authCont{
+        .write{
+            padding:5px;
+            margin-right:5px;
+            border-radius:10px;
+            border: 2px solid gray;
+            &:hover{
+                color:green;
+                border: 2px solid green;
+            }
+
+        }
+        .logout{
+            cursor:pointer;
+            padding:5px;
+            &:hover{
+                color:green;
+            }
+        }
+    }
+}

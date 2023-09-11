@@ -1,19 +1,20 @@
-import "../styles/global.scss"
+import "../styles/global.scss";
 import Navbar from "@/components /navbar/Navbar";
 import { Inter } from "next/font/google";
 
 import Footer from "@/components /footer/Footer";
-import { ThemeProvider } from "../../context/ThemeContext";
+import { ThemeContextProvider } from "../components /context/ThemeContext";
 import {
   HamburgerContext,
   HamburgerProvider,
-} from "../../context/HumbergerContext";
+} from "../components /context/HumbergerContext";
+import ThemeProvider from "@/providers/ThemeProvider";
 
 // Todo Add Roboto font for the Navbar
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "SnipTech", 
+  title: "SnipTech",
   description: "Blog site created using react app",
 };
 
@@ -21,17 +22,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeProvider>
-          <HamburgerProvider>
-            <div className="container">
-              <div className="wrapper">
-                <Navbar/>
-                {children}
-                <Footer/>
+        <ThemeContextProvider>
+          <ThemeProvider>
+            <HamburgerProvider>
+              <div className="container">
+                <div className="wrapper">
+                  <Navbar />
+                  {children}
+                  <Footer />
                 </div>
-            </div>
-          </HamburgerProvider>
-        </ThemeProvider>
+              </div>
+            </HamburgerProvider>
+          </ThemeProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   );

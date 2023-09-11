@@ -3,7 +3,7 @@ import styles from './mobileLinks.module.css'
 import { navLinkData } from '@/components /navbar/navbarData'
 import Dropdown from './dropDown/Dropdown'
 import Link from 'next/link'
-import { HamburgerContext } from '../../../../../../context/HumbergerContext'
+import { HamburgerContext } from '../../../../context/HumbergerContext'
 
 const Mobile = ({mode}) => {
 

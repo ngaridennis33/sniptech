@@ -79,7 +79,7 @@
     
 }
 .input:focus{
-    border: 2px solid rgb(20, 57, 193);
+    border: 1px solid rgb(20, 57, 193);
     transition: all ease;
 }
 
@@ -108,8 +108,8 @@
 .input:valid + .inputLabel .inputLabelName{
     transform: translateY(-70%);
     font-size: 14px;
-    font-weight:700;
-    color: blue;
+    font-weight:500;
+    color: #007bff;
     background-color: #fff;
     padding: 5px;
     left: 5px;

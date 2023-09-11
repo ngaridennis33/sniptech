@@ -1,16 +1,17 @@
 "use client"
 import Link from 'next/link'
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import styles from "./navbar.module.css"
 import DarkmodeToogle from '../DarkmodeToggle/DarkmodeToogle'
 import Logo from './layout/logo/Logo'
 import DesktopLinks from './layout/navLinks/deskTop/DesktopLinks'
-import { AuthDesktopButton, AuthMobileButton } from '../button/Button'
-import { ThemeContext } from '../../../context/ThemeContext'
+import { ThemeContext } from '../context/ThemeContext'
 import { Menu, CloseMenu } from '../hamburger/Humberger'
 import Mobile from './layout/navLinks/mobileLinks/Mobile'
 import { useClickOutside } from '@/hooks/hooks'
-import { HamburgerContext } from '../../../context/HumbergerContext'
+import AuthLinks from '@/components /authLinks/AuthLinks'
+import { HamburgerContext } from '../context/HumbergerContext'
+
 
 
 
@@ -24,9 +25,6 @@ let domNode = useClickOutside(()=>{
     domNodeClick();
 })
 
-
-    // Handle User
-    const user = false;
 
   return (
     <>
@@ -47,8 +45,8 @@ let domNode = useClickOutside(()=>{
 
             {/* Right Section (Desktop View) */}
             <div className={styles.cta}> 
+                <AuthLinks/>
                 <DarkmodeToogle/>
-                {user ? (<AuthDesktopButton url={"/auth/login"} text={"Logout"}/>):(<AuthDesktopButton url={"/auth/login"} text = {"Login"}/>)}
             </div>
 
             {/* Mobile View Hamburger */}
@@ -65,8 +63,7 @@ let domNode = useClickOutside(()=>{
                 <DarkmodeToogle/>
                 <Mobile mode = {mode}/>
                 <div className={styles.mobileAuth}>
-                    {user ? (<AuthMobileButton url={"/dashboard/login"} text={"logout"} handleHamburgerClose={handleHamburgerClose} />):(<AuthMobileButton url={"/dashboard/login"} text={"Login"} handleHamburgerClose={handleHamburgerClose}/>)}
-                    {user ? (""):(<AuthMobileButton url={"/dashboard/register"} text={"Sign Up"} handleHamburgerClose={handleHamburgerClose}/>)}
+                    <AuthLinks handleHamburgerClose={handleHamburgerClose} />
                 </div>
         </div>
     </>

@@ -1,10 +1,18 @@
 @import 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0';
 @import "responsive";
-:root{
-  --bg:white;
-  --textColor:black;
-  --softBg:#f0f0f0;
-  --softTextColor:#626262
+@import "variables";
+.root{
+  background-color:$color-primary-light;
+  color:$color-tertiary-light;
+}
+
+.dark{
+  background-color:$color-primary-dark;
+  color: $color-tertiary-dark;
+}
+
+.theme{
+  transition:1s all ease ;
 }
 
 * {
@@ -47,40 +55,24 @@ a{
 
    @include xl{
     max-width: 1024px; 
+    padding:0 40px;
    }
   
   @include lg{
     max-width: 768px; 
-    padding:40px;
   }
 
   @include md{
-    max-width: 475px; 
+    max-width: 475px;
+    padding:0 20px;
   }
 
   @include sm{
     max-width: 475px; 
+    padding:0 10px;
   }
 }
 
-
- .theme{
-  transition:1s all ease ;
- }
-
-.light{
-  background-color: #fffefe;
-  color: #000C18;
-}
-
-.dark{
-  background-color:#000C18;
-  color: #ffff;
-}
-
-.entryTheme{
-  background-color: #011222;
-}
 
 /* Texts */
 

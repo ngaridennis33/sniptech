@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgb(152, 148, 148);
+    border-bottom: 1px solid #e0dcd1;
 }
 
 .left{
@@ -27,7 +27,7 @@
     width: 20%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
     gap: 10px;
 }
 
@@ -41,9 +41,9 @@
 }
 
 
-@media only screen and (max-width:700px){
+@media only screen and (max-width:768px){
     .left {
-        width: 30%;
+        width: 20%;
     }
 
     .center {  

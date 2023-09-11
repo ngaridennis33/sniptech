@@ -10,7 +10,8 @@
     font-size: 20px;
     display: flex;
     align-items: center;
-    justify-content:space-around;
+    justify-content:flex-end;
+    gap:20px;
     transition: all .5s ease;
 }
 
@@ -30,34 +31,35 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     transition: .3s ease;
 }
 
 .dropMenu{
-    background-color: #07284a;
+    background-color: #ffff;
     opacity: 0;
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.972);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     visibility: hidden;
     line-height: 45px;
     min-width: 150px ;
     top: 12vh;
     position: absolute;
-    border-radius: 5px;
 }
 
 .dropMenuItem{
     width: 100%;
     list-style: none;
-    color: #fff;
     font-size: 17px;
     text-align: center;
+    color:black;
 }
 .dropMenuItem:not(:last-child){
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #e0dcd1;
 }
 .dropMenuItem:hover{
     text-decoration: underline;
+    background-color: #ECECEC;
+    color:#038003;
 }
 
 .dropMenuItemLink{
@@ -65,24 +67,17 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    border-radius: inherit;
-}
-.dropMenuItemLink:hover{  
-    background-color: #09345f;
 }
 
 .navMenuItem{
     height: 100%;
     cursor: pointer;
-    color: #000000;
     border-bottom: 5px solid transparent;
 }
 
 .navMenuItem:hover{
     color:#038003;
-    border-bottom: 5px solid red;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-bottom: 5px solid #038003;
 }
 
 .navMenuItem.dark{

@@ -5,7 +5,7 @@ import FormInput from './FormInput/FormInput'
 import { LogInRegisterBtn } from '@/components /button/Button';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ThemeContext } from '../../../../context/ThemeContext';
+import { ThemeContext } from '../../../components /context/ThemeContext';
 
 const Register = () => {
   const {mode} = useContext(ThemeContext);

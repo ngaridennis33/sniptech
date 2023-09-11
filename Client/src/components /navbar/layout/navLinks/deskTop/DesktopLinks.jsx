@@ -20,7 +20,7 @@ const DesktopLinks = ({mode}) => {
                 <div className={styles.dropDownCont}>
                     <span className={styles.navMenuItemLink}>About</span>
                     <KeyboardArrowDownSharpIcon className={styles.dropDownIcon}/>
-                </div>
+                 </div>
                 
                 
                 {/* Drop Down */}
