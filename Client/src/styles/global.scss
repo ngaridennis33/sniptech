@@ -1,19 +1,7 @@
 @import 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0';
 @import "responsive";
 @import "variables";
-.root{
-  background-color:$color-primary-light;
-  color:$color-tertiary-light;
-}
 
-.dark{
-  background-color:$color-primary-dark;
-  color: $color-tertiary-dark;
-}
-
-.theme{
-  transition:1s all ease ;
-}
 
 * {
   padding: 0;
@@ -40,38 +28,52 @@ a{
 /* The Container holding the body */
 .container{
   min-height: 100vh;
-  color: var(--textColor);
+  // color: var(--textColor);
 }
 
-/* Holds the boy apart from the Nav bar and the Footer*/
+/* Holds the body apart from the Navbar and the Footer*/
 .wrapper{
-  max-width:1536px;
+  min-width:1536px;
   margin:auto;
-  padding:0 80px;
+  padding:0 200px;
 
   @include xxl{
-    max-width: 1366px;
+    min-width: 1366px;
    } 
 
    @include xl{
-    max-width: 1024px; 
+    min-width: 1024px; 
     padding:0 40px;
    }
   
   @include lg{
-    max-width: 768px; 
+    min-width: 768px; 
+    
   }
 
   @include md{
-    max-width: 475px;
+    min-width: 475px;
     padding:0 20px;
   }
 
   @include sm{
-    max-width: 475px; 
+    min-width: 475px; 
     padding:0 10px;
   }
 }
+
+.light{
+  background-color:$color-primary-light;
+  color:$color-secondary-dark;
+  transition:.5s all ease ;
+}
+
+.dark{
+  background-color:$color-primary-dark;
+  color: $color-secondary-light;
+  transition:.5s all ease ;
+}
+
 
 
 /* Texts */

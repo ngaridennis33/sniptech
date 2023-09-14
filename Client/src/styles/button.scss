@@ -1,0 +1,55 @@
+.authLink{
+    display: flex;
+    .authButton{
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        font-weight: 500;
+        text-align: center;
+        background-color: rgb(3, 128, 3);
+        color: #ffffff; /* Set your desired text color */
+        border-radius: 5px;
+        border: none;
+        transition: background-color 0.3s;
+        cursor: pointer;
+
+        &:hover{
+            background-color: #45a049;
+            }
+        }
+
+        .logInRegisterBtn{
+        margin-top: 10px;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        background-color: rgb(3, 128, 3);
+        color: #ffff;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: rgb(3, 144, 3);
+            transition: all .3s ease;
+            }
+        }
+
+
+        .ctaButton{
+            padding: 16px 20px;
+            cursor: pointer;
+            background-color: rgb(3, 128, 3);
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            width: max-content;
+            
+            &:hover{
+                background-color: #45a049;
+            }
+        }
+
+}

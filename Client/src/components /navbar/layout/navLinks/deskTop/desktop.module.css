@@ -12,7 +12,6 @@
     align-items: center;
     justify-content:flex-end;
     gap:20px;
-    transition: all .5s ease;
 }
 
 .navMenuItemLink{
@@ -32,7 +31,6 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
-    transition: .3s ease;
 }
 
 .dropMenu{
@@ -42,8 +40,9 @@
     visibility: hidden;
     line-height: 45px;
     min-width: 150px ;
-    top: 12vh;
+    top: 15vh;
     position: absolute;
+    transition: .3s ease;
 }
 
 .dropMenuItem{
@@ -96,4 +95,11 @@
 
 .navMenuItem:hover .dropDownIcon{
     transform: rotate(180deg);
+}
+
+@media only screen and (max-width:1080px){
+    .navMenuList{
+        justify-content: center;
+    }
+
 }
