@@ -21,6 +21,7 @@
     border-radius: 10px;
 }
 
+
 .container.dark{
     background-color:#031a31; 
 }
@@ -38,12 +39,22 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
     color: #000;
 }
 
 .header.dark{
     color: #fff;
+}
 
+.heading{
+    height:50px;
+    width: 80%;
+    position: relative;
+}
+
+.logoImage{
+    object-fit: cover;
 }
 
 .form{
@@ -76,8 +87,10 @@
     margin-bottom: 10px;
     border-radius: 5px;
     font-size: 14px;
-    
+
 }
+
+
 .input:focus{
     border: 1px solid rgb(20, 57, 193);
     transition: all ease;
@@ -101,7 +114,7 @@
     left: 8px;
     transition: all .3s ease;
     color: grey;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .input:focus + .inputLabel .inputLabelName,

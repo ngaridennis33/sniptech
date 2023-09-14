@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ThemeContext } from '../../../components /context/ThemeContext'
 import { LogInRegisterBtn } from '@/components /button/Button'
-import LogoImg from "/public/sniptech-logos_white.png"
+import LogoImg from "/public/sniptech-logos_transparent.png"
 
 const Login = () => {
   const {mode} = useContext(ThemeContext);
@@ -21,7 +21,10 @@ const Login = () => {
     <div className={styles.wrapper}>
     <div className={containerClass}>
       <div className={header}>
-      <Link href="/" className='logoText'><Image src={LogoImg} className={styles.logoImage} alt="logoImage" /></Link>
+          
+        <div className={styles.heading}>
+      <Link href="/" className='logoText'><Image src={LogoImg} fill className={styles.logoImage} alt="logoImage" /></Link>
+        </div>
         <h3 className='text-heading'>Welcome</h3>
         <span className={styles.textbody}> Log in to SnipTech to continue to site</span>
       </div>
@@ -49,7 +52,7 @@ const Login = () => {
 
     <div className={styles.register}>
       <span> Don&apos;t have an account?</span>
-      <Link className='text-link' href={'/dashboard/register'}>Sign Up</Link>
+      <Link className='text-link' href={'/auth/register'}>Sign Up</Link>
     </div>
 
 {/* Or Container */}

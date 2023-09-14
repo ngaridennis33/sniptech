@@ -5,7 +5,7 @@ import { AuthDesktopButton, AuthMobileButton } from '../button/Button'
 
 const AuthLinks = ({handleHamburgerClose}) => {
     // Temp status
-    const status = "notauuthenticated"
+    const status = "notauthenticated"
 
   return(
   <div className={styles.authStatusCont}>
