@@ -28,7 +28,6 @@ a{
 /* The Container holding the body */
 .container{
   min-height: 100vh;
-  // color: var(--textColor);
 }
 
 /* Holds the body apart from the Navbar and the Footer*/
@@ -36,6 +35,12 @@ a{
   min-width:1536px;
   margin:auto;
   padding:0 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+
 
   @include xxl{
     min-width: 1366px;

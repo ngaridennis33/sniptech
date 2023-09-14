@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ThemeContext } from '../../../components /context/ThemeContext'
 import { LogInRegisterBtn } from '@/components /button/Button'
-import LogoImg from "/public/logoipsum-261.svg"
+import LogoImg from "/public/sniptech-logos_white.png"
 
 const Login = () => {
   const {mode} = useContext(ThemeContext);

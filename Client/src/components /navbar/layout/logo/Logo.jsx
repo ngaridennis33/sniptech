@@ -1,14 +1,14 @@
 import Image from 'next/image'
 import React from 'react'
-import LogoImg from "/public/logoipsum-261.svg"
-import LogoImgDark from "/public/logoipsum-261.svg"
+import LogoImg from "/public/sniptech-logos_transparent.png"
+import LogoImgDark from "/public/sniptech-logos_white.svg"
 import styles from './logo.module.css'
 
 
 const Logo = ({mode}) => {
   return (
     <div className={styles.logoImageContainer}>
-    {mode === "dark" ? (<Image src={LogoImgDark} className={styles.logoImage} alt="logoImage" />):(<Image src={LogoImg} className={styles.logoImage} alt="logoImage" />)}
+    {mode === "dark" ? (<Image src={LogoImgDark} className={styles.logoImage} alt="logoImage" fill />):(<Image src={LogoImg} className={styles.logoImage} alt="logoImage" fill />)}
     </div>
   )
 }
