@@ -1,12 +1,7 @@
 .wrapper{
     display: flex;
     flex-direction: column;
-    /* width: 400px; */
     position: relative;
-}
-
-.label{
-    color: #069317;
 }
 
 .input{
@@ -21,7 +16,7 @@
     margin: 5px 0;
     font-size: 14px;
     border-radius: 5px;
-    border: 1px solid #5e8bb7;
+    border: 1px solid #636364;
 }
 
 .input::placeholder{
@@ -29,7 +24,7 @@
 }
 
 .input:focus{
-    border: 2px solid #069317;
+    border: 1px solid #069317;
 }
 
 .errorMessage{

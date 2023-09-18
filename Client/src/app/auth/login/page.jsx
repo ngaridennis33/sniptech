@@ -10,6 +10,7 @@ import LogoImg from "/public/sniptech-logos_transparent.png"
 const Login = () => {
   const {mode} = useContext(ThemeContext);
   const containerClass = `${styles.container} ${mode === 'dark' ? styles.dark : ''}`;
+  const wrapperClass = `${styles.wrapper} ${mode === 'dark' ? styles.dark : ''}`;
   const socialLogin = `${styles.socialLogin} ${mode === 'dark' ? styles.dark : ''}`;
   const inputLabel = `${styles.inputLabel} ${mode === 'dark' ? styles.dark : ''}`;
   const inputLabelName = `${styles.inputLabelName} ${mode === 'dark' ? styles.dark : ''}`;
@@ -18,15 +19,14 @@ const Login = () => {
 
 
   return (
-    <div className={styles.wrapper}>
+    <div className={wrapperClass}>
     <div className={containerClass}>
       <div className={header}>
           
         <div className={styles.heading}>
       <Link href="/" className='logoText'><Image src={LogoImg} fill className={styles.logoImage} alt="logoImage" /></Link>
         </div>
-        <h3 className='text-heading'>Welcome</h3>
-        <span className={styles.textbody}> Log in to SnipTech to continue to site</span>
+        <h3 className='text-heading'>Sign in to SnipTech</h3>
       </div>
       <form className={styles.form}>
 

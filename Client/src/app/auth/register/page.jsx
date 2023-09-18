@@ -6,10 +6,12 @@ import { LogInRegisterBtn } from '@/components /button/Button';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ThemeContext } from '../../../components /context/ThemeContext';
+import LogoImg from "/public/sniptech-logos_transparent.png"
 
 const Register = () => {
   const {mode} = useContext(ThemeContext);
   const containerClass = `${styles.container} ${mode === 'dark' ? styles.dark : ''}`;
+  const wrapperClass = `${styles.wrapper} ${mode === 'dark' ? styles.dark : ''}`;
   const socialLogin = `${styles.socialLogin} ${mode === 'dark' ? styles.dark : ''}`;
   const header = `${styles.header} ${mode === 'dark' ? styles.dark : ''}`;
 
@@ -95,12 +97,14 @@ const onChange = (e)=>{
 ]
 
   return (
-    <div className={containerClass}>
+    <div className={wrapperClass}>
 
+    <div className={containerClass}>
       <div className={header}>
-      <Link href="/" className='logoText'>Sniptech</Link>
-        <h3 className='text-heading'>Welcome</h3>
-        <span className={styles.textbody}> Log in to SnipTech to continue to site</span>
+      <div className={styles.heading}>
+      <Link href="/" className='logoText'><Image src={LogoImg} fill className={styles.logoImage} alt="logoImage" /></Link>
+        </div>
+        <h3 className='text-heading'>Create your sniptech account</h3>
       </div>
 
       <form className={styles.form}>
@@ -119,6 +123,10 @@ const onChange = (e)=>{
 
       <div className={styles.bottom}>
         <LogInRegisterBtn text={"Register"}/>
+        <div className={styles.login}>
+      <span> Don&apos;t have an account?</span>
+      <Link className='text-link' href={'/auth/login'}>Sign in</Link>
+    </div>
           {/* Or Container */}
         <div className={styles.orCont}>
           <hr className={styles.hr}/>
@@ -133,6 +141,7 @@ const onChange = (e)=>{
     </div>
 
     </div>
+      </div>
   )
 }
 

@@ -16,7 +16,7 @@ const FormInput = (props) => {
 
   return (
     <div className={styles.wrapper}>
-        <label style={{color:`${props.mode === "dark" ? "rgb(3, 144, 3)" : "blue"}`}} className={styles.label}>{label}</label>
+        <label style={{color:`${props.mode === "dark" ? "#fff" : "#232323"}`}} className={styles.label}>{label}</label>
         <input className={styles.input}
         {...inputProps}
         onChange={onChange} 
