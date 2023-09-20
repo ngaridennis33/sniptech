@@ -19,6 +19,11 @@
     border: 1px solid #636364;
 }
 
+.label{
+    font-size: 16px;
+    font-weight: bold;
+}
+
 .input::placeholder{
     color: grey;
 }

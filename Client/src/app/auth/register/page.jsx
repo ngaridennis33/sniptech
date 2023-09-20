@@ -39,7 +39,7 @@ const onChange = (e)=>{
       name:"userName",
       type:"text",
       placeholder:"UserName",
-      errorMessage:"* UserName should be 3-16 characters and shouldn't include any special characters!",
+      errorMessage:"⁕ UserName should be 3-16 characters and shouldn't include any special characters!",
       label:"UserName",
       pattern:"^[A-Za-z0-9]{3,16}$",
       required:true,
@@ -59,7 +59,7 @@ const onChange = (e)=>{
       name:"email",
       type:"email",
       placeholder:"Email",
-      errorMessage:"* Email should be a valid email address!",
+      errorMessage:"⁕ Email should be a valid email address!",
       label:"Email",
       required:true,
   },
@@ -79,7 +79,7 @@ const onChange = (e)=>{
       name:"password",
       type:"password",
       placeholder:"Password",
-      errorMessage:"* Password should be between 8-20 characters. MUST include 1 uppercase and lowe case letter, 1 digit and 1 special character! (eg. asdASD123*)",
+      errorMessage:"⁕ Password should be between 8-20 characters. MUST include 1 uppercase and lowe case letter, 1 digit and 1 special character! (eg. asdASD123*)",
       label:"Password",
       pattern:"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!/@$%^&*-]).{8,20}$",
       required:true,
@@ -89,7 +89,7 @@ const onChange = (e)=>{
       name:"confirmPassword",
       type:"password",
       placeholder:"Confirm Password",
-      errorMessage:"* Passwords DO NOT match!",
+      errorMessage:"⁕ Passwords DO NOT match!",
       label:"ConfirmPassword",
       pattern:values.password,
       required:true,
@@ -102,7 +102,7 @@ const onChange = (e)=>{
     <div className={containerClass}>
       <div className={header}>
       <div className={styles.heading}>
-      <Link href="/" className='logoText'><Image src={LogoImg} fill className={styles.logoImage} alt="logoImage" /></Link>
+      <Link href="/"><Image src={LogoImg} fill className={styles.logoImage} alt="logoImage" /></Link>
         </div>
         <h3 className='text-heading'>Create your sniptech account</h3>
       </div>

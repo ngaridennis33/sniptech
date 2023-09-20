@@ -94,12 +94,11 @@ a{
 .text-heading {
   font-family: Montserrat;
   font-size: 72px;
-  color: transparent;
-  background: linear-gradient(to bottom, #18ca0b, #1d8346);
+  background: linear-gradient(to bottom, #1bd70e, #166c38);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent transparent;
+  -webkit-text-fill-color: transparent;
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
   /* For main headings or section titles. */
 }
 

@@ -25,6 +25,7 @@
 }
 
 .container{
+    border-top: 5px solid rgb(79, 194, 21);
     padding: 0px 40px;
     border-radius: 10px;
     width: max-content;
