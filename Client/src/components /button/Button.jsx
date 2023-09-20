@@ -36,7 +36,7 @@ export const LogInRegisterBtn=({text}) => {
 
 
 // Control to action Button and logic
-export const CtaButton = ({url, text}) => {
+export const CtaButton = () => {
   return (
       <Link style={{width:"max-content"}} href={url} rel="preload" as="style" >
         <button className={styles.ctaButton}>{text}
