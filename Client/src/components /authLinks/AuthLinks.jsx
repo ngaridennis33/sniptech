@@ -9,7 +9,7 @@ const AuthLinks = ({handleHamburgerClose}) => {
 
   return(
   <div className={styles.authStatusCont}>
-    {status === "notauthenticated" ? (
+    {status === "nostauthenticated" ? (
        <AuthDesktopButton url={"/auth/login"} text={"Login"} handleHamburgerClose={handleHamburgerClose}/>
     ):(
     <div className={styles.authCont}>

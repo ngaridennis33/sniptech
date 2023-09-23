@@ -32,7 +32,7 @@ const Login = () => {
 
         {/* Email Container */}
         <div className={styles.inputCont}>
-        <input className={input} style={{ backgroundColor: mode === 'dark' ? '#031a31' : '#fff' }} autoFocus type="text" required/>
+        <input className={input} placeholder="" style={{ backgroundColor: mode === 'dark' ? '#031a31' : '#fff' }} autoFocus type="text " required/>
           <label htmlFor="input" className={inputLabel}>
             <span className={inputLabelName}>Email Address</span>
           </label>

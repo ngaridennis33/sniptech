@@ -1,6 +1,12 @@
+@import "../../styles/responsive.scss";
+
 .container{
     flex: 2;
     margin-top: 60px;
+
+    @include lg{
+        display: none;
+    }
 
     .subTitle{
         color: gray;

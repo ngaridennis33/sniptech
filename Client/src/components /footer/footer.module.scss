@@ -1,0 +1,88 @@
+@import "../../styles/responsive.scss";
+
+.wrapper{
+    width: 100%;
+    margin-top: 50px;
+    padding: 20px 0px;
+
+    .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include md{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+        .info{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            
+            .logoContainer{
+                width: 60%;
+                height: 80px;
+                position: relative;
+
+                @include md{
+                    align-self: center;
+                }
+
+                .logo{
+                    object-fit: cover;
+                }
+            }
+
+            .desc{
+                font-weight: 300;
+            }
+
+            .social{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+
+        }
+
+        .links{
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            gap: 100px;
+            
+            @include lg{
+                gap: 20px;
+            }
+
+            @include md{
+                width: 100%;
+                margin-top: 50px;
+                justify-content: space-between;
+            }
+
+            @include sm{
+                font-size: 14px;
+            }
+
+            .list{
+                display: flex;
+                flex-direction: column;
+                font-weight: 300;
+                gap: 10px;
+
+                .listTitle{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .copyRight{
+        text-align: center;
+        font-weight: 300;
+        font-size: 14px;
+    }
+}

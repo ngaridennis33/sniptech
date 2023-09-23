@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .authLink{
     display: flex;
 
@@ -44,8 +46,9 @@
             cursor: pointer;
             background-color: rgb(3, 128, 3);
             border: none;
-            color: #fff;
+            color: $color-primary-light;
             border-radius: 5px;
+            min-width: 100px;
             width: max-content;
             
             &:hover{

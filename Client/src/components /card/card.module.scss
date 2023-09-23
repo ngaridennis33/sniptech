@@ -1,3 +1,6 @@
+@import "../../styles/responsive.scss";
+
+
 .container{
     margin-bottom: 50px;
     display: flex;
@@ -8,6 +11,10 @@
         flex: 1;
         height: 350px;
         position: relative;
+
+        @include xl{
+            display: none;
+        }
 
         .image{
             object-fit: cover;
