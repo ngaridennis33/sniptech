@@ -4,8 +4,8 @@ import styles from './page.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ThemeContext } from '../../../components /context/ThemeContext'
-import { LogInRegisterBtn } from '@/components /button/Button'
 import LogoImg from "/public/sniptech-logos_transparent.png"
+import AuthLinks from '@/components /authLinks/AuthLinks'
 
 const Login = () => {
   const {mode} = useContext(ThemeContext);
@@ -32,7 +32,7 @@ const Login = () => {
 
         {/* Email Container */}
         <div className={styles.inputCont}>
-        <input className={input} placeholder="" style={{ backgroundColor: mode === 'dark' ? '#031a31' : '#fff' }} autoFocus type="text " required/>
+        <input className={input} style={{ backgroundColor: mode === 'dark' ? '#031a31' : '#fff' }} autoFocus type="email" required/>
           <label htmlFor="input" className={inputLabel}>
             <span className={inputLabelName}>Email Address</span>
           </label>
@@ -47,7 +47,8 @@ const Login = () => {
         </div>
 
         <span className='text-link'> Forgot Password? </span>
-        <LogInRegisterBtn text={"Continue"}/>
+        <AuthLinks/>
+        {/* <Link className={styles.authLink} href="/"><button className={styles.authButton}>Continue</button></Link> */}
       </form>
 
     <div className={styles.register}>

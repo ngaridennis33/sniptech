@@ -2,7 +2,6 @@
 import React, { useContext, useState } from 'react'
 import styles from "./register.module.css"
 import FormInput from './FormInput/FormInput'
-import { LogInRegisterBtn } from '@/components /button/Button';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ThemeContext } from '../../../components /context/ThemeContext';
@@ -117,12 +116,12 @@ const onChange = (e)=>{
                     value={values[input.name]} 
                     onChange={onChange}
                     
-                 />
+                />
                 ))}
       </form>
 
       <div className={styles.bottom}>
-        <LogInRegisterBtn text={"Register"}/>
+        <Link className={styles.authLink} href="auth/register"><button className={styles.authButton}>Register</button> </Link>
         <div className={styles.login}>
       <span> Don&apos;t have an account?</span>
       <Link className='text-link' href={'/auth/login'}>Sign in</Link>

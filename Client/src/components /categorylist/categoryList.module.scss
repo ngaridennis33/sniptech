@@ -1,40 +1,44 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
 .container{
 
     .title{
-        margin: 50px 0;
+        margin: 5rem 0;
     }
 
     .categories{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        gap: 20px;
+        gap: 2rem;
     }
 
     .category{
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 1rem;
         text-transform: capitalize;
         width: 15%;
-        height: 80px;
+        height: 8rem;
         justify-content: center;
-        border-radius: 10px;
-        @media screen and (max-width: 1280px){
+        border-radius: 1rem;
+        color: $color-white;
+        font-size: 1.5rem;
+
+        @include respond(laptop){ 
             width: 20%;
-        }
-
-        @media screen and (max-width: 1024px){
+          }
+        
+          @include respond(tablet){ 
             width: 25%;
-        }
+            background-color: green;
+          }
 
-        @media screen and (max-width: 768px){
-            width: 45%;
-        }
-
-        @media screen and (max-width: 640px){
+          @include respond(phone){ 
             width: 100%;
-        }
+            background-color: green;
+          }
 
         .img{
             border-radius: 50%;
@@ -42,18 +46,18 @@
     }
 
     .category.style{
-        background-color:#57c4ff31 ;
+        background-color:$color-tertiary-6 ;
     }
 
     .category.travel{
-        background-color:#18068b31 ;
+        background-color:$color-tertiary-3 ;
     }
 
     .category.fashion{
-        background-color:#c9134a31 ;
+        background-color: $color-tertiary-4;
     }
 
     .category.tech{
-        background-color:#2db30b3c ;
+        background-color: $color-tertiary-2;
     }
 }

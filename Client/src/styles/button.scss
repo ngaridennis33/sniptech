@@ -6,13 +6,13 @@
     .authButton{
         width: 100%;
         height: 100%;
-        padding: 10px;
-        font-size: 1rem;
+        padding: 1rem;
+        font-size: 1.5rem;
         font-weight: 500;
         text-align: center;
-        background-color: rgb(3, 128, 3);
-        color: #ffffff; /* Set your desired text color */
-        border-radius: 5px;
+        background-color: $color-tertiary-1;
+        color: #ffffff; 
+        border-radius: .5rem;
         border: none;
         transition: background-color 0.3s;
         cursor: pointer;
@@ -22,44 +22,46 @@
             }
         }
 
-        .logInRegisterBtn{
-        margin-top: 10px;
-        padding: 10px;
-        width: 100%;
-        border: none;
-        background-color: rgb(3, 128, 3);
-        color: #ffff;
-        font-size: 1rem;
-        font-weight: 500;
-        border-radius: 5px;
-        cursor: pointer;
-
-        &:hover{
-            background-color: rgb(3, 144, 3);
-            transition: all .3s ease;
-            }
-        }
-
-
         .ctaButton{
-            padding: 16px;
+            padding: 1.6rem;
             cursor: pointer;
-            background-color: rgb(3, 128, 3);
+            background-color: $color-tertiary-1;
             border: none;
-            color: $color-primary-light;
-            border-radius: 5px;
-            min-width: 100px;
+            color: $color-white;
+            border-radius: .5rem;
+            min-width: 10rem;
             width: max-content;
+            font-size: 1.4rem;
             
             &:hover{
                 background-color: #45a049;
             }
         }
 
-        .readmoreLink{
-            border-bottom: 1px solid crimson;
+        .preNxtBtn{
+            padding: 1.6rem;
+            cursor: pointer;
+            background-color: $color-tertiary-3;
+            border: none;
+            color: $color-white;
+            border-radius: .5rem;
+            min-width: 10rem;
             width: max-content;
-            padding: 2px 0px;
+            font-size: 1.4rem;
+            
+            &:hover{
+                background-color: rgb(226, 30, 69);
+            }
+        }
+
+        .readmoreLink{
+            font-size: 1.4rem;
+            outline: none;
+            border: none;
+            background-color: inherit;
+            border-bottom: .1rem solid crimson;
+            width: max-content;
+            padding: .2rem 0rem;
         }
 
 

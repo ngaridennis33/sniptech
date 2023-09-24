@@ -18,7 +18,7 @@ const Card = () => {
                 <h1>Lorem ipsum adipisicing elit. Inventore, corrupti.</h1>
                 </Link>
                 <p className={styles.desc}>Lorem  Saepe tenetur explicabo tempora officia culpa accusamus vero iste sunt quisquam optio?</p>
-                <Link className={styles.link} href="/"> Read More...</Link>
+                <Link className={styles.authLink} href="/"><button className={styles.readmoreLink}> Read More...</button></Link>
             </div>
     </div>
   )

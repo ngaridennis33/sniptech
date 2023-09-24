@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 import styles from './authLinks.module.scss';
-import { AuthDesktopButton, AuthMobileButton } from '../button/Button'
 
 const AuthLinks = ({handleHamburgerClose}) => {
     // Temp status
@@ -9,8 +8,8 @@ const AuthLinks = ({handleHamburgerClose}) => {
 
   return(
   <div className={styles.authStatusCont}>
-    {status === "nostauthenticated" ? (
-       <AuthDesktopButton url={"/auth/login"} text={"Login"} handleHamburgerClose={handleHamburgerClose}/>
+    {status === "notauthenticated" ? (
+      <Link className={styles.authLink} href="/auth/login" ><button className={styles.authButton} onClick={handleHamburgerClose} >Login</button> </Link>
     ):(
     <div className={styles.authCont}>
         <Link href = "/write" className={styles.write}>Write</Link> 

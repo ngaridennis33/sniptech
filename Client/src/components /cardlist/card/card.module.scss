@@ -1,4 +1,5 @@
-@import "../../styles/responsive.scss";
+@import "../../../styles//responsive.scss";
+@import "../../../styles/button.scss";
 
 
 .container{
@@ -12,9 +13,9 @@
         height: 350px;
         position: relative;
 
-        @include xl{
+        @include respond(tablet){ 
             display: none;
-        }
+          }
 
         .image{
             object-fit: cover;
@@ -44,10 +45,5 @@
             font-weight: 300;
         }
 
-        .link{
-            border-bottom: 1px solid crimson;
-            width: max-content;
-            padding: 2px 0px;
-        }
     }
 }

@@ -1,31 +1,29 @@
-
-
-  /***************/
- /* light Theme */
-/***************/
+// colors
 $color-primary-light:#FFFF;
 $color-primary-light-softBg:#ECECEC;
 
-// text
-$color-secondary-dark:#000;
-$color-secondary-light-softBg:#626262;
+
+$color-secondary-dark:#011222;
+$color-secondary-dark-softBg:#031A31;
+
+$color-black:#000;
+$color-grey-dark: #2f2e2e;
+$color-grey-light-1:#626262;
+$color-grey-light-2: #ddd;
+$color-white:#fff;
+
+
+$color-tertiary-1:#038003d9;
+$color-tertiary-2:#BF4080;
+$color-tertiary-3:crimson;
+$color-tertiary-4:#1a51dc;
+$color-tertiary-5:#22AD01;
+$color-tertiary-6:#3a348c;
 
 
 
-  /**************/
- /* Dark Theme */
-/**************/
-$color-primary-dark:#011222;
-$color-primary-dark-softBg:#052c51;
 
-$color-secondary-light:#ddd;
-$color-secondary-dark-softBg:#a6a6a6;
+// DEFAULT FONTSIZE
+$default-font-size:2.6rem;
 
 
-
-// Buttons
-$color-secondary-dark-softBg:#068106;
-
-
-// Beautiful colors
-$color1:#BF4080;

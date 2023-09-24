@@ -1,13 +1,16 @@
+@import "../../styles/button.scss";
+@import "../../styles/variables.scss";
+
 .authStatusCont{
     .authCont{
         .write{
-            padding:5px;
-            margin-right:5px;
-            border-radius:10px;
-            border: 2px solid gray;
+            padding:.5rem;
+            margin-right:.5rem;
+            border-radius:1rem;
+            border: .2rem solid $color-tertiary-3;
             &:hover{
                 color:green;
-                border: 2px solid green;
+                border: .2rem solid green;
             }
             @media only screen and (max-width:768px){
                 display: none;
@@ -17,7 +20,7 @@
         }
         .logout{
             cursor:pointer;
-            padding:5px;
+            padding:.5rem;
             &:hover{
                 color:green;
             }

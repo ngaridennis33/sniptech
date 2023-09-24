@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "./menu.module.scss"
-import MenuPost from '../menuPost/MenuPost'
-import MenuCategories from '../menuCategories/MenuCategories'
+import MenuPost from './menuPost/MenuPost'
+import MenuCategories from './menuCategories/MenuCategories'
 
 const Menu = () => {
   return (
