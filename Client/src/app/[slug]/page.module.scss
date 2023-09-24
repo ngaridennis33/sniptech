@@ -1,0 +1,69 @@
+@import "../../styles/variables.scss";
+
+.container{
+
+    .infoContainer{
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        .textContainer{
+            flex: 1;
+
+            .title{
+                font-size: 6.4rem;
+                margin-bottom: 50px;
+            }
+
+            .user{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                .userImageContainer{
+                    height: 50px;
+                    width: 50px;
+                    position: relative;
+
+                    .avatar{
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                }
+
+                .userTextContainer{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    color: $color-grey-light-1;
+                }
+            }
+        }
+
+        .imageContainer{
+            flex: 1;
+            height: 350px;
+            position: relative;
+
+            .image{
+                object-fit: cover;
+            }
+        }
+    }
+
+    .content{
+        display: flex;
+        gap: 5rem;
+
+        .post{
+            flex: 5;
+            margin-top: 60px;
+
+            .description p{
+                font-size: 2rem;
+                font-weight: 300;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

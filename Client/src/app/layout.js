@@ -4,10 +4,7 @@ import { Inter } from "next/font/google";
 
 import Footer from "@/components /footer/Footer";
 import { ThemeContextProvider } from "../components /context/ThemeContext";
-import {
-  HamburgerContext,
-  HamburgerProvider,
-} from "../components /context/HumbergerContext";
+import { HamburgerProvider } from "../components /context/HumbergerContext";
 import ThemeProvider from "@/providers/ThemeProvider";
 
 // Todo Add Roboto font for the Navbar

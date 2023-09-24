@@ -18,6 +18,7 @@
           }
 
         .image{
+            border-radius: 10px;
             object-fit: cover;
         }
     }
@@ -38,6 +39,9 @@
                 color: crimson;
                 font-weight: 500;
             }
+        }
+        .title{
+            font-size: 2.2rem;
         }
 
         .desc{

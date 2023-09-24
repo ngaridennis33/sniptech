@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import styles from './authLinks.module.scss';
 
+
 const AuthLinks = ({handleHamburgerClose}) => {
     // Temp status
     const status = "notauthenticated"

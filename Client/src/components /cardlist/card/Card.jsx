@@ -15,7 +15,7 @@ const Card = () => {
                     <span className={styles.category}> CULTURE </span>
                 </div>
                 <Link href="/">
-                <h1>Lorem ipsum adipisicing elit. Inventore, corrupti.</h1>
+                <h1 className={styles.title}>Lorem ipsum adipisicing elit. Inventore, corrupti.</h1>
                 </Link>
                 <p className={styles.desc}>Lorem  Saepe tenetur explicabo tempora officia culpa accusamus vero iste sunt quisquam optio?</p>
                 <Link className={styles.authLink} href="/"><button className={styles.readmoreLink}> Read More...</button></Link>
