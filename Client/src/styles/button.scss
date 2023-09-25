@@ -85,3 +85,28 @@
         
     }
 }
+
+.deleteButtons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .cancelButton{
+        padding: 16px 20px;
+        background-color: $color-tertiary-4;
+        color: $color-white;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .confirmButton{
+        padding: 16px 20px;
+        background-color: $color-tertiary-3;
+        color: $color-white;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+    }
+}

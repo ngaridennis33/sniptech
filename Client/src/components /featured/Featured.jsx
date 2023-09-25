@@ -1,9 +1,15 @@
-import React from 'react'
+"use client"
+import React, { useContext } from 'react'
 import styles from "./featured.module.scss"
 import Image from 'next/image'
 import Link from 'next/link'
+// import Delete from '../delete/Delete'
+// import { ModalContext } from '../context/ModalContext'
+// import Modal from '../modal/Modal'
 
 const Featured = () => {
+
+  // const {showModal,handleModalClose,domNodeClick} = useContext(ModalContext);
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>
@@ -19,7 +25,7 @@ const Featured = () => {
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa sed ea provident quia, nulla voluptatem sunt dolores, minima aut corporis id earum molestiae hic eligendi. Quaerat aliquid unde dicta accusamus.
           </p>
           <Link href="/readmore" className={styles.authLink} styles={{width:"maxContent"}}>
-          <button className={styles.ctaButton}>Read More</button>
+          <button className={styles.ctaButton} >Read More</button>
           </Link>
         </div>
       </div>
