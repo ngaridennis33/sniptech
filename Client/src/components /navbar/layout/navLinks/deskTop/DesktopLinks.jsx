@@ -36,10 +36,6 @@ const DesktopLinks = ({mode}) => {
                     <li className={styles.dropMenuItem}>
                         <Link href={"/vision"} className={styles.dropMenuItemLink}>Vision</Link>
                     </li>
-
-                    <li className={styles.dropMenuItem}>
-                        <Link href={"/contact"} className={styles.dropMenuItemLink}>Contact</Link>
-                    </li>
                 </ul>
                 {/* End of Dropdown */}
 
@@ -52,6 +48,10 @@ const DesktopLinks = ({mode}) => {
 
             <li className={navMenuItem}>
                 <Link href={"/portfolio"} className={styles.navMenuItemLink}> Portfolio</Link>
+            </li>
+
+            <li className={navMenuItem}>
+                <Link href={"/contact"} className={styles.navMenuItemLink}> Contact</Link>
             </li>
 
         </ul>

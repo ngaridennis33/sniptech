@@ -10,7 +10,8 @@ const AuthLinks = ({handleHamburgerClose}) => {
   return(
   <div className={styles.authStatusCont}>
     {status === "notauthenticated" ? (
-      <Link className={styles.authLink} href="/auth/login" ><button className={styles.authButton} onClick={handleHamburgerClose} >Login</button> </Link>
+      //  <AuthDesktopButton url={"/auth/login"} text={"Login"} handleHamburgerClose={handleHamburgerClose}/>
+      <Link className={styles.authLink} href="/auth/login" ><button className={styles.authButton}>Login</button> </Link>
     ):(
     <div className={styles.authCont}>
         <Link href = "/write" className={styles.write}>Write</Link> 

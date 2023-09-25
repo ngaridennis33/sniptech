@@ -55,6 +55,7 @@
         }
 
         .readmoreLink{
+            color: inherit;
             font-size: 1.4rem;
             outline: none;
             border: none;
@@ -69,5 +70,18 @@
             }
         }
 
+}
 
+.sendButton{
+    padding: 16px 20px;
+    background-color: $color-tertiary-7;
+    color: $color-white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover{
+        opacity: .8;
+        
+    }
 }

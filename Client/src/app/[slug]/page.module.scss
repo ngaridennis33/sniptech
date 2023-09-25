@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
 
 .container{
 
@@ -12,7 +13,15 @@
 
             .title{
                 font-size: 6.4rem;
-                margin-bottom: 50px;
+                margin-bottom: 5rem;
+
+                @include respond(laptop){
+                    font-size: 5.4rem; 
+                  }
+
+                  @include respond(tablet){
+                    font-size: 4rem; 
+                  }
             }
 
             .user{
@@ -42,10 +51,15 @@
 
         .imageContainer{
             flex: 1;
-            height: 350px;
+            height: 35rem;
             position: relative;
 
+            @include respond(tablet){ //width < 900px
+                display: none; //1rem = 8px, 8/16 = 50%
+              }
+
             .image{
+                border-radius: 5px;
                 object-fit: cover;
             }
         }

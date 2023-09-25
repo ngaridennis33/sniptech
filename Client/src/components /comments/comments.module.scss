@@ -1,0 +1,64 @@
+@import "../../styles/variables.scss";
+@import "../../styles/button.scss";
+
+.container{
+    margin-top:50px;
+
+    .title{
+        color: $color-grey-light-1;
+        margin-bottom: 30px;
+    }
+    .write{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;  
+        
+        .input{
+            padding: 20px;
+            width: 100%;
+        }
+    }
+
+    .comments{
+        margin-top: 50px;
+
+        .comment{
+            margin-bottom: 50px;
+
+            .user{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                margin-bottom: 20px;
+
+                .image{
+                    object-fit: cover;
+                    border-radius: 50%;
+
+                }
+
+                .userInfo{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    color: $color-grey-light-1;
+
+                    .userName{
+                        font-weight: 500;
+                    }
+
+                    .date{
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .description{
+                font-size: 18px;
+                font-weight: 300;
+            }
+        }
+    }
+
+}
