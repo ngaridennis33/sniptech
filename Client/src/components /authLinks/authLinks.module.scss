@@ -2,6 +2,11 @@
 @import "../../styles/variables.scss";
 
 .authStatusCont{
+
+    .button{
+        width: max-content;
+        height: max-content;
+    }
     .authCont{
         .write{
             padding:.5rem;

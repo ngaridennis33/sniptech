@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Link from 'next/link'
 import styles from './authLinks.module.scss';
 
 
-const AuthLinks = ({handleHamburgerClose}) => {
+
+const AuthLinks = ({handleModalClose,handleHamburgerClose}) => {
     // Temp status
     const status = "notauthenticated"
 
   return(
   <div className={styles.authStatusCont}>
     {status === "notauthenticated" ? (
-      <Link className={styles.authLink} href="/auth/login" ><button className={styles.authButton}>Login</button> </Link>
+    <div className={styles.button} onClick={handleHamburgerClose}><button className={styles.action} onClick={handleModalClose} >Login</button></div> 
     ):(
     <div className={styles.authCont}>
         <Link href = "/write" className={styles.write}>Write</Link> 

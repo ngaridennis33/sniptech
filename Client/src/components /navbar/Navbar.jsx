@@ -11,11 +11,15 @@ import Mobile from './layout/navLinks/mobileLinks/Mobile'
 import { useClickOutside } from '@/hooks/hooks'
 import AuthLinks from '@/components /authLinks/AuthLinks'
 import { HamburgerContext } from '../context/HumbergerContext'
+import { ModalContext } from '../context/ModalContext'
+import Modal from '../modal/Modal'
+import SignIn from '../authLinks/signin/Signin'
 
 
 
 
 const Navbar = () => {
+    const {handleModalClose,showModal} = useContext(ModalContext);
     const {mode} = useContext(ThemeContext);
     const {navbarOpen,handleHamburgerClose,domNodeClick} = useContext(HamburgerContext);
     const mobileLinks = (`${styles.mobileLinks} ${mode === 'dark' ? styles.dark : ''}`) && (`${styles.mobileLinks} ${navbarOpen === true ? styles.showMenu : ''}`);
@@ -28,6 +32,11 @@ let domNode = useClickOutside(()=>{
 
   return (
     <>
+         {showModal && 
+          <Modal>
+            <SignIn/>
+          </Modal>
+          }
     <div className={styles.navWrapper}>
         <div className={styles.container}>
 
@@ -45,7 +54,7 @@ let domNode = useClickOutside(()=>{
 
             {/* Right Section (Desktop View) */}
             <div className={styles.cta}> 
-                <AuthLinks/>
+                <AuthLinks handleModalClose={handleModalClose}/>
                 <DarkmodeToogle/>
             </div>
 
@@ -63,7 +72,7 @@ let domNode = useClickOutside(()=>{
                 <DarkmodeToogle/>
                 <Mobile mode = {mode}/>
                 <div className={styles.mobileAuth}>
-                    <AuthLinks handleHamburgerClose={handleHamburgerClose} />
+                    <AuthLinks handleModalClose={handleModalClose} handleHamburgerClose={handleHamburgerClose} />
                 </div>
         </div>
     </>
