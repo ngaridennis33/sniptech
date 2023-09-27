@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
-import styles from "./forminput.module.css"
+import styles from "./forminput.module.scss"
 
 const FormInput = (props) => {
+
+  const inputLabel = `${styles.inputLabel} ${props.mode === 'dark' ? styles.dark : ''}`;
+  const input = `${styles.input} ${props.mode === 'dark' ? styles.dark : ''}`;
 
     // When the user clicks outside the input, validate  their entries.
     // const [focused, setFocused] = useState(false)
@@ -16,8 +19,8 @@ const FormInput = (props) => {
 
   return (
     <div className={styles.wrapper}>
-        <label style={{color:`${props.mode === "dark" ? "#fff" : "#232323"}`}} className={styles.label}>{label}</label>
-        <input className={styles.input}
+        <label className={inputLabel}>{label}</label>
+        <input className={input}
         {...inputProps}
         onChange={onChange} 
         onBlur={handleFocus} 

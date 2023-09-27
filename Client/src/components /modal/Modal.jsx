@@ -13,7 +13,7 @@ const Modal = ({children, title }) => {
     const modal = (`${styles.modal} ${mode === 'dark' ? styles.dark : ''}`);
 
 // Toogle the modal open or close when the user clicks on the Donate button.
-    const {handleModalClose,domNodeClick} = useContext(ModalContext);
+    const {closeModal,domNodeClick} = useContext(ModalContext);
 
 //Toggle Modal open or close when user clicks outside the Modal.
     let domNode = useClickOutside(()=>{
@@ -26,8 +26,8 @@ return(
                 <div className={modal}>
                         <div className={styles.bg}></div>
                     <div className={styles.modalHeader}>
-                        <a  href="#" onClick={handleModalClose}>
-                        ✕
+                        <a  href="#" onClick={closeModal}>
+                        &times;
                         </a>
                     </div>
                     {title && <h1>{title}</h1>}

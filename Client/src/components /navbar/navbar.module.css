@@ -78,7 +78,7 @@
         padding: 50px 10px;
         box-shadow: 0 15px 15px rgba(0, 0, 0, 0.972);
         transform: translateX(100%);
-        z-index: 2;
+        z-index: 1000;
         transition: .15s ease-in;
         opacity: 1;
     }

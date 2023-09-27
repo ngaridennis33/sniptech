@@ -88,6 +88,15 @@ a{
   transition:.5s all ease ;
 }
 
+// Update the Quil editor editor 
+.ql-container{
+  font-size: 28px !important;
+}
+
+.quill > .ql-container > .ql-editor.ql-blank::before{
+  color: $color-grey-light-1;
+}
+
 
 
 /* Texts */

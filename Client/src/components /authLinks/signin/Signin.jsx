@@ -7,7 +7,7 @@ import { ThemeContext } from '../../../components /context/ThemeContext'
 import LogoImg from "/public/sniptech-logos_transparent.png"
 import AuthLinks from '@/components /authLinks/AuthLinks'
 
-const SignIn = () => {
+const SignIn = ({openModal}) => {
   const {mode} = useContext(ThemeContext);
   const containerClass = `${styles.container} ${mode === 'dark' ? styles.dark : ''}`;
   const socialLogin = `${styles.socialLogin} ${mode === 'dark' ? styles.dark : ''}`;
@@ -24,7 +24,7 @@ const SignIn = () => {
         </div>
         <h3 className='text-heading'>Sign in to SnipTech</h3>
       </div>
-      
+
       <form className={styles.form}>
         {/* Email Container */}
         <div className={styles.inputCont}>
@@ -43,13 +43,12 @@ const SignIn = () => {
         </div>
 
         <span className='text-link'> Forgot Password? </span>
-        <AuthLinks/>
-        {/* <Link className={styles.authLink} href="/"><button className={styles.authButton}>Continue</button></Link> */}
+            <button style={{width:"100%"}} className={styles.action}>Login</button>
       </form>
 
     <div className={styles.register}>
-      <span> Don&apos;t have an account?</span>
-      <Link className='text-link' href={'/auth/register'}>Sign Up</Link>
+      <span className={styles.text}> Don&apos;t have an account?</span>
+      <span className="text-link" onClick={()=> openModal("register")}>Sign Up</span>
     </div>
 
 {/* Or Container */}
@@ -68,3 +67,4 @@ const SignIn = () => {
 }
 
 export default SignIn
+
