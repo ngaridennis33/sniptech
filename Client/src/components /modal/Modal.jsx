@@ -21,14 +21,13 @@ const Modal = ({children, title }) => {
     })
 
 return(
-        <div className={styles.modalOverlay} ref={domNode}>
-            <div className={styles.modalWrapper}>
+        <div className={styles.modalOverlay}>
+            <div className={styles.modalWrapper} ref={domNode}>
                 <div className={modal}>
-                        <div className={styles.bg}></div>
                     <div className={styles.modalHeader}>
-                        <a  href="#" onClick={closeModal}>
+                        <span onClick={closeModal} className={styles.x}>
                         &times;
-                        </a>
+                        </span>
                     </div>
                     {title && <h1>{title}</h1>}
                     <div className={styles.modalBody}>{children}</div>

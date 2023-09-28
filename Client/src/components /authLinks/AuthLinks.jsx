@@ -11,8 +11,6 @@ const AuthLinks = ({openModal}) => {
   const {handleHamburgerClose} = useContext(HamburgerContext);
     // Temp status
     const status = "notauthenticated";
-    console.log(openModal)
-    console.log(handleHamburgerClose)
 
   return(
   <div className={styles.authStatusCont}>

@@ -1,16 +1,21 @@
 @import "../../../styles/button.scss";
 @import "../../../styles/variables.scss";
 @import "../../../styles/animation.scss";
+@import "../../../styles/responsive.scss";
 
 .container{
-    padding: 0px 40px;
+    padding: 0px 50px;
     border-radius: 10px;
-    width: max-content;
+    min-width: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center; 
     gap: 10px;
+
+    @include respond(tablet){
+        padding:0;
+      }
 
     .header{
         width: 100%;
@@ -31,8 +36,9 @@
     }
 
     .form{
+        width: 100%;
         -webkit-animation: slit-in-vertical 0.45s ease-out both;
-	        animation: slit-in-vertical 0.45s ease-out both;
+	    animation: slit-in-vertical 0.45s ease-out both;
     }
 
     .bottom{

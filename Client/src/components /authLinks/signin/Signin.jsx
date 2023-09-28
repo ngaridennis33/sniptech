@@ -1,11 +1,9 @@
 "use client" 
 import React, { useContext } from 'react'
 import styles from "./signin.module.scss"
-import Link from 'next/link'
 import Image from 'next/image'
 import { ThemeContext } from '../../../components /context/ThemeContext'
 import LogoImg from "/public/sniptech-logos_transparent.png"
-import AuthLinks from '@/components /authLinks/AuthLinks'
 
 const SignIn = ({openModal}) => {
   const {mode} = useContext(ThemeContext);
