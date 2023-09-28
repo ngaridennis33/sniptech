@@ -1,10 +1,15 @@
 @import "../../../../styles/variables.scss";
 @import "../../../../styles/animation.scss";
+@import "../../../../styles/responsive.scss";
 
 .wrapper{
     display: flex;
     flex-direction: column;
     position: relative;
+
+    @include respond(tablet){
+        width: 100%;
+    }
 
     .inputLabel{
         font-size: 16px;
@@ -18,6 +23,7 @@
     .input{
         background-color: inherit;
         cursor: pointer;
+        width: 400px;
         border:none;
         outline: none;
         display: flex;
@@ -26,6 +32,10 @@
         font-size: 14px;
         border-radius: 5px;
         border: 1px solid $color-grey-light-1;
+
+        @include respond(tablet){
+            width: 350px;
+        }
 
         &::placeholder{
             color: $color-grey-light-1;
