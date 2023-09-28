@@ -21,8 +21,8 @@ const Modal = ({children, title }) => {
     })
 
 return(
-        <div className={styles.modalOverlay}>
-            <div className={styles.modalWrapper} ref={domNode}>
+        <div className={styles.modalOverlay} ref={domNode}>
+            <div className={styles.modalWrapper}>
                 <div className={modal}>
                         <div className={styles.bg}></div>
                     <div className={styles.modalHeader}>
