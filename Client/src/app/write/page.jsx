@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import styles from "./page.module.scss";
 import "react-quill/dist/quill.bubble.css";
 import Image from 'next/image';
-import ReactQuill from 'react-quill';
+// import ReactQuill from 'react-quill';
 
 const WritePage = () => {
 
@@ -35,7 +35,7 @@ const WritePage = () => {
                     </button>
                 </div>
             )}
-            <ReactQuill className={styles.textArea} theme="bubble" value={value} onChange={setValue} placeholder="Tell your story" />
+            {/* <ReactQuill className={styles.textArea} theme="bubble" value={value} onChange={setValue} placeholder="Tell your story" /> */}
         </div>
 
         <button className={styles.publish}>Publish</button>
