@@ -6,7 +6,7 @@ import styles from './authLinks.module.scss';
 
 const AuthLinks = ({openModal,handleHamburgerClose}) => {
     // Temp status
-    const status = "notauthenticated"
+    const status = "notaudthenticated"
 
   return(
   <div className={styles.authStatusCont}>
