@@ -74,7 +74,7 @@ let domNode = useClickOutside(()=>{
                 <DarkmodeToogle/>
                 <Mobile mode = {mode}/>
                 <div className={styles.mobileAuth}>
-                    <AuthLinks handleHamburgerClose={handleHamburgerClose} openModal={openModal} />
+                    <AuthLinks openModal={openModal} />
                 </div>
         </div>
     </>

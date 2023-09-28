@@ -1,13 +1,17 @@
 "use client"
-import React from 'react'
+import React, { useContext } from 'react'
 import Link from 'next/link'
 import styles from './authLinks.module.scss';
+import { HamburgerContext } from '../context/HumbergerContext';
 
 
 
-const AuthLinks = ({openModal,handleHamburgerClose}) => {
+const AuthLinks = ({openModal}) => {
+
+  const {handleHamburgerClose} = useContext(HamburgerContext);
     // Temp status
     const status = "notauthenticated";
+    console.log(openModal)
 
   return(
   <div className={styles.authStatusCont}>
