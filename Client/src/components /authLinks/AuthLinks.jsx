@@ -1,3 +1,4 @@
+"use client"
 import React, { useContext } from 'react'
 import Link from 'next/link'
 import styles from './authLinks.module.scss';
@@ -6,7 +7,7 @@ import styles from './authLinks.module.scss';
 
 const AuthLinks = ({openModal,handleHamburgerClose}) => {
     // Temp status
-    const status = "notaudthenticated"
+    const status = "notaudthenticated";
 
   return(
   <div className={styles.authStatusCont}>
