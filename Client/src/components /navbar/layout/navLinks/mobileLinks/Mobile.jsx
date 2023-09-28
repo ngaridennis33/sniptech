@@ -1,3 +1,4 @@
+"use client"
 import React, { useContext, useState } from 'react'
 import styles from './mobileLinks.module.css'
 import { navLinkData } from '@/components /navbar/navbarData'
