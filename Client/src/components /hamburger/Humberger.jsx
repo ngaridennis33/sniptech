@@ -10,7 +10,7 @@ export const Menu = ({mode}) =>{
     const container = `${styles.container} ${mode === 'dark' ? styles.dark : ''}`;
     return(
         <div className={container}>
-            <span className={styles.icon}><OpenIcon/></span>
+            <span className={styles.icon}><OpenIcon className={styles.icons}/></span>
         </div>
     )
 }

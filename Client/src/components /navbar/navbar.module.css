@@ -14,8 +14,18 @@
 }
 
 .left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 20%;
     height: 100%;
+}
+.logoLink{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .center{
@@ -42,7 +52,7 @@
 
 @media only screen and (max-width:768px){
     .left {
-        width: 20%;
+        width: 50%;
     }
 
     .center {  
@@ -54,8 +64,12 @@
     }
 
     .mobileHamburgerCotainer{
-        display: block;
-        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 50%;
+        height: 100%;
+        z-index: 1000;
     }
     .mobileAuth{
         margin: 10px auto;
@@ -78,7 +92,7 @@
         padding: 50px 10px;
         box-shadow: 0 15px 15px rgba(0, 0, 0, 0.972);
         transform: translateX(100%);
-        z-index: 1000;
+        z-index: 999;
         transition: .15s ease-in;
         opacity: 1;
     }

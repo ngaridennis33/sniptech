@@ -78,6 +78,7 @@
 
 .navMenuItem:hover{
     color:#038003;
+    border-radius: 5px;
     border-bottom: 5px solid #038003;
 }
 

@@ -44,7 +44,7 @@ let domNode = useClickOutside(()=>{
 
             {/* left Section */}
             <div className={styles.left}>
-                <Link href="/">
+                <Link href="/" className={styles.logoLink}>
                     <Logo mode = {mode}/>
                 </Link>
             </div>

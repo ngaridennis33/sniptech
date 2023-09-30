@@ -1,6 +1,5 @@
-"use client"
 import React, { useContext, useState } from 'react'
-import styles from './mobileLinks.module.css'
+import styles from './mobileLinks.module.scss'
 import { navLinkData } from '@/components /navbar/navbarData'
 import Dropdown from './dropDown/Dropdown'
 import Link from 'next/link'
@@ -28,9 +27,9 @@ const Mobile = ({mode}) => {
       
           return(
           <ul className={styles.navMenu} key = {index}>
-            {link && <li className={navMenuItem}><Link onClick={handleHamburgerClose} style={{width:"100%", padding:" 5px", display:"flex", gap:"10px", alignItems:"center"}} href={link}><ul className={styles.icon}>{icon}</ul>{label} </Link></li>}
+            {link && <li className={navMenuItem}><Link onClick={handleHamburgerClose} href={link}>{label}</Link></li>}
             {!link && (<div className={styles.dropdownContainer}onClick={() => openDropDownHandler(label)}>
-              <span className={dropdownLabel} dataisopen={isopen.toString()} style={{display:"flex", gap:"10px", alignItems:"center"}}><ul className={styles.icon}>{icon}</ul>{label}</span>
+              <span className={dropdownLabel} dataisopen={isopen.toString()}>{label}</span>
             </div>)}
             {isopen && (<Dropdown handleHamburgerClose = {handleHamburgerClose} tree = {tree} mode={mode}/>)}
           </ul>
