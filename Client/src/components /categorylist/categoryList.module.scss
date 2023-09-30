@@ -6,6 +6,28 @@
     .title{
         margin: 5rem 0;
         font-size: 3.2rem;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 12px 25px 10px 25px;
+        position: relative;
+        display: inline-block;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        background: #ed6663;
+        border-radius: 3px 3px 0 0 ;
+
+        &::after{
+            content: "";
+            height: 1px;
+            width: 1px;
+            border-style: solid;
+            border-width: 5px;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            border-color: #d95451 #d95451 transparent transparent;
+        }
     }
 
     .categories{

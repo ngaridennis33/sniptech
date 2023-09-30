@@ -35,7 +35,7 @@ let domNode = useClickOutside(()=>{
   return (
     <>
     {isModalOpen &&
-         <Modal>
+         <Modal isModalOpen={isModalOpen}>
             {modalContent === "login" ? <SignIn openModal={openModal}/> : <Register openModal={openModal}/>}
          </Modal>
         }

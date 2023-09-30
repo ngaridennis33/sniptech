@@ -86,7 +86,7 @@ const Register = ({openModal}) => {
     
           <form className={styles.form}>
           {InputData.map((input)=>(
-                    <FormInput 
+                  <FormInput 
                     mode={mode}
                     names={input.label}
                         key={input.id} 

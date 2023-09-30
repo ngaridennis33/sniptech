@@ -19,9 +19,11 @@
 
     .modalWrapper {
         color: $color-white;
-        width: max-content;
+        min-width: 400px;;
         height: max-content;
         position: relative;
+        -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: scale-in-center .3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         @include respond(phone){ //width < 900px
             width: 100%;
             height: 100vh;
@@ -39,8 +41,6 @@
             padding: 15px;
             color:#011d3c;
             box-sizing: border-box;
-            -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-            animation: scale-in-center .3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
             &.close{
                 -webkit-animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -71,6 +71,8 @@
 
                     &:hover{
                         color: $color-tertiary-3;
+                        transform: scale(1.3);
+                        font-weight: 500;
                     }
                 }
 

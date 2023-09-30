@@ -61,6 +61,15 @@
                     position: relative;
                     transition: .3s ease;
 
+                    
+                    .icon{
+                        transition: .3s ease;
+                    }
+
+                    .icon:hover{
+                        transform: scale(1.2);
+                    }
+
                     .tooltip{
                         visibility: hidden;
                         font-size: 14px;
@@ -89,7 +98,7 @@
                     visibility: visible;
                 }
                 &:hover{
-                    transform: scale(1.1);
+                    border-color: green;
                 }
             }
         }

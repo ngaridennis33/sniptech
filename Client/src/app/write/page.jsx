@@ -20,16 +20,16 @@ const WritePage = () => {
             {open && (
                 <div className={styles.add}>
                     <button className={styles.addButton}>
-                        <Image src = "/images.svg" width={25} height={25} alt ="" />
+                        <Image src = "/images.svg" width={25} height={25} alt ="" className={styles.icon} />
                         <span className={styles.tooltip}>Images</span>
                     </button>
                     <button className={styles.addButton}>
-                        <Image src = "/new-tab.svg" width={25} height={25} alt ="" />
+                        <Image src = "/new-tab.svg" width={25} height={25} alt ="" className={styles.icon}/>
                         <span className={styles.tooltip}>New tab</span>
 
                     </button>
                     <button className={styles.addButton}>
-                        <Image src = "/play.svg" width={25} height={25} alt ="" />
+                        <Image src = "/play.svg" width={25} height={25} alt ="" className={styles.icon}/>
                         <span className={styles.tooltip}>Video</span>
 
                     </button>
