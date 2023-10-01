@@ -2,6 +2,7 @@
 @import "../../styles/responsive.scss";
 
 .container{
+    border-top: 1px solid;
 
     .title{
         margin: 5rem 0;
@@ -36,21 +37,61 @@
         justify-content: space-between;
         gap: 2rem;
 
-        .card{
+        .category{
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: $color-tertiary-10;
             padding: 10px;
-            width: max-content;
+            width: 15%;
             gap: 10px;
             min-height: 12rem;
             box-sizing: border-box;
+            border-radius: 10px;
             cursor: pointer;
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+            transition: .3s ease;
+
+
+            @include respond(laptop){ 
+                width: 20%;
+            }
+            
+            @include respond(tablet){ 
+                width: 25%;
+            }
+
+            @include respond(phone){ 
+                width: 100%;
+            }
+
+            &.travel{
+                background-color: $color-tertiary-10;
+            }
+
+            &.tech{
+                background-color: $color-tertiary-9;
+            }
+            &.fashion{
+                background-color: $color-tertiary-10;
+            }
+            &.finance{
+                background-color:$color-tertiary-11 ;
+            }
+            &.sports{
+                background-color:$color-tertiary-12 ;
+            }
+            &.art{
+                background-color:$color-tertiary-13 ;
+            }
+
             .left{
                 flex: 2;
                 height: 100%;
                 border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
                 .subTitle{
                     text-transform: uppercase;
                     font-size: 18px;
@@ -68,60 +109,16 @@
                     width: 50px;
                     height: 50px;
                     transition: .3s ease;
-                    &:hover{
-                        transform: scale(1.3);
-                    }
+
+
                 }
 
             }
 
+            &:hover .right .img{
+                transform: scale(1.3);
+            }
+
         }
     }
-
-    // .category{
-    //     display: flex;
-    //     align-items: center;
-    //     gap: 1rem;
-    //     text-transform: capitalize;
-    //     width: 15%;
-    //     height: 8rem;
-    //     justify-content: center;
-    //     border-radius: 1rem;
-    //     color: $color-white;
-    //     font-size: 1.5rem;
-
-    //     @include respond(laptop){ 
-    //         width: 20%;
-    //       }
-        
-    //       @include respond(tablet){ 
-    //         width: 25%;
-    //         background-color: green;
-    //       }
-
-    //       @include respond(phone){ 
-    //         width: 100%;
-    //         background-color: green;
-    //       }
-
-    //     .img{
-    //         border-radius: 50%;
-    //     }
-    // }
-
-    // .category.style{
-    //     background-color:$color-tertiary-6 ;
-    // }
-
-    // .category.travel{
-    //     background-color:$color-tertiary-3 ;
-    // }
-
-    // .category.fashion{
-    //     background-color: $color-tertiary-4;
-    // }
-
-    // .category.tech{
-    //     background-color: $color-tertiary-2;
-    // }
 }

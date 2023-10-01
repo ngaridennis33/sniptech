@@ -154,7 +154,7 @@
     }
 
     .socialLogin{
-        border: .1rem solid $color-tertiary-3;
+        border: .1rem solid $color-tertiary-4;
         outline: none;
         padding: 10px;
         width: 100%;
@@ -168,6 +168,10 @@
         cursor: pointer;
         margin-bottom: 20px;
         transition: all 0.5s ease;
+
+        .socialText{
+            font-size: 1.6rem;
+        }
 
         &:hover{
             transform: scale(1.03);

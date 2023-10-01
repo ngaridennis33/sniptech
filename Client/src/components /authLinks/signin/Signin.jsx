@@ -58,7 +58,7 @@ const SignIn = ({openModal}) => {
 
     <div className={socialLogin}>
       <Image width={20} height={20} src="/5.png" alt="google"  priority={true}/>
-      <span>Continue with Google</span>
+      <span className={styles.socialText}>Continue with Google</span>
     </div>
     </div>
   )

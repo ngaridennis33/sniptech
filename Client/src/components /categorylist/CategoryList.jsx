@@ -8,80 +8,75 @@ const CategoryList = () => {
     <div className={styles.container}>
       <h1 className={styles.title}> Popular Categories</h1>
       <div className={styles.categories}>
-          {/* <Link href="/blog?cat=style" className = {`${styles.category} ${styles.style}`}>
-          <Image src="/contact.png" width={32} height={32} className={styles.img} alt=""/> 
-          style
+
+        <Link href="/blog?cat=art" className={`${styles.category} ${styles.art}`}>
+          <div className={styles.left}>
+          <Image src="/art1.svg" width={32} height={32} className={styles.img} alt=""/> 
+            <h2 className={styles.subTitle}>Art</h2>
+            <p className={styles.desc}>Creative writing, storytelling.</p>
+            </div>
+            <div className={styles.right}>
+          <Image src="/art2.svg" width={32} height={32} className={styles.img} alt=""/> 
+            </div>
           </Link>
 
-          <Link href="/blog?cat=travel" className = {`${styles.category} ${styles.travel}`}>
-          <Image src="/hero.png" width={32} height={32} className={styles.img} alt=""/> 
-          Travel
+          <Link href="/blog?cat=finance" className={`${styles.category} ${styles.finance}`}>
+          <div className={styles.left}>
+          <Image src="/finance1.svg" width={32} height={32} className={styles.img} alt=""/> 
+            <h2 className={styles.subTitle}>Finance</h2>
+            <p className={styles.desc}>Finance, Investment, Wealth</p>
+            </div>
+            <div className={styles.right}>
+          <Image src="/finance2.svg" width={32} height={32} className={styles.img} alt=""/> 
+            </div>
           </Link>
 
-          <Link href="/blog?cat=fashion" className = {`${styles.category} ${styles.fashion}`}>
-          <Image src="/bg2.jpg" width={32} height={32} className={styles.img} alt=""/> 
-          Fashion
+          <Link href="/blog?cat=fashion" className={`${styles.category} ${styles.fashion}`}>
+          <div className={styles.left}>
+          <Image src="/fashion1.svg" width={32} height={32} className={styles.img} alt=""/> 
+            <h2 className={styles.subTitle}>Style</h2>
+            <p className={styles.desc}>Fashion inspiration</p>
+            </div>
+            <div className={styles.right}>
+          <Image src="/fashion2.svg" width={32} height={32} className={styles.img} alt=""/> 
+            </div>
           </Link>
 
-          <Link href="/blog?cat=tech" className = {`${styles.category} ${styles.tech}`}>
-          <Image src="/bg2.jpg" width={32} height={32} className={styles.img} alt=""/> 
-          Tech
-          </Link> */}
+          <Link href="/blog?cat=tech" className={`${styles.category} ${styles.tech}`}>
+          <div className={styles.left}>
+          <Image src="/net1.svg" width={32} height={32} className={styles.img} alt=""/> 
+            <h2 className={styles.subTitle}>Tech</h2>
+            <p className={styles.desc}>Tech industry Insights</p>
+            </div>
+            <div className={styles.right}>
+          <Image src="/comp.svg" width={32} height={32} className={styles.img} alt=""/> 
+            </div>
+          </Link>
 
-          <div className={styles.card}>
+          <Link href="/blog?cat=travel" className={`${styles.category} ${styles.travel}`}>
           <div className={styles.left}>
           <Image src="/bag.svg" width={32} height={32} className={styles.img} alt=""/> 
             <h2 className={styles.subTitle}>Travel</h2>
-            <p className={styles.desc}>Lorem ipsum dolor sit amet.</p>
+            <p className={styles.desc}>Exciting Adventures</p>
             </div>
             <div className={styles.right}>
           <Image src="/car.svg" width={32} height={32} className={styles.img} alt=""/> 
             </div>
-          </div>
+          </Link>
 
-          <div className={styles.card}>
+          <Link href="/blog?cat=sports" className={`${styles.category} ${styles.sports}`}>
           <div className={styles.left}>
-          <Image src="/bag.svg" width={32} height={32} className={styles.img} alt=""/> 
-            <h2 className={styles.subTitle}>Travel</h2>
-            <p className={styles.desc}>Lorem ipsum dolor sit amet.</p>
+          <Image src="/sports1.svg" width={32} height={32} className={styles.img} alt=""/> 
+            <h2 className={styles.subTitle}>Sports</h2>
+            <p className={styles.desc}>Sports Analysis Hub</p>
             </div>
             <div className={styles.right}>
-          <Image src="/car.svg" width={32} height={32} className={styles.img} alt=""/> 
+          <Image src="/sports2.svg" width={32} height={32} className={styles.img} alt=""/> 
             </div>
-          </div>
+          </Link>
 
-          <div className={styles.card}>
-          <div className={styles.left}>
-          <Image src="/bag.svg" width={32} height={32} className={styles.img} alt=""/> 
-            <h2 className={styles.subTitle}>Travel</h2>
-            <p className={styles.desc}>Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div className={styles.right}>
-          <Image src="/car.svg" width={32} height={32} className={styles.img} alt=""/> 
-            </div>
-          </div>
 
-          <div className={styles.card}>
-          <div className={styles.left}>
-          <Image src="/bag.svg" width={32} height={32} className={styles.img} alt=""/> 
-            <h2 className={styles.subTitle}>Travel</h2>
-            <p className={styles.desc}>Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div className={styles.right}>
-          <Image src="/car.svg" width={32} height={32} className={styles.img} alt=""/> 
-            </div>
-          </div>
 
-          <div className={styles.card}>
-          <div className={styles.left}>
-          <Image src="/bag.svg" width={32} height={32} className={styles.img} alt=""/> 
-            <h2 className={styles.subTitle}>Travel</h2>
-            <p className={styles.desc}>Lorem ipsum dolor sit amet.</p>
-            </div>
-            <div className={styles.right}>
-          <Image src="/car.svg" width={32} height={32} className={styles.img} alt=""/> 
-            </div>
-          </div>
         </div>
     </div>
   )
