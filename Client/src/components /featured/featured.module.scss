@@ -2,8 +2,11 @@
 @import "../../styles/responsive.scss";
 
 .container{
-  
+  border-bottom: 1px solid rgb(187, 184, 184);
+
     .title{
+  border-bottom: 1px solid rgb(187, 184, 184);
+
         font-size: 96px;
         font-weight: 300;
         -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;

@@ -44,16 +44,27 @@ a{
   color: inherit;
 }
 
+// ScrollBar
+::-webkit-scrollbar{
+  width: 5px;
+ }
+
+ ::-webkit-scrollbar-thumb{
+  background: $color-grey-light-1;
+  border-radius: 10px;
+ }
+
 /* The Container holding the body */
 .container{
   min-height: 100vh;
+  margin-top: 10vh;
 }
 
 /* Holds the body apart from the Navbar and the Footer*/
 .wrapper{
   min-width:93.75rem;
-  margin:auto;
   padding:0 20rem;
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

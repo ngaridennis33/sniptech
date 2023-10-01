@@ -27,8 +27,8 @@ export default function RootLayout({ children }) {
               <ModalProvider>
                 <div className="container">
                   <Navbar />
+                  <Progress />
                   <div className="wrapper">
-                    <Progress />
                     {children}
                     <Footer />
                   </div>

@@ -25,7 +25,6 @@ const Progress = () => {
     };
   }, []);
 
-  console.log(progress);
 
   return (
     <progress

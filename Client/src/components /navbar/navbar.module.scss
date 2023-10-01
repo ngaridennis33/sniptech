@@ -1,23 +1,33 @@
 @import "../../styles/responsive.scss";
 @import "../../styles/variables.scss";
 
+
 .navWrapper{
-    line-height: 65px;
-    height: 10vh;
     position: fixed;
+    line-height: 16px;
+    height: 10vh;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 0 20rem ;
-    background-color: inherit;
     z-index: 1000;
-    background-color: $color-white;
+    background-color: $color-primary-light;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 
     &.dark{
         background-color: $color-secondary-dark;
     }
-
-
+}
+.container{
+    height: 6vh;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .3s ease;
+    padding: 0 20rem ;
     @include respond(laptop){
         padding: 0 10rem;
       }
@@ -30,15 +40,6 @@
         padding:0 1.5rem;
       }
 }
-.container{
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    // border-bottom: 1px solid #e0dcd1;
-}
 
 .left{
     display: flex;
@@ -46,13 +47,23 @@
     align-items: center;
     width: 20%;
     height: 100%;
+    position: relative;
 }
 .logoLink{
     height: 100%;
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
+    // background-color: inherit;
+    background-color: $color-primary-light;
+    position: absolute;
+    top: -30px;
+    padding: 5px;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 11px -4px rgba(0,0,0,0.75); 
 }
 
 .center{

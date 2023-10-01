@@ -111,6 +111,21 @@
     }
 }
 
+.authButton{
+    padding: 10px 20px;
+    background-color: inherit;
+    color: $color-tertiary-4;
+    font-weight: bold;
+    border: none;
+    border: 1px solid $color-tertiary-4;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover{
+        opacity: .8;
+        
+    }
+}
+
 .deleteButtons{
     display: flex;
     align-items: center;

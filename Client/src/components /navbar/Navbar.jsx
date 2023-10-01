@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link'
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styles from "./navbar.module.scss"
 import DarkmodeToogle from '../DarkmodeToggle/DarkmodeToogle'
 import Logo from './layout/logo/Logo'
@@ -15,17 +15,18 @@ import { ModalContext } from '../context/ModalContext'
 import Modal from '../modal/Modal'
 import SignIn from '../authLinks/signin/Signin'
 import Register from '../authLinks/register/Register'
+import Announcement from './layout/announcement/Announcement'
 
 
 
 
 const Navbar = () => {
+
     const {isModalOpen,openModal, modalContent,} = useContext(ModalContext);
     const {mode} = useContext(ThemeContext);
     const {navbarOpen,handleHamburgerClose,domNodeClick} = useContext(HamburgerContext);
     const mobileLinks = (`${styles.mobileLinks} ${mode === 'dark' ? styles.dark : ''}`) && (`${styles.mobileLinks} ${navbarOpen === true ? styles.showMenu : ''}`);
     const navWrapper = `${styles.navWrapper} ${mode === 'dark' ? styles.dark : ''}`;
-
 
 //Toggle hamburger open or close when user clicks outside the menu.
 let domNode = useClickOutside(()=>{
@@ -41,7 +42,8 @@ let domNode = useClickOutside(()=>{
          </Modal>
         }
     <div className={navWrapper}>
-        <div className={styles.container}>
+        <Announcement/>
+    <div className={styles.container}>
 
             {/* left Section */}
             <div className={styles.left}>

@@ -1,0 +1,27 @@
+@import "../../../../styles/variables.scss";
+
+.container{
+    height: 4vh;
+    width: 100%;
+    background-color: $color-secondary-dark-softBg;
+    padding: 0 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ul{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        list-style: none;
+        gap: 10px;
+        color: #fff;
+
+        li{
+
+        }
+    }
+
+}
