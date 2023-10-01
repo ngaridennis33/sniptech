@@ -26,8 +26,8 @@ export default function RootLayout({ children }) {
             <HamburgerProvider>
               <ModalProvider>
                 <div className="container">
+                  <Navbar />
                   <div className="wrapper">
-                    <Navbar />
                     <Progress />
                     {children}
                     <Footer />

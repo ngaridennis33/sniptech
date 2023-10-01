@@ -24,6 +24,7 @@ const Navbar = () => {
     const {mode} = useContext(ThemeContext);
     const {navbarOpen,handleHamburgerClose,domNodeClick} = useContext(HamburgerContext);
     const mobileLinks = (`${styles.mobileLinks} ${mode === 'dark' ? styles.dark : ''}`) && (`${styles.mobileLinks} ${navbarOpen === true ? styles.showMenu : ''}`);
+    const navWrapper = `${styles.navWrapper} ${mode === 'dark' ? styles.dark : ''}`;
 
 
 //Toggle hamburger open or close when user clicks outside the menu.
@@ -39,7 +40,7 @@ let domNode = useClickOutside(()=>{
             {modalContent === "login" ? <SignIn openModal={openModal}/> : <Register openModal={openModal}/>}
          </Modal>
         }
-    <div className={styles.navWrapper}>
+    <div className={navWrapper}>
         <div className={styles.container}>
 
             {/* left Section */}
