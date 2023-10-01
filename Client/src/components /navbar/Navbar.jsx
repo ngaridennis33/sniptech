@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 import React, { useContext } from 'react'
-import styles from "./navbar.module.css"
+import styles from "./navbar.module.scss"
 import DarkmodeToogle from '../DarkmodeToggle/DarkmodeToogle'
 import Logo from './layout/logo/Logo'
 import DesktopLinks from './layout/navLinks/deskTop/DesktopLinks'

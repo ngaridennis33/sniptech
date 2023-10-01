@@ -7,6 +7,7 @@ import { ThemeContextProvider } from "../components /context/ThemeContext";
 import { HamburgerProvider } from "../components /context/HumbergerContext";
 import ThemeProvider from "@/providers/ThemeProvider";
 import { ModalProvider } from "@/components /context/ModalContext";
+import Progress from "@/components /progress/Progress";
 
 // Todo Add Roboto font for the Navbar
 const inter = Inter({ subsets: ["latin"] });
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
                 <div className="container">
                   <div className="wrapper">
                     <Navbar />
+                    <Progress />
                     {children}
                     <Footer />
                   </div>
