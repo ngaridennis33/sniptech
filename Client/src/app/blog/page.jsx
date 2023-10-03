@@ -8,7 +8,7 @@ import Menu from '@/components /menu/Menu'
 
 export const metadata = {
   title: "SnipTech Blog",
-  description: "SnipTech blogsite meta",
+  description: "SnipTech blogsite",
 };
 
 const Blog = () => {
