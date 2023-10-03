@@ -58,16 +58,20 @@ export const navLinkData = [
             },
         ],
     },
+    ,
     {
-        label: "Service",
-        link: "/service",
-        icon:<HomeRepairServiceIcon/>,
+        label: "blog",
+        link: "/blog",
+        tree: null,
+    },
+    {
+        label: "portfolio",
+        link: "/portfolio",
         tree: null,
     },
     {
       label: "Contact",
       link: "/contact",
-      icon:<ContactPageIcon/>,
       tree: null,
   },
 ];

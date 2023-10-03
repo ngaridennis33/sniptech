@@ -6,11 +6,11 @@ appearance: none;
 margin: 0;
 width: 100%;
 position: fixed;
-top: 10vh;
+top: 100px;
 left: 0;
 height: .4rem;
 background-color: inherit;
-z-index: 2000;
+z-index: 1000;
 }
 
 .progressBar::-webkit-progress-bar{

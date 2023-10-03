@@ -94,7 +94,7 @@
 }
 
 .navMenuItem:hover .dropMenu{
-    top: 10vh;
+    top: 100px;
     opacity: 1;
     visibility: visible;
 }

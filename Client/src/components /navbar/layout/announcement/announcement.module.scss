@@ -1,26 +1,40 @@
 @import "../../../../styles/variables.scss";
+@import "../../../../styles/responsive.scss";
 
 .container{
-    height: 4vh;
+    height: 40px;
     width: 100%;
     background-color: $color-secondary-dark;
-    padding: 0 200px;
+    padding: 0 20rem;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    ul{
-        height: 100%;
+    @include respond(laptop){
+        padding: 0 10rem;
+      }
+
+    @include respond(tablet){
+        height: 100px;
+        padding:0 1rem;
+    }
+
+    @include respond(tablet){
+        display: none;
+      }
+
+      .social{
         width: 100%;
         display: flex;
-        justify-content: flex-end;
         align-items: center;
-        list-style: none;
-        gap: 10px;
-        color: #fff;
-
-        li{
-
+        justify-content: flex-end;
+        gap: 1rem;
+        .icon{
+            cursor: pointer;
+            border-radius: 50%;
+            &:hover{
+                opacity: .98;
+            }
         }
     }
 

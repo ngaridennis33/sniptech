@@ -25,8 +25,8 @@ const Navbar = () => {
     const {isModalOpen,openModal, modalContent,} = useContext(ModalContext);
     const {mode} = useContext(ThemeContext);
     const {navbarOpen,handleHamburgerClose,domNodeClick} = useContext(HamburgerContext);
-    const mobileLinks = (`${styles.mobileLinks} ${mode === 'dark' ? styles.dark : ''}`) && (`${styles.mobileLinks} ${navbarOpen === true ? styles.showMenu : ''}`);
     const navWrapper = `${styles.navWrapper} ${mode === 'dark' ? styles.dark : ''}`;
+    const mobileLinks = `${styles.mobileLinks} ${mode === 'dark' ? styles.dark : ''}  ${styles.mobileLinks} ${navbarOpen === true ? styles.showMenu : ''}`;
 
 //Toggle hamburger open or close when user clicks outside the menu.
 let domNode = useClickOutside(()=>{
@@ -42,7 +42,8 @@ let domNode = useClickOutside(()=>{
          </Modal>
         }
     <div className={navWrapper}>
-        <Announcement/>
+    <Announcement/>
+    
     <div className={styles.container}>
 
             {/* left Section */}
@@ -67,13 +68,12 @@ let domNode = useClickOutside(()=>{
             <div className={styles.mobileHamburgerCotainer} onClick={handleHamburgerClose}>
                 {navbarOpen ? <CloseMenu mode = {mode}/> : <Menu mode = {mode}/>}
             </div>
-        </div>
+    </div>
     </div>
 
     {/* Mobile Links */}
         {navbarOpen ? <div className={"overlay"}/>:""}
-        <div style={{background:`${mode === "dark" ? "#011120" : "#fff"}`,
-            boxShadow:`${mode === "dark" ? "0 15px 15px rgba(255, 255, 255, 0.15)" : "0 15px 15px rgba(0, 0, 0, 0.972)"}`}} className={mobileLinks} ref={domNode}>
+        <div className={mobileLinks} ref={domNode}>
                 <DarkmodeToogle/>
                 <Mobile mode = {mode}/>
                 <div className={styles.mobileAuth}>

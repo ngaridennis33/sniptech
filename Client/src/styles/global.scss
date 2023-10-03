@@ -68,7 +68,7 @@ a{
 .container{
   overflow: hidden;
   min-height: 100vh;
-  margin-top: 10vh;
+  margin-top: 100px;
 }
 
 /* Holds the body apart from the Navbar and the Footer*/
@@ -210,6 +210,7 @@ a{
 }
 
 .overlay{
+  z-index: 10000;
   display: none;
   position: fixed;
   height: 100vh;
@@ -219,7 +220,6 @@ a{
 	bottom:0;
 	left:0;
   background-color: $color-overlay;
-  opacity: .7;
   z-index: 1;
 
   @include respond(phone){
