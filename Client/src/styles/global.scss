@@ -12,11 +12,21 @@
 }
 
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   font-family:Lato;
   line-height: 1.6;
   font-size: clamp(1.125rem, 2vw,1.25rem);
   font-size:$default-font-size;
+}
+
+h1,h2{
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+p{
+  margin: 10px 0;
 }
 
 html{
@@ -56,6 +66,7 @@ a{
 
 /* The Container holding the body */
 .container{
+  overflow: hidden;
   min-height: 100vh;
   margin-top: 10vh;
 }
@@ -67,10 +78,12 @@ a{
   margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
   position: relative;
+  gap: 200px;
+  box-sizing: border-box;
 
   @include respond(laptop){
     min-width: 56.25rem; 

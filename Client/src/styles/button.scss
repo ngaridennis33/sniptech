@@ -1,81 +1,47 @@
 @import "./variables.scss";
 
+.utilsBtn{
+    padding: 16px 20px;
+    cursor: pointer;
+    border: none;
+    color: $color-white;
+    border-radius: .5rem;
+    min-width: 10rem;
+    width: max-content;
+    font-size: 1.4rem;
+    transition: .3s ease;
+    
+&:hover{
+        transform: scale(.98); 
+        opacity: .8;  
+    }
+}
+
 .authLink{
     display: flex;
 
-    .authButton{
-        width: 100%;
-        height: 100%;
-        padding: 1rem;
-        font-size: 1.5rem;
-        font-weight: 500;
-        text-align: center;
-        background-color: $color-tertiary-1;
-        color: #ffffff; 
-        border-radius: .5rem;
-        border: none;
-        transition: background-color 0.3s;
-        cursor: pointer;
-
-        &:hover{
-            background-color: #45a049;
-            }
-        }
-
         .ctaButton{
-            padding: 1.6rem;
-            cursor: pointer;
+            @extend .utilsBtn;
             background-color: $color-tertiary-1;
-            border: none;
-            color: $color-white;
-            border-radius: .5rem;
-            min-width: 10rem;
-            width: max-content;
-            font-size: 1.4rem;
-            
-            &:hover{
-                background-color: #45a049;
-            }
         }
 
         .preBtn{
-            padding: 1.6rem;
-            cursor: pointer;
+            @extend .utilsBtn;
             background-color: $color-tertiary-3;
-            border: none;
-            color: $color-white;
-            border-radius: .5rem;
-            min-width: 10rem;
-            width: max-content;
-            font-size: 1.4rem;
             &:before{
                 content:"\2039";
                 margin-right: 10px;
                 font-size: 1.6rem;
             }
             
-            &:hover{
-                opacity: .8;
-            }
         }
-        .nxtBtn{
-            padding: 1.6rem;
-            cursor: pointer;
+        .nxtBtn{ 
+            @extend .utilsBtn;     
             background-color: $color-tertiary-3;
-            border: none;
-            color: $color-white;
-            border-radius: .5rem;
-            min-width: 10rem;
-            width: max-content;
-            font-size: 1.4rem;
             &:after{
                 content:"\203A";
                 margin-left: 10px;
                 font-size: 1.6rem;
-            }
-            
-            &:hover{
-                opacity: .8;
             }
     }
 
@@ -89,6 +55,7 @@
             width: max-content;
             padding: .2rem 0rem;
             cursor: pointer;
+            transition: .3s ease;
             &:hover{
                 color: $color-tertiary-1;
                 border-bottom:.1rem solid $color-tertiary-1; 
@@ -98,30 +65,24 @@
 }
 
 .action{
-    padding: 16px 20px;
+    @extend .utilsBtn;
     background-color: $color-tertiary-7;
-    color: $color-white;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    &:hover{
-        opacity: .8;
-        
-    }
 }
 
 .authButton{
-    padding: 10px 20px;
+    padding: .5rem 1rem;
     background-color: inherit;
     color: $color-tertiary-4;
     font-weight: bold;
     border: none;
-    border: 1px solid $color-tertiary-4;
-    border-radius: 5px;
+    border: .1rem solid $color-tertiary-4;
+    border-radius: .5rem;
     cursor: pointer;
+    transition: .3s ease;
     &:hover{
-        opacity: .8;
+        transform: scale(.98);
+        border: .1rem solid $color-tertiary-5;
+        color:$color-tertiary-5;
         
     }
 }
@@ -131,27 +92,11 @@
     align-items: center;
     justify-content: space-around;
     .cancelButton{
-        padding: 16px 20px;
+        @extend .utilsBtn;
         background-color: $color-tertiary-4;
-        color: $color-white;
-        font-weight: bold;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        &:hover{
-            opacity: .8;
-        }
     }
     .confirmButton{
-        padding: 16px 20px;
+        @extend .utilsBtn;
         background-color: $color-tertiary-3;
-        color: $color-white;
-        font-weight: bold;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        &:hover{
-            opacity: .8;
-        }
     }
 }

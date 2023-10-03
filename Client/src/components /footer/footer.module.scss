@@ -1,9 +1,25 @@
 @import "../../styles/responsive.scss";
+@import "../../styles/variables.scss";
 
 .wrapper{
     width: 100%;
     margin-top: 5rem;
-    padding: 2rem 0;
+    padding: 0 20rem;
+    background-color: $color-secondary-dark;
+    color: #fff;
+    overflow: hidden;
+
+    @include respond(laptop){ 
+        padding: 0 10rem;
+    }
+
+    @include respond(tablet){ 
+        padding: 0 5rem;
+    }
+
+    @include respond(phone){ 
+        padding: 0 2rem;
+    }
 
     .container{
     display: flex;
@@ -22,12 +38,13 @@
             gap: 2rem;
             
             .logoContainer{
-                width: 60%;
+                width: 30%;
                 height: 8rem;
                 position: relative;
 
-                @include respond(tablet){ 
+                @include respond(laptop){ 
                     align-self: center; 
+                    width: 60%;
                   }
 
                 .logo{
@@ -74,10 +91,13 @@
                 font-weight: 300;
                 font-size: 1.4rem;
                 gap: 1rem;
+                color: $color-grey-light-1;
 
                 .listTitle{
                     font-weight: bold;
+                    color: $color-white;
                 }
+
             }
         }
     }
@@ -86,5 +106,6 @@
         text-align: center;
         font-weight: 300;
         font-size: 1.4rem;
+        color: $color-grey-light-2;
     }
 }

@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content:flex-end;
-    gap:20px;
+    gap:2rem;
 }
 
 .navMenuItemLink{
@@ -30,7 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: .5rem;
 }
 
 .dropMenu{
@@ -38,8 +38,8 @@
     opacity: 0;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     visibility: hidden;
-    line-height: 45px;
-    min-width: 150px ;
+    line-height: 16px;;
+    min-width: 10rem ;
     top: 15vh;
     position: absolute;
     transition: .3s ease;
@@ -47,14 +47,17 @@
 }
 
 .dropMenuItem{
+    padding: 10px 20px;
+    line-height: 1.6;
     width: 100%;
     list-style: none;
-    font-size: 17px;
+    font-size: 1.6rem;
+    font-weight: 300;
     text-align: center;
     color:black;
 }
 .dropMenuItem:not(:last-child){
-    border-bottom: 1px solid #e0dcd1;
+    border-bottom: .1rem solid #e0dcd1;
 }
 .dropMenuItem:hover{
     text-decoration: underline;
@@ -73,13 +76,13 @@
     box-sizing: border-box;
     height: 100%;
     cursor: pointer;
-    border-bottom: 5px solid transparent;
+    border-bottom: .3rem solid transparent;
+    transition: .3s ease;
 }
 
 .navMenuItem:hover{
     color:#038003;
-    border-radius: 5px;
-    border-bottom: 5px solid #038003;
+    border-bottom: .3rem solid #038003;
 }
 
 .navMenuItem.dark{

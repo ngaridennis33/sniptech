@@ -5,9 +5,9 @@
 
 .modalOverlay {
     position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0;
+    box-sizing: border-box;
+	top:0;
+	left:0;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -73,12 +73,6 @@
                     cursor: pointer;
                     color: $color-grey-light-1;
                     transition: .5s ease;
-
-                    &:hover{
-                        color: $color-tertiary-3;
-                        transform: scale(1.3);
-                        font-weight: 500;
-                    }
                 }
 
 

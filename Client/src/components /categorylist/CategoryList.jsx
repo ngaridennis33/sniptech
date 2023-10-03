@@ -20,6 +20,17 @@ const CategoryList = () => {
             </div>
           </Link>
 
+          <Link href="/blog?cat=tech" className={`${styles.category} ${styles.tech}`}>
+          <div className={styles.left}>
+          <Image src="/net1.svg" width={32} height={32} className={styles.img} alt=""/> 
+            <h2 className={styles.subTitle}>Tech</h2>
+            <p className={styles.desc}>Tech industry Insights</p>
+            </div>
+            <div className={styles.right}>
+          <Image src="/comp.svg" width={32} height={32} className={styles.img} alt=""/> 
+            </div>
+          </Link>
+
           <Link href="/blog?cat=finance" className={`${styles.category} ${styles.finance}`}>
           <div className={styles.left}>
           <Image src="/finance1.svg" width={32} height={32} className={styles.img} alt=""/> 
@@ -31,6 +42,7 @@ const CategoryList = () => {
             </div>
           </Link>
 
+
           <Link href="/blog?cat=fashion" className={`${styles.category} ${styles.fashion}`}>
           <div className={styles.left}>
           <Image src="/fashion1.svg" width={32} height={32} className={styles.img} alt=""/> 
@@ -39,17 +51,6 @@ const CategoryList = () => {
             </div>
             <div className={styles.right}>
           <Image src="/fashion2.svg" width={32} height={32} className={styles.img} alt=""/> 
-            </div>
-          </Link>
-
-          <Link href="/blog?cat=tech" className={`${styles.category} ${styles.tech}`}>
-          <div className={styles.left}>
-          <Image src="/net1.svg" width={32} height={32} className={styles.img} alt=""/> 
-            <h2 className={styles.subTitle}>Tech</h2>
-            <p className={styles.desc}>Tech industry Insights</p>
-            </div>
-            <div className={styles.right}>
-          <Image src="/comp.svg" width={32} height={32} className={styles.img} alt=""/> 
             </div>
           </Link>
 

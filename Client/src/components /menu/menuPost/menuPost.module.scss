@@ -1,11 +1,16 @@
+@import "../../../styles/variables.scss";
+
+
 .items{
-    border: 1px solid rgb(169, 168, 168);
     padding: 10px;
-    border-radius: 5px;
     margin: 35px 0px 60px 0px;
     display: flex;
     flex-direction: column;
     gap: 35px;
+
+    &:not(:last-child){
+    border-bottom: 1px solid $color-grey-light-2;
+    }
     .item{
         display: flex;
         align-items: center;

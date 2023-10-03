@@ -1,20 +1,26 @@
 @import "../../styles/responsive.scss";
+@import "../../styles/variables.scss";
 
 .container{
     flex: 2;
     margin-top: 60px;
+    border: 1px $color-grey-light-2 solid;
+    border-radius: 10px;
 
     @include lg{
         display: none;
     }
 
     .subTitle{
-        color: gray;
+        padding: 10px;
+        color: $color-grey-light-1;
         font-size: 16px;
         font-weight: 400;
     }
 
     .title{
+    border-bottom: 1px $color-grey-light-2 solid;
+        padding: 10px;
         font-size: 20px;
     }
 

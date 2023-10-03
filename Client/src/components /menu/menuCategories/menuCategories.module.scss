@@ -1,27 +1,39 @@
+@import "../../../styles/variables.scss";
+
 .categoryList{
     margin: 35px 0 60px 0px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    padding: 10px;
+    border-bottom: 1px solid $color-grey-light-2;
 
     .categoryItem{
         padding: 10px 25px;
         border-radius: 10px;
         font-size: 14px;
-    }
-    .categoryItem.style{
-        background-color: rgb(165, 30, 161);
+        color: #fff;
+        font-weight: 500;
+
+        &.travel{
+            background-color: $color-icons-5;
+        }
+
+        &.tech{
+            background-color: $color-icons-2;
+        }
+        &.fashion{
+            background-color: $color-icons-4;
+        }
+        &.finance{
+            background-color:$color-icons-3;
+        }
+        &.sports{
+            background-color:$color-icons-6;
+        }
+        &.art{
+            background-color:$color-icons-1;
+        }
     }
 
-    .categoryItem.fashion{
-        background-color: #7fb88133;
-    }
-
-    .categoryItem.tech{
-        background-color: rgb(30, 149, 19);
-    }
-
-    .categoryItem.travel{
-        background-color: rgb(32, 172, 172);
-    }
 }

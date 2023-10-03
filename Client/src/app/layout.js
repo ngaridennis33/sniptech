@@ -28,10 +28,8 @@ export default function RootLayout({ children }) {
                 <div className="container">
                   <Navbar />
                   <Progress />
-                  <div className="wrapper">
-                    {children}
-                    <Footer />
-                  </div>
+                  <div className="wrapper">{children}</div>
+                  <Footer />
                 </div>
               </ModalProvider>
             </HamburgerProvider>
