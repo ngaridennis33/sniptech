@@ -48,10 +48,10 @@
 
 .dropMenuItem{
     padding: 10px 20px;
-    line-height: 1.6;
+    line-height: 16px;
     width: 100%;
     list-style: none;
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 300;
     text-align: center;
     color:black;
@@ -78,6 +78,7 @@
     cursor: pointer;
     border-bottom: .3rem solid transparent;
     transition: .3s ease;
+    font-size: 1.5rem;
 }
 
 .navMenuItem:hover{
