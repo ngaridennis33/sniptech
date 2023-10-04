@@ -11,6 +11,8 @@ const Featured = () => {
       <h1 className={styles.title}>
         <b>Hey, welcome to SnipTech</b> Discover new stories and creative Ideas
       </h1>
+      <hr className={styles.hr1}/>
+      <hr className={styles.hr}/>
       <div className={styles.post}>
         <div className={styles.imgContainer}>
           <Image src="/apps.jpg" alt='' fill className={styles.img}/>

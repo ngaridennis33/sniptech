@@ -6,6 +6,7 @@ import MenuCategories from './menuCategories/MenuCategories'
 const Menu = () => {
   return (
     <div className={styles.container}>
+      <div className={styles.top}></div>
       <h2 className={styles.subTitle}>{"What's hot"} </h2>
       <h1 className={styles.title}>Most Popular</h1>
       <MenuPost withImage={false}/>

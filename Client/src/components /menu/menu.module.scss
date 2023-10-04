@@ -6,20 +6,28 @@
     margin-top: 60px;
     border: 1px $color-grey-light-2 solid;
     border-radius: 10px;
+    position: relative;
 
     @include lg{
         display: none;
     }
+    .top{
+        height: 20px;
+        width: 100%;
+        background-color: $color-icons-7;
+        position: absolute;
+        border-radius: 10px 10px 0 0 ;
+    }
 
     .subTitle{
-        padding: 10px;
+        padding: 20px 10px 10px 10px;
         color: $color-grey-light-1;
         font-size: 16px;
         font-weight: 400;
     }
 
     .title{
-    border-bottom: 1px $color-grey-light-2 solid;
+        border-bottom: 1px $color-grey-light-2 solid;
         padding: 10px;
         font-size: 20px;
     }
