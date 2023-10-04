@@ -96,10 +96,11 @@ const Register = ({openModal}) => {
                         
                     />
                     ))}
+          <button className={styles.action} style={{width:"100%", marginTop:"5px"}}>Register</button>
+
           </form>
     
           <div className={styles.bottom}>
-            <button className={styles.action}>Register</button>
             <div className={styles.login}>
           <span className={styles.text}>Already have an account?</span>
           <span className="text-link"  onClick={()=> openModal("login")}>Sign In</span>
