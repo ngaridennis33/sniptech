@@ -15,9 +15,9 @@
     .searchBox{
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: flex-start;
         height: 30px;
-        max-width: 400px;
+        width: 300px;
         position: relative;
         .input{
             height: 100%;
@@ -25,22 +25,36 @@
             border: none;
             outline: none;
             padding-left: 20px;
-            border-radius: 25px;
+            border-radius: 10px;
             font-size: 14px;
             background-color: #fff;
         }
 
-        .icon{
+        .iconContainer{
             position: absolute;
             top: 0;
             right: 0;
-            height: 30px;
-            padding: 5px;
-            width: 50px;
-            background-color: $color-grey-light-1;
-            cursor: pointer;
-            border-radius: 0 25px 25px 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .icon{
+                height: 100%;
+                padding: 5px;
+                width: 40px;
+                cursor: pointer;
+                border-radius: 0 5px 5px 0;
+                background-color: $color-grey-light-1;
+                box-sizing: border-box;
+                transition: .3s ease;
+                &:hover{
+                    background-color: $color-tertiary-1;
+                }
+            }
+
         }
+
     }
 
     @include respond(laptop){

@@ -19,7 +19,13 @@ const CategoryList = () => {
       desc:"Tech industry Insights",
       img2:"/comp.svg",
       url:"/blog?cat=tech",
-    }]
+    },{
+      categoryName:"finance",
+      img1:"/finance1.svg",
+      desc:"Creative writing, storytelling.",
+      img2:"/finance2.svg",
+      url:"/blog?cat=art",
+    },]
 
 
   return (
@@ -28,7 +34,8 @@ const CategoryList = () => {
       <div className={styles.categories}>
 
           {/* {categories.map(({categoryName, img1,desc,img2,url}, index)=>(
-            <Link href={url} className={`${styles.category} ${styles.categoryName}`} key={index}>
+            <div className={`${styles.category} ${categoryName}`} key={index}>
+             <Link href={url}>
                Todo: How do you pass the title to the class component
                   <div className={styles.left}>
                   <Image src={img1} width={32} height={32} className={styles.img} alt=""/> 
@@ -39,6 +46,7 @@ const CategoryList = () => {
                   <Image src={img2} width={32} height={32} className={styles.img} alt=""/> 
                     </div>
               </Link>
+            </div>
           ))  
           } */}
 
