@@ -84,20 +84,20 @@ a{
   position: relative;
   gap: 200px;
 
-  // @include respond(laptop){
-  //   min-width: 56.25rem; 
-  //   padding: 0 10rem;
-  // }
+  @include respond(laptop){
+    min-width: 56.25rem; 
+    padding: 0 10rem;
+  }
 
-  // @include respond(tablet){
-  //   min-width: 37.5rem;
-  //   padding:0 1rem;
-  // }
+  @include respond(tablet){
+    min-width: 37.5rem;
+    padding:0 1rem;
+  }
 
-  // @include respond(phone){
-  //   min-width: 18.75rem;
-  //   padding:0 1.5rem;
-  // }
+  @include respond(phone){
+    min-width: 18.75rem;
+    padding:0 1.5rem;
+  }
 }
 
 .light{
