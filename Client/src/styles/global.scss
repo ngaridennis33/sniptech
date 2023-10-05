@@ -73,8 +73,8 @@ a{
 
 /* Holds the body apart from the Navbar and the Footer*/
 .wrapper{
-  min-width:93.75rem;
-  padding:0 20rem;
+  min-width:80rem;
+  padding: 0 10rem 0 10rem;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -83,22 +83,21 @@ a{
   min-height: 100vh;
   position: relative;
   gap: 200px;
-  box-sizing: border-box;
 
-  @include respond(laptop){
-    min-width: 56.25rem; 
-    padding: 0 10rem;
-  }
+  // @include respond(laptop){
+  //   min-width: 56.25rem; 
+  //   padding: 0 10rem;
+  // }
 
-  @include respond(tablet){
-    min-width: 37.5rem;
-    padding:0 1rem;
-  }
+  // @include respond(tablet){
+  //   min-width: 37.5rem;
+  //   padding:0 1rem;
+  // }
 
-  @include respond(phone){
-    min-width: 18.75rem;
-    padding:0 1.5rem;
-  }
+  // @include respond(phone){
+  //   min-width: 18.75rem;
+  //   padding:0 1.5rem;
+  // }
 }
 
 .light{
