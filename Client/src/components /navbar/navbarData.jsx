@@ -1,6 +1,4 @@
 //NavBar links for Mobile Devices.
-
-
 export const navLinkData = [
     {
       label:"Home", 
