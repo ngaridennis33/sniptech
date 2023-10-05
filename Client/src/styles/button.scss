@@ -70,10 +70,13 @@
 }
 
 .authButton{
-    padding: .5rem 1rem;
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
     background-color: inherit;
     color: $color-tertiary-4;
-    font-weight: bold;
+    font-weight: 500;
+    line-height: 24px;
     border: none;
     border: .1rem solid $color-tertiary-4;
     border-radius: .5rem;

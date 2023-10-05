@@ -4,8 +4,11 @@
 .authStatusCont{
 
     .button{
-        width: max-content;
-        height: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 140px;
+        height: 40px;
     }
     .authCont{
         .write{
