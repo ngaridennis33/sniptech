@@ -4,9 +4,35 @@ import styles from "./signin.module.scss"
 import Image from 'next/image'
 import { ThemeContext } from '../../../components /context/ThemeContext'
 import LogoImg from "/public/sniptech-logos_transparent.png"
+import { signIn, useSession } from 'next-auth/react'
+import Spinner from '@/components /spinner/spinner'
+import { useRouter } from 'next/router'
 
 const SignIn = ({openModal}) => {
+
+  // Context
   const {mode} = useContext(ThemeContext);
+
+  // Router to redirect
+  // const router = useRouter();
+
+  // Login Session
+  const {data,status} = useSession()
+  if(status === "loading"){
+    return (
+    <div className={styles.loading}>Loading</div>
+    )
+  };
+
+  // if(status === "authenticated"){
+  //   return (
+  //   router.push("/")
+  //   )
+  // };
+
+  console.log(data, status)
+
+  // Dynamic styles
   const containerClass = `${styles.container} ${mode === 'dark' ? styles.dark : ''}`;
   const socialLogin = `${styles.socialLogin} ${mode === 'dark' ? styles.dark : ''}`;
   const inputLabel = `${styles.inputLabel} ${mode === 'dark' ? styles.dark : ''}`;
@@ -56,7 +82,7 @@ const SignIn = ({openModal}) => {
       <hr className={styles.hr}/>
     </div>
 
-    <div className={socialLogin}>
+    <div className={socialLogin} onClick = {()=> signIn("google")} >
       <Image width={20} height={20} src="/5.png" alt="google"  priority={true}/>
       <span className={styles.socialText}>Continue with Google</span>
     </div>

@@ -3,23 +3,26 @@ import React, { useContext } from 'react'
 import Link from 'next/link'
 import styles from './authLinks.module.scss';
 import { HamburgerContext } from '../context/HumbergerContext';
+import { signOut, useSession } from 'next-auth/react';
 
 
 
 const AuthLinks = ({openModal}) => {
 
   const {handleHamburgerClose} = useContext(HamburgerContext);
-    // Temp status
-    const status = "notauthenticated";
+
+    // Check User login status
+    const {data,status} = useSession()
+console.log(data,status)
 
   return(
   <div className={styles.authStatusCont}>
-    {status === "notauthenticated" ? (
+    {status === "unauthenticated" ? (
     <div onClick={handleHamburgerClose} className={styles.button}><button className={styles.authButton} onClick={()=> openModal("login")}>Login</button></div> 
     ):(
     <div className={styles.authCont}>
         <Link href = "/write" className={styles.write}>Write</Link> 
-        <span className={styles.logout}>Logout</span>
+        <span className={styles.logout} onClick={signOut}>Logout</span>
     </div>
     )}
 

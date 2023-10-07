@@ -8,7 +8,7 @@ const MenuPost = ({withImage}) => {
     <div className={styles.items}>
     <Link href = "/" className={styles.item}>
       {withImage && <div className={styles.imageContainer}>
-        <Image src="/img3.png" fill alt="" className={styles.image}/>
+        <Image src="/hero.png" fill alt="" className={styles.image}/>
       </div>}
       <div className={styles.textContainer}>
         <span className={`${styles.category} ${styles.travel}`}>Travel</span>
