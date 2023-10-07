@@ -17,13 +17,13 @@ console.log(data,status)
 
   return(
   <div className={styles.authStatusCont}>
-    {status === "unauthenticated" ? (
-    <div onClick={handleHamburgerClose} className={styles.button}><button className={styles.authButton} onClick={()=> openModal("login")}>Login</button></div> 
-    ):(
+    {status === "authenticated" ? (
     <div className={styles.authCont}>
         <Link href = "/write" className={styles.write}>Write</Link> 
         <span className={styles.logout} onClick={signOut}>Logout</span>
     </div>
+    ): (
+    <div onClick={handleHamburgerClose} className={styles.button}><button className={styles.authButton} onClick={()=> openModal("login")}>Login</button></div> 
     )}
 
   </div>
