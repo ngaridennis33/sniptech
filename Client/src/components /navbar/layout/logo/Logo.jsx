@@ -7,7 +7,7 @@ import styles from './logo.module.css'
 const Logo = ({mode}) => {
   return (
     <div className={styles.logoImageContainer}>
-    {mode === "dark" ? (<Image src={LogoImg} height={30} width={30} className={styles.logoImage} alt="logoImage" fill />):(<Image src={LogoImg} className={styles.logoImage} alt="logoImage" fill />)}
+    {mode === "dark" ? (<Image src={LogoImg} className={styles.logoImage} alt="logoImage" fill/>):(<Image src={LogoImg} className={styles.logoImage} alt="logoImage" fill />)}
     </div>
   )
 }

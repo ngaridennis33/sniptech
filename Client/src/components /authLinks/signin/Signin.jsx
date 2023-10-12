@@ -20,7 +20,7 @@ const SignIn = ({openModal}) => {
   const {data,status} = useSession()
   if(status === "loading"){
     return (
-    <div className={styles.loading}>Loading</div>
+    <div className={styles.loading}><Spinner/></div>
     )
   };
 

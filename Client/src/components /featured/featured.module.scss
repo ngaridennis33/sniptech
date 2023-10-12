@@ -3,6 +3,11 @@
 @import "../../styles/animation.scss";
 
 .container{
+  background-image: url("../../../public/home/patternBG.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  border-radius: 0px 0px 200px 0px;
 
     .title{
         font-size: 96px;
