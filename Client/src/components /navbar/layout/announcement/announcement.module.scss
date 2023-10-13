@@ -26,11 +26,6 @@
             font-size: 1.6rem;
             font-weight: 300;
             color: $color-white;
-            &:after{
-                content: "\25bc";
-                color: $color-grey-light-2;
-                margin-left: 5px;
-            }
         }
 
         .dropMenu{

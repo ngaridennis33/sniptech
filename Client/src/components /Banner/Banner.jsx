@@ -11,7 +11,7 @@ const Banner = () => {
             <div className={styles.heading}>
                 <h1 className={styles.title}>Experience your ultimate mobile application</h1>
                 <p className={styles.desc}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae dolorem accusamus eum iusto iure quisquam?</p>
-            <button className={styles.action}>Get Started</button>
+            <button className={styles.action} style={{background:"#fff", color:"#000", marginTop:"50px"}}>Get Started</button>
             </div>
         </div>
         <div className={styles.imageBox}>

@@ -3,12 +3,32 @@ import React, { useState } from 'react'
 import styles from "./page.module.scss";
 import "react-quill/dist/quill.bubble.css";
 import Image from 'next/image';
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/router';
 // import ReactQuill from 'react-quill';
 
 const WritePage = () => {
 
-    const [open,setOpen] = useState(false);
-    const [value,setValue] = useState("");
+    const {status} = useSession()
+  
+    // Router to redirect
+  const router = useRouter();
+
+  const [open,setOpen] = useState(false);
+  const [value,setValue] = useState("");
+  
+  if(status === "loading"){
+    return (
+    <div className={styles.loading}>Loading</div>
+    )
+  };
+
+  if(status === "authenticated"){
+    return (
+    router.push("/")
+    )
+  };
+
 
   return (
     <div className={styles.container}>

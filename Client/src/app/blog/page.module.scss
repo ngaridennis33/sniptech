@@ -1,23 +1,9 @@
 @import "../../styles/responsive.scss";
 
 .container{
-    padding:$padding-xxl;
-    @include respond(desktop){
-        padding:$padding-xl;
-      }
-    
-      @include respond(laptop){
-        padding: $padding-lg;
-      }
-    
-      @include respond(tablet){
-        padding:$padding-md
-      }
-    
-      @include respond(phone){
-        padding:$padding-sm
-      }
-
+    display: flex;
+    flex-direction: column;
+        gap: 50px;
     .content{
         display: flex;
         gap: 50px;
