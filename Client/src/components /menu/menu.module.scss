@@ -7,9 +7,13 @@
     border: 1px $color-grey-light-2 solid;
     border-radius: 10px;
     position: relative;
+    position: sticky;
+    top: 0; 
+    right: 0; 
+    height: max-content;
 
     @include lg{
-        display: none;
+        // display: none;
     }
     .top{
         height: 20px;
