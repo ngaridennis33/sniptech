@@ -7,27 +7,28 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 // import ReactQuill from 'react-quill';
 
-const WritePage = () => {
 
+const WritePage = () => {
+      // Router to redirect
+    //   const router = useRouter();
     const {status} = useSession()
+
   
-    // Router to redirect
-  const router = useRouter();
 
   const [open,setOpen] = useState(false);
   const [value,setValue] = useState("");
-  
+
   if(status === "loading"){
     return (
     <div className={styles.loading}>Loading</div>
     )
   };
 
-  if(status === "authenticated"){
-    return (
-    router.push("/")
-    )
-  };
+//   if(status === "authenticated"){
+//     return (
+//     // router.push("/")
+//     )
+//   };
 
 
   return (
