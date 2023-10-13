@@ -32,19 +32,19 @@ const Register = ({openModal}) => {
   
       // User Input Data.
       const InputData=[
-        {
-        id:1,
-        name:"userName",
-        type:"text",
-        placeholder:"UserName",
-        errorMessage:"⁕ UserName should be 3-16 characters and shouldn't include any special characters!",
-        label:"UserName",
-        pattern:"^[A-Za-z0-9]{3,16}$",
-        required:true,
+    //     {
+    //     id:1,
+    //     name:"userName",
+    //     type:"text",
+    //     placeholder:"UserName",
+    //     errorMessage:"⁕ UserName should be 3-16 characters and shouldn't include any special characters!",
+    //     label:"UserName",
+    //     pattern:"^[A-Za-z0-9]{3,16}$",
+    //     required:true,
   
-    },
+    // },
     {
-        id:2,
+        id:1,
         name:"email",
         type:"email",
         placeholder:"Email",
@@ -53,7 +53,7 @@ const Register = ({openModal}) => {
         required:true,
     },
     {
-        id:3,
+        id:2,
         name:"password",
         type:"password",
         placeholder:"Password",
@@ -63,7 +63,7 @@ const Register = ({openModal}) => {
         required:true,
     },
     {
-        id:4,
+        id:3,
         name:"confirmPassword",
         type:"password",
         placeholder:"Confirm Password",
