@@ -24,7 +24,8 @@ $sm: 37.5em;    //600px
 $md: 56.25em;   //900px
 $lg: 75em;      //1200px
 $xl: 112.5em;   //1800px
-$xxl: 112.5em;  //+1800
+$xxl: 120.5em;  //+1920px
+
 
 @mixin respond($breakpoint){
     @if $breakpoint == phone{
@@ -84,3 +85,11 @@ $xxl: 112.5em;  //+1800
         @content;
     }
 }
+
+// PADDING 
+$padding-sm: 1rem;
+$padding-md: 2rem;
+$padding-lg: 5rem;
+$padding-xl: 7rem;
+$padding-xxl: 10rem;
+

@@ -1,40 +1,38 @@
 @import "../../styles/responsive.scss";
 @import "../../styles/button.scss";
+@import "../../styles/variables.scss";
 
 .wrapper{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 80vh;
+    background-color: $color-secondary-dark-softBg;
     background-image: url("../../../public/home/bannerBg.png");
     background-repeat: no-repeat;
     background-position: top left;
     background-size: cover;
     border-radius: 0px 0px 200px 0px;
-    margin-top: 0px;
-    @include respond(laptop){
-        height: 80vh;
+    padding:$padding-xxl;
+    @include respond(desktop){
+        padding:$padding-xl;
       }
-
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    gap: 100px;
-    padding: 0 10rem 0 10rem;
-    @include respond(laptop){
-        min-width: 56.25rem; 
-        padding: 0 10rem;
+    
+      @include respond(laptop){
+        padding: $padding-lg;
       }
     
       @include respond(tablet){
-        min-width: 37.5rem;
-        padding:0 1rem;
+        padding:$padding-md
       }
     
       @include respond(phone){
-        min-width: 18.75rem;
-        padding:0 1.5rem;
+        padding:$padding-sm
       }
+
+.container{
+    color: $color-white;
+    height: 100%;
+    display: flex;
+    align-items: center;
 
     .textBox{
         flex: 1;
@@ -53,7 +51,7 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
-            gap: 20px;
+            // gap: 20px;
             @include respond(tablet){
                 align-items: center;
             }
@@ -73,21 +71,25 @@
         flex: 1;
         width: 50%;
         display: flex;
-        padding: 50px;
         align-items: center;
         justify-content: center;
         &.imageBox{
-            width: 100%;
-            height:100%;
+            width: 300px;
+            height:600px;
             position: relative;
+            @include respond(laptop){
+                height: 500px;
+            }
             @include respond(tablet){
                 display: none;
+                height: 500px;
             }
 
             .img{
                 object-fit: cover;
                 width: 100%;
-                height: max-content;
+                height: 100%;
+                background-position: bottom left;
                 
               
             }
