@@ -58,11 +58,12 @@ model VerificationToken {
 }
 
 model Category {
-  id    String  @id @default(cuid()) @map("_id")
-  slug  String  @unique
-  title String
-  img   String?
-  Posts Post[]
+  id      String  @id @default(cuid()) @map("_id")
+  slug    String  @unique
+  title   String
+  desc    String
+  img     String[]
+  Posts   Post[]
 }
 
 model Post {
