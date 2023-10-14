@@ -11,7 +11,7 @@ const Announcement = () => {
            <span className={styles.title}>Categories</span> 
             <div className={styles.dropMenu}>
                 <ul className={styles.dropMenuItem}>
-                <Link href={"/about"} className={styles.dropMenuItemLink}>
+                <Link href={"/categorypage?cat=tech"} className={styles.dropMenuItemLink}>
                   <Image src="/net1.svg" width={20} height={20} className={styles.img} alt=""/> <span className={styles.catName}>Tech</span>
                 </Link>
                 <Link href={"/about"} className={styles.dropMenuItemLink}>

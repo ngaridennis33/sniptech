@@ -10,10 +10,34 @@
     width: max-content;
     font-size: 1.4rem;
     transition: .3s ease;
+    &:disabled{
+        opacity: .8;
+        cursor: not-allowed;
+    }
     
 &:hover{
-        transform: scale(.98); 
-        opacity: .8;  
+        transform: scale(.98);  
+    }
+}
+
+.preBtn{
+    @extend .utilsBtn;
+    background-color: $color-tertiary-3;
+    &:before{
+        content:"\2039";
+        margin-right: 10px;
+        font-size: 1.6rem;
+    }
+    
+}
+
+.nxtBtn{ 
+    @extend .utilsBtn;     
+    background-color: $color-tertiary-3;
+    &:after{
+        content:"\203A";
+        margin-left: 10px;
+        font-size: 1.6rem;
     }
 }
 
@@ -25,25 +49,7 @@
             background-color: $color-tertiary-1;
         }
 
-        .preBtn{
-            @extend .utilsBtn;
-            background-color: $color-tertiary-3;
-            &:before{
-                content:"\2039";
-                margin-right: 10px;
-                font-size: 1.6rem;
-            }
-            
-        }
-        .nxtBtn{ 
-            @extend .utilsBtn;     
-            background-color: $color-tertiary-3;
-            &:after{
-                content:"\203A";
-                margin-left: 10px;
-                font-size: 1.6rem;
-            }
-    }
+
 
         .readmoreLink{
             color: inherit;

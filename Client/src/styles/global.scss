@@ -15,8 +15,10 @@ body {
   overflow: hidden;
   font-family:Lato;
   line-height: 1.6;
-  font-size: clamp(1.125rem, 2vw,1.25rem);
+  // font-size: clamp(1.125rem, 2vw,1.25rem);
   font-size:$default-font-size;
+
+  padding-top: 100px;
 }
 
 h1,h2{
@@ -66,12 +68,12 @@ a{
 
 /* The Container holding the body */
 .container{
+  width: 100vw;
   min-height: 100vh;
 }
 
 /* Holds the body apart from the Navbar and the Footer*/
 .wrapper{
-  margin-top: 100px;
   max-width: 120.5em;
   min-height: 100vh;
   position: relative;

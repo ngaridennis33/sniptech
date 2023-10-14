@@ -8,15 +8,17 @@ export const GET = async (req) => {
 
   const POST_PER_PAGE = 5;
 
+  const query = {
+    take: POST_PER_PAGE,
+    skip: POST_PER_PAGE * (page - 1),
+  };
   try {
-    const posts = await prisma.post.findMany({
-      // At the beginning the post is 1, multiplying it by zero
-      // makes it zero. Taking the first two posts then none will be skipped.
-      take: POST_PER_PAGE,
-      skip: POST_PER_PAGE * (page - 1),
-    });
-
-    return new NextResponse(JSON.stringify(posts, { status: 200 }));
+    // Count the total number of posts and the return the posts
+    const [posts, count] = await prisma.$transaction([
+      prisma.post.findMany(query),
+      prisma.post.count(),
+    ]);
+    return new NextResponse(JSON.stringify({ posts, count }, { status: 200 }));
   } catch (err) {
     console.log(err);
     return new NextResponse(

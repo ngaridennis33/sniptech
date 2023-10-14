@@ -16,18 +16,25 @@ import Card from './card/Card';
   }
 
 const CardList = async ({page}) => {
-  const data = await getData(page);
+  const {posts, count} = await getData(page);
+      // At the beginning the post is 1, multiplying it by zero
+      // makes it zero. Taking the first two posts then none will be skipped.
+  const POST_PER_PAGE = 5;
+  console.log(page)
+
+  const hasPrev = POST_PER_PAGE * (page - 1) > 0;
+  const hasNext = POST_PER_PAGE * (page -1) + POST_PER_PAGE < count;
 
 
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Recent Posts</h1>
       <div className={styles.posts}>
-        {data?.map((item)=> (
+        {posts?.map((item)=> (
           <Card key = {item._id} item = {item}/>
         ))}
       </div>
-      <Pagination/>
+      <Pagination hasPrev={hasPrev} hasNext={hasNext} page={page}/>
     </div>
   )
 }
