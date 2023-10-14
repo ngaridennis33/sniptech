@@ -3,21 +3,21 @@ import styles from "./card.module.scss"
 import Image from 'next/image'
 import Link from 'next/link'
 
-const Card = () => {
+const Card = ({key, item}) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} key= {key}>
             <div className={styles.imageContainer}>
-                <Image src="/img1.jpg" alt = "" fill className={styles.image}/> 
+                <Image src={item.img} alt = "" fill className={styles.image}/> 
             </div>
             <div className={styles.textContainer}>
                 <div className={styles.detail}>
-                    <span className={styles.date}> 11.02.2023 - </span>
-                    <span className={styles.category}> CULTURE </span>
+                    <span className={styles.date}> {item.createdAt} - </span>
+                    <span className={styles.category}>{item.slug} </span>
                 </div>
                 <Link href="/">
-                <h1 className={styles.title}>Lorem ipsum adipisicing elit. Inventore, corrupti.</h1>
+                <h1 className={styles.title}>{item.title}</h1>
                 </Link>
-                <p className={styles.desc}>Lorem  Saepe tenetur explicabo tempora officia culpa accusamus vero iste sunt quisquam optio?</p>
+                <p className={styles.desc}>{item.desc}</p>
                 <Link className={styles.authLink} href="/"><button className={styles.readmoreLink}> Read More...</button></Link>
             </div>
     </div>

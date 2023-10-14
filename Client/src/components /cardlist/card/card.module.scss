@@ -47,6 +47,11 @@
         .desc{
             font-size: 18px;
             font-weight: 300;
+            display: -webkit-box;
+            -webkit-line-clamp: 4; /* Number of lines before adding ellipsis */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
     }

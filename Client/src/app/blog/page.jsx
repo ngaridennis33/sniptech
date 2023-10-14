@@ -11,13 +11,18 @@ export const metadata = {
   description: "SnipTech blogsite",
 };
 
-const Blog = () => {
+const Blog = ({searchParams}) => {
+
+  // If there is no search params, take the page as one
+  const page = parseInt(searchParams.page) || 1;
+
+  
   return (
     <div className={styles.container}>
     <Featured/>
     <CategoryList/>
     <div className={styles.content}>
-      <CardList/>
+      <CardList page={page}/>
       <Menu/>
     </div>
    
