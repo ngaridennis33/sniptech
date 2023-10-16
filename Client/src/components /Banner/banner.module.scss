@@ -61,8 +61,8 @@
             }
 
             .title{
-                font-size: 7.8rem;
                 font-weight: 500;
+                    font-size: clamp(5rem, 7vw + 1rem, 7.8rem);
             }
             .desc{
                 font-size: 1.9rem;

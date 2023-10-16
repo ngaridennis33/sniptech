@@ -4,7 +4,7 @@ const path = require("path");
 const nextConfig = {
   // Add external domains to the config
   images: {
-    domains: ["images.pexels.com"],
+    domains: ["lh3.googleusercontent.com"],
   },
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],

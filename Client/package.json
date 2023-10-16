@@ -25,7 +25,7 @@
     "react-quill": "^2.0.0",
     "sass": "^1.63.6",
     "studio": "^0.13.5",
-    "swr": "^2.1.5"
+    "swr": "^2.2.4"
   },
   "devDependencies": {
     "prisma": "^5.4.2"

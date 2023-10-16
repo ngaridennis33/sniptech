@@ -15,10 +15,11 @@ body {
   overflow: hidden;
   font-family:Lato;
   line-height: 1.6;
-  // font-size: clamp(1.125rem, 2vw,1.25rem);
+  font-size: clamp(1.125rem, 7vw + 1rem, 9rem);
   font-size:$default-font-size;
 
   padding-top: 100px;
+  height: -webkit-fill-available;
 }
 
 h1,h2{
@@ -46,6 +47,8 @@ html{
     @include respond(bigDesktop){ //width > 1800px
       font-size: 75%; //1rem = 12px; 12/16 = 75%
     }
+  
+    height: -webkit-fill-available;
 }
 
 
@@ -68,7 +71,6 @@ a{
 
 /* The Container holding the body */
 .container{
-  width: 100vw;
   min-height: 100vh;
 }
 
