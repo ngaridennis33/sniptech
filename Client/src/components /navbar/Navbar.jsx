@@ -16,6 +16,7 @@ import Modal from '../modal/Modal'
 import SignIn from '../authLinks/signin/Signin'
 import Register from '../authLinks/register/Register'
 import Announcement from './layout/announcement/Announcement'
+import DeleteModal from '../delete/Delete'
 
 
 
@@ -33,13 +34,22 @@ let domNode = useClickOutside(()=>{
     domNodeClick();
 })
 
+// All components Using the Modal
+const modalComponents = {
+    login: <SignIn openModal={openModal} />,
+    register: <Register openModal={openModal} />,
+    delete: <DeleteModal openModal={openModal} />,
+    // Add more content types and their corresponding components here
+  };
+
 
   return (
     <>
     {isModalOpen &&
-         <Modal isModalOpen={isModalOpen}>
-            {modalContent === "login" ? <SignIn openModal={openModal}/> : <Register openModal={openModal}/>}
-         </Modal>
+          <Modal isModalOpen={isModalOpen}>
+          {modalComponents[modalContent] || (""
+          )}
+        </Modal>
         }
     <div className={navWrapper}>
     <Announcement/>

@@ -2,7 +2,7 @@ import React from 'react'
 import styles from "./delste.module.scss";
 import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
 
-const Delete = () => {
+const DeleteModal = () => {
   return (
     <div className={styles.container}>
     <div className={styles.confirmMessage}>
@@ -17,4 +17,4 @@ const Delete = () => {
   )
 }
 
-export default Delete
+export default DeleteModal

@@ -48,19 +48,26 @@ const {openModal} = useContext(ModalContext);
       </div>) : (<button className={styles.authButton} onClick={()=> openModal("login")}> Login in to write a comment</button>)}
      <div className={styles.comments} >
 
-   {isLoading ? <Spinner/>: data?.map((item)=>(
+     {isLoading ? (
+    <Spinner />
+  ) : data?.length > 0 ? (
+    data.map((item) => (
       <div className={styles.comment} key={item._id}>
         <div className={styles.user}>
-          {item?.user?.image && <Image src={item.user.image} alt ="" width={50} height={50} className={styles.image} />}
+          {item?.user?.image && (
+            <Image src={item.user.image} alt="" width={50} height={50} className={styles.image} />
+          )}
           <div className={styles.userInfo}>
             <span className={styles.userName}>{item.user.name}</span>
-            <span className={styles.date}>{item.createdAt.substring(0,10)}</span>
+            <span className={styles.date}>{item.createdAt.substring(0, 10)}</span>
           </div>
         </div>
-        <p className={styles.description}>{item.desc}</p>
+          <p className={styles.description}>{item.desc}</p>
       </div>
-      ))
-    }
+    ))
+  ) : (
+    <p>This post has no comments yet. </p>
+  )}
     </div>
 
     
