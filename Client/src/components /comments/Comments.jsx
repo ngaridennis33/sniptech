@@ -1,11 +1,13 @@
 "use client" 
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import styles from "./comments.module.scss"
 import Link from 'next/link';
 import Image from 'next/image';
 import useSWR from "swr"
 import { useSession } from 'next-auth/react';
 import Spinner from '../spinner/spinner';
+import { ModalContext } from '../context/ModalContext';
+
 
 const fetcher = async (url) => {
   const res = await fetch(url);
@@ -20,6 +22,8 @@ const fetcher = async (url) => {
 }
 
 const Comments = ({postSlug}) => {
+  // Open modal to login
+const {openModal} = useContext(ModalContext);
 
   
   const {status} = useSession();
@@ -41,7 +45,7 @@ const Comments = ({postSlug}) => {
       {status === "authenticated" ? (<div className={styles.write}>
         <textarea className={styles.input} placeholder='write a comment..' onChange={(e)=> setDesc(e.target.value)} />
         <button className={styles.action} onClick={handleSubmit}> Send </button>
-      </div>) : (<Link href="/login"> Login in to write a comment</Link>)}
+      </div>) : (<button className={styles.authButton} onClick={()=> openModal("login")}> Login in to write a comment</button>)}
      <div className={styles.comments} >
 
    {isLoading ? <Spinner/>: data?.map((item)=>(

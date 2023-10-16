@@ -1,16 +1,28 @@
 @import "../../../styles/responsive.scss";
 @import "../../../styles/variables.scss";
 
-.container{
-    margin-top: 3rem;
+.wrapper{
+    box-sizing: border-box;
+    display: flex;
+    gap: 20px;
+
+
+    .container{
+    flex: 5;
+    border: 1px $color-grey-light-2 solid;
+    border-radius: 10px;
+    position: relative;
+    position: sticky;
+    top: 0; 
+    right: 0; 
+    height: max-content;
 
     .infoContainer{
         display: flex;
-        align-items: center;
-        gap: 50px;
 
         .textContainer{
             flex: 1;
+            padding: 10px;
 
             .title{
                 font-size: 6.4rem;
@@ -60,6 +72,7 @@
               }
 
             .image{
+                top: 0;
                 border-radius: 5px;
                 object-fit: cover;
             }
@@ -67,11 +80,9 @@
     }
 
     .content{
-        display: flex;
-        gap: 5rem;
+        padding: 10px;
 
         .post{
-            flex: 5;
             margin-top: 60px;
 
             .description p{
@@ -81,4 +92,5 @@
             }
         }
     }
+}
 }
