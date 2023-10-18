@@ -2,11 +2,14 @@
 @import "../../styles/responsive.scss";
 
 .container{
+    border: 1px solid $color-grey-light-2;
+        padding: 10px;
+        border-radius: 10px;
 
     .title{
-        margin: 5rem 0;
+        margin-bottom: 2rem;
         font-size: 3.2rem;
-        color: #fff;
+        color: $color-white;
         font-size: 16px;
         font-weight: bold;
         padding: 12px 25px 10px 25px;

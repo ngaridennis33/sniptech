@@ -37,27 +37,6 @@ export const navLinkData = [
           link: "/faq",
           branches: null,
       },
-            {
-                label: "Legal",
-                link: null,
-                branches: [
-                    {
-                        label: "Terms of Service",
-                        link: "/terms-of-service",
-                        branches: null,
-                    },
-                    {
-                        label: "Privacy Policy",
-                        link: "/privacy-policy",
-                        branches: null,
-                    },
-                    {
-                        label: "Terms and Conditions",
-                        link: "/terms-and-conditions",
-                        branches: null,
-                    },
-                ],
-            },
         ],
     },
     {

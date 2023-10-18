@@ -1,5 +1,4 @@
 .dropdownContainer{
-    background: #031A31;
     white-space: nowrap;
     padding: 10px;
     border-radius: 10px;
@@ -16,14 +15,11 @@
     height: 100%;
     cursor: pointer;
     font-weight: bold;
-    border-radius: 5px;
-}
-.navMenuItem::before{
-    content: "\27A2  ";
-    color: rgb(10, 107, 49);
+    border-left: 2px solid transparent;
 }
 .navMenuItem:hover{
-    background-color: #038003;
+    border-left: 2px solid;
+    color: #038003;
 }
 
 .treeChildContainer{
@@ -33,7 +29,6 @@ border-radius: 5px;
 }
 
 .dropdownLabel{
-    color: yellow;
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
