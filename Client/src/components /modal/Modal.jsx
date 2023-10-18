@@ -24,12 +24,9 @@ return(
         <div className={styles.modalOverlay}>
             <div className={styles.modalWrapper} ref={domNode}>
                 <div className={modal}>
-                    <div className={styles.modalHeader}>
-                        <span onClick={closeModal} className={styles.x}>
+                        <span onClick={closeModal} className={styles.close}>
                         &times;
                         </span>
-                    </div>
-                    {title && <h1>{title}</h1>}
                     <div className={styles.modalBody}>{children}</div>
                 </div>
             </div>

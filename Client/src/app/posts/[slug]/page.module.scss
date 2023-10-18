@@ -25,6 +25,7 @@
             padding: 10px;
 
             .title{
+                text-transform: capitalize;
                 font-size: 6.4rem;
                 margin-bottom: 5rem;
 
@@ -73,7 +74,7 @@
 
             .image{
                 top: 0;
-                border-radius: 5px;
+                border-radius: 0 10px 0 0;
                 object-fit: cover;
             }
         }
@@ -85,10 +86,17 @@
         .post{
             margin-top: 60px;
 
-            .description p{
+            .description{
                 font-size: 2rem;
                 font-weight: 300;
                 margin-bottom: 20px;
+                &::first-letter{
+                    font-size: 2em;
+                    font-weight: bold;
+                    margin-right: 4px;
+                    line-height: 1.3;
+                }
+                
             }
         }
     }

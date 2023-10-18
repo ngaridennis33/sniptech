@@ -1,5 +1,6 @@
 @import "../../../styles//responsive.scss";
 @import "../../../styles/button.scss";
+@import "../../../styles/variables.scss";
 
 
 .container{
@@ -7,6 +8,8 @@
     display: flex;
     align-items: center;
     gap: 50px;
+    border-radius: 10px;
+    border: 1px solid $color-grey-light-2;
 
     .imageContainer{
         flex: 1;
@@ -18,7 +21,7 @@
           }
 
         .image{
-            border-radius: 10px;
+            border-radius: 10px 0 0 10px;
             object-fit: cover;
         }
     }
@@ -32,16 +35,22 @@
         .detail{
 
             .date{
-                color: gray;
+                color: $color-grey-light-1;
+                font-style: italic;
             }
 
             .category{
-                color: crimson;
-                font-weight: 500;
+                color: $color-tertiary-3;
+                font-weight: bold;
+                text-transform: capitalize;
             }
         }
         .title{
             font-size: 2.2rem;
+            &:hover{
+                text-decoration: underline;
+                color: $color-tertiary-1;
+            }
         }
 
         .desc{

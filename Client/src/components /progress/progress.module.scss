@@ -14,7 +14,8 @@ z-index: 999;
 }
 
 .progressBar::-webkit-progress-bar{
-background-color: $color-tertiary-8;
+    background-color: transparent;
+// background-color: $color-tertiary-8;
 border-radius: 0 50px 50px 0; 
 }
 .progressBar::-webkit-progress-value{

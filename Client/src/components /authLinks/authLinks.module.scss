@@ -12,10 +12,11 @@
     }
     .authCont{
         .write{
+            color: $color-tertiary-4;
             padding:.5rem;
             margin-right:.5rem;
             border-radius:1rem;
-            border: .2rem solid $color-tertiary-3;
+            border: .1rem solid $color-tertiary-4;
             &:hover{
                 color:green;
                 border: .2rem solid green;

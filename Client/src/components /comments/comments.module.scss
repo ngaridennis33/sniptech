@@ -6,8 +6,10 @@
     margin-top:50px;
 
     .title{
-        color: $color-grey-light-1;
+        font-weight: bold;
+        font-size: 16px;
         margin-bottom: 30px;
+        border-bottom: 1px solid $color-grey-light-2;
     }
     .write{
         display: flex;
@@ -23,10 +25,12 @@
 
     .comments{
         margin-top: 50px;
+        
 
         .comment{
             margin-bottom: 50px;
             width: 100%;
+            
 
             .user{
                 display: flex;
