@@ -5,13 +5,17 @@ import Link from 'next/link'
 
 const Card = ({key, item}) => {
   return (
+    <div className={styles.wrapper}>
     <div className={styles.container} key= {key}>
-            {item?.img && <div className={styles.imageContainer}>
-                <Image src={item.img} alt = "" fill className={styles.image}/> 
-            </div>}
             <div className={styles.textContainer}>
                 <div className={styles.detail}>
-                    <span className={styles.date}> {item.createdAt.substring(0,10)} - </span>
+                {item?.user?.image && <div className={styles.userImageContainer}>
+                    <Image src={item.user.image} fill className={styles.avatar} alt=""/>
+                </div>}
+                <div className={styles.userTextContainer}>
+                    <span className={styles.username}>{item?.user.name}</span>
+                    <span className={styles.date}>{item?.createdAt.substring(0,10)}</span>
+                </div>
                     <span className={styles.category}>{item.catSlug} </span>
                 </div>
                 <Link href={`/posts/${item.slug}`}>
@@ -20,6 +24,10 @@ const Card = ({key, item}) => {
                 <p className={styles.desc}>{item.desc}</p>
                 <Link className={styles.authLink} href={`/posts/${item.slug}`}><button className={styles.readmoreLink}> Read More...</button></Link>
             </div>
+            {item?.img && <div className={styles.imageContainer}>
+                <Image src={item.img} alt = "" fill className={styles.image}/> 
+            </div>}
+    </div>
     </div>
   )
 }

@@ -1,6 +1,8 @@
+import { getAuthSession } from "@/utils/auth";
 import prisma from "@/utils/connect";
 import { NextResponse } from "next/server";
 
+// GET ALL POSTS
 export const GET = async (req) => {
   const { searchParams } = new URL(req.url);
 
@@ -15,6 +17,9 @@ export const GET = async (req) => {
     where: {
       ...(cat && { catSlug: cat }),
     },
+    include: {
+      user: true, // Include the user field in the response
+    },
   };
   try {
     // Count the total number of posts and the return the posts
@@ -23,6 +28,32 @@ export const GET = async (req) => {
       prisma.post.count({ where: query.where }),
     ]);
     return new NextResponse(JSON.stringify({ posts, count }, { status: 200 }));
+  } catch (err) {
+    console.log(err);
+    return new NextResponse(
+      JSON.stringify({ message: "Something went wrong!" }, { status: 500 })
+    );
+  }
+};
+
+// CREATE A NEW POST
+export const POST = async (req) => {
+  const session = await getAuthSession();
+
+  if (!session) {
+    return new NextResponse(
+      JSON.stringify({ message: "Not authenticated!" }, { status: 401 })
+    );
+  }
+
+  try {
+    const body = await req.json();
+    const post = await prisma.post.create({
+      data: { ...body, userEmail: session.user.email },
+    });
+    console.log(post);
+
+    return new NextResponse(JSON.stringify(post, { status: 200 }));
   } catch (err) {
     console.log(err);
     return new NextResponse(
